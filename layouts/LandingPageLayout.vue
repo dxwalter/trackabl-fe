@@ -6,6 +6,8 @@
       <!-- Hero -->
       <LandingPageHero />
     </div>
+    <!-- Benefits -->
+    <LandingPageBenefits />
     <slot />
     <LandingPageFooter />
   </div>

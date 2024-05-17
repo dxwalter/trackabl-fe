@@ -39,10 +39,16 @@ module.exports = {
       "nav-color": "#151515",
       white: "#FFF",
       grey: {
+        200: "#F2F4F7",
         300: "#D0D5DD",
+        500: "#667085",
       },
       blue: {
+        500: "#005EE8",
         900: "#001F4D",
+      },
+      navyBlue: {
+        900: "#101828",
       },
       primary: "#005EE8",
     },
