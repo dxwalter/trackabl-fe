@@ -24,7 +24,7 @@
             class="px-4 xl:w-6/12 2xl:w-7/12 3xl:w-6/12 2xl:pl-[100px] 2xl:pr-[70px]"
           >
             <!-- benefit list -->
-            <div class="mb-12 xl:flex">
+            <div class="mb-12 xl:flex 3xl:mb-5">
               <!-- image -->
               <div class="w-9 mb-4 xl:mr-4 shrink-0">
                 <NuxtImg
@@ -49,7 +49,7 @@
             </div>
 
             <!-- benefit list -->
-            <div class="mb-12 xl:flex">
+            <div class="mb-12 xl:flex 3xl:mb-5">
               <!-- image -->
               <div class="w-9 mb-4 xl:mr-4 shrink-0">
                 <NuxtImg
@@ -65,16 +65,15 @@
                   Insightful analytics for smarter spending habit
                 </div>
                 <div class="text-grey-500 leading-7 text-lg">
-                  Trackabl offers a user-friendly interface with powerful
-                  filters that provide detailed insights into your spending
-                  habits. Easily categorize and subcategorize your expenses with
-                  just a few clicks.
+                  Trackabl simplifies everything by providing easy-to-use
+                  filters and analytics that shed valuable insights into your
+                  spending habits, so you can see exactly how your money flows.
                 </div>
               </div>
             </div>
 
             <!-- benefit list -->
-            <div class="mb-7 xl:flex">
+            <div class="mb-7 xl:flex 3xl:mb-0">
               <!-- image -->
               <div class="w-9 mb-4 xl:mr-4 shrink-0">
                 <NuxtImg
@@ -100,7 +99,7 @@
           </div>
           <!-- analytics image-->
           <div
-            class="xl:w-6/12 2xl:w-5/12 3xl:w-6/12 pl-4 py-6 2xl:pl-12 2xl:pt-12 bg-grey-200 w-full h-80 md:h-[500px] lg:h-[600px]"
+            class="xl:w-6/12 2xl:w-5/12 3xl:w-6/12 pl-4 py-6 2xl:pl-8 2xl:pt-8 bg-grey-200 w-full h-80 md:h-[500px] lg:h-[600px] 3xl:h-[550px]"
           >
             <div
               class="w-full h-full landing-analytics-image"
