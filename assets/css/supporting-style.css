@@ -70,6 +70,8 @@ html {
 body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .hamburger-menu-close {
@@ -167,4 +169,61 @@ body {
   .open-nav-for-mobile .nav-btn-container a {
     width: 217.79px !important;
   }
+}
+
+.password-field:focus {
+  outline: none;
+}
+
+.blue-active-form-field:focus {
+  border-color: #004ec1;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.carousel-style-modifier
+  .carousel__pagination
+  .carousel__pagination-item
+  button.carousel__pagination-button::after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #2a79ec;
+}
+
+.carousel-style-modifier
+  .carousel__pagination
+  .carousel__pagination-item:nth-child(2)
+  button.carousel__pagination-button {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.carousel-style-modifier
+  .carousel__pagination
+  .carousel__pagination-item
+  button.carousel__pagination-button--active::after {
+  background-color: #fff;
+}
+
+.carousel-style-modifier .carousel__next,
+.carousel-style-modifier .carousel__prev {
+  display: block;
+  top: unset;
+  transform: unset;
+  position: absolute;
+  color: white;
+}
+
+.carousel-style-modifier .carousel__next:hover,
+.carousel-style-modifier .carousel__prev:hover {
+  color: white;
+}
+
+.carousel-style-modifier .carousel__next {
+  right: 34%;
+}
+
+.carousel-style-modifier .carousel__prev {
+  left: 34%;
 }

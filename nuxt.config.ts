@@ -17,5 +17,13 @@ export default defineNuxtConfig({
     display: "swap",
     Lato: "400-900",
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/google-fonts"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxt/image",
+    "@nuxtjs/google-fonts",
+    "vue3-carousel-nuxt",
+  ],
+  carousel: {
+    prefix: "MyPrefix",
+  },
 });

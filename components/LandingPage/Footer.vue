@@ -33,7 +33,7 @@
     <div class="app-container">
       <div class="xl:flex justify-between py-6 px-4 2xl:px-[100px]">
         <div class="mb-4 xl:mb-0 text-center self-center">
-          <NuxtLink to="#" class="text-white">Privacy policy</NuxtLink>
+          <NuxtLink to="/legal" class="text-white">Privacy policy</NuxtLink>
         </div>
         <div class="mb-4 xl:mb-0 text-center self-center">
           <NuxtLink to="#" class="text-white"

@@ -35,9 +35,19 @@
               >Contact Us</NuxtLink
             >
           </div>
-          <div class="nav-btn-container">
+          <div class="nav-btn-container flex">
             <NuxtLink
-              to="#"
+              to="/auth"
+              class="button bg-white py-3 px-[24px] flex justify-center rounded-xl max-w-fit mr-3"
+            >
+              <div
+                class="mr-2 lato-medium text-[16px] self-center text-blue-900"
+              >
+                Sign in
+              </div>
+            </NuxtLink>
+            <NuxtLink
+              to="/auth/sign-up"
               class="button bg-primary py-3 px-6 flex justify-center rounded-xl max-w-fit"
             >
               <div class="mr-2 lato-medium text-[16px] self-center text-white">
