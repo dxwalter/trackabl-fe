@@ -47,7 +47,7 @@
             <div class="w-5/12 border self-center text-grey-150"></div>
           </div>
         </div>
-        <form>
+        <form @submit.prevent="logUserIn">
           <div class="full mb-5">
             <div class="text-navy-blue-900 text-sm mb-1.5 lato-medium">
               Email
@@ -55,7 +55,7 @@
             <input
               required
               type="email"
-              class="w-full px-[14px] py-3 text-grey-500 rounded-xl border border-grey-300 blue-active-form-field"
+              class="w-full px-[14px] py-3 text-navy-blue-900 rounded-xl border border-grey-300 blue-active-form-field"
               placeholder="Enter your email address"
             />
           </div>
@@ -67,14 +67,16 @@
               <input
                 required
                 type="password"
-                class="w-full px-[14px] rounded-xl py-3 text-grey-500 self-center password-field"
+                class="w-full px-[14px] rounded-xl py-3 text-navy-blue-900 self-center password-field"
+                id="SignInPassword"
                 placeholder="Enter your password"
               />
               <div
                 class="self-center h-full px-[14px] text-blue-700 text-sm underline cursor-pointer"
                 style="text-underline-offset: 4px"
+                @click="mangePasswordVisibility"
               >
-                Show
+                {{ isPasswordVisible ? "Hide" : "Show" }}
               </div>
             </div>
           </div>
@@ -87,9 +89,17 @@
           </div>
           <div>
             <button
-              class="p-4 bg-blue-500 w-full text-center rounded-xl text-white lato-medium hover:bg-blue-600"
+              class="p-4 bg-blue-500 w-full text-center rounded-xl text-white lato-medium hover:bg-blue-600 flex justify-center"
+              :disabled="isFormSubmitted"
+              :class="{
+                'is-loading': isFormSubmitted,
+              }"
+              type="submit"
             >
-              Continue
+              <div class="button-text">Continue</div>
+              <div class="w-6 button-spinner">
+                <NuxtImg src="/button-loader.svg" class="w-full" />
+              </div>
             </button>
           </div>
         </form>
@@ -101,4 +111,27 @@
 definePageMeta({
   layout: "auth-page-layout",
 });
+
+import { useFormInputManipulator } from "@/composables/FormInputManipulator";
+
+const { HidePassword, ShowPassword } = useFormInputManipulator();
+
+const isPasswordVisible = ref(false);
+const isFormSubmitted = ref(false);
+
+const mangePasswordVisibility = () => {
+  if (isPasswordVisible.value) {
+    HidePassword("SignInPassword");
+  } else {
+    ShowPassword("SignInPassword");
+  }
+
+  isPasswordVisible.value = !isPasswordVisible.value;
+};
+
+const logUserIn = () => {
+  useNuxtApp().$toast.success(
+    `<div class="toastHeader lato-semi-bold text-base mb-2">Uh-uh! This email is not valid</div><div class="toastBody text-sm lato-regular">It looks like there is already an account with this email address. Try to login or use a different email address</div>`
+  );
+};
 </script>

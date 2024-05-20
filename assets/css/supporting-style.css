@@ -227,3 +227,133 @@ body {
 .carousel-style-modifier .carousel__prev {
   left: 34%;
 }
+
+.is-loading .button-text {
+  display: none;
+}
+
+.button-spinner {
+  display: none;
+}
+
+.is-loading .button-spinner {
+  display: block;
+  animation: button-rotate-animation 1s infinite linear;
+}
+
+@keyframes button-rotate-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.Toastify__toast-container {
+  width: 100% !important;
+}
+/* Toastify__toast Toastify__toast-theme--light Toastify__toast--error */
+
+.Toastify__toast-container
+  .Toastify__toast
+  .Toastify__toast-body
+  .Toastify__toast-icon {
+  display: none !important;
+}
+
+.Toastify__progress-bar {
+  display: none;
+}
+
+.Toastify__toast-container
+  .Toastify__toast.Toastify__toast--error
+  .Toastify__toast-body
+  > div:last-child
+  .toastHeader {
+  color: #b42318 !important;
+  font-size: 16px;
+}
+
+.Toastify__toast-container
+  .Toastify__toast.Toastify__toast--error
+  .Toastify__toast-body
+  > div:last-child
+  .toastBody {
+  color: #d92d20 !important;
+  font-size: 16px;
+}
+
+.Toastify__toast-container
+  .Toastify__toast.Toastify__toast--success
+  .Toastify__toast-body
+  > div:last-child
+  .toastHeader {
+  color: #027a48 !important;
+  font-size: 16px;
+}
+
+.Toastify__toast-container
+  .Toastify__toast.Toastify__toast--success
+  .Toastify__toast-body
+  > div:last-child
+  .toastBody {
+  color: #039855 !important;
+  font-size: 16px;
+}
+
+.Toastify__toast-container
+  .Toastify__toast.Toastify__toast-theme--light.Toastify__toast--error {
+  background-color: #fffbfa;
+  border: 1px solid #fda29b;
+}
+
+.Toastify__toast-container
+  .Toastify__toast.Toastify__toast-theme--light.Toastify__toast--success {
+  background-color: #f6fef9;
+  border: 1px solid #6ce9a6;
+}
+
+.Toastify__close-button > svg {
+  fill: currentcolor;
+  height: 24px;
+  width: 22px;
+}
+
+.Toastify__toast-container {
+  width: calc(100% - 0px) !important;
+  margin: 0 auto;
+  padding: 0 !important;
+}
+
+.Toastify__toast-container--top-right {
+  right: 0 !important;
+  top: 0 !important;
+}
+
+@media (min-width: 1024px) {
+  .Toastify__toast-container--top-center,
+  .Toastify__toast-container--top-left,
+  .Toastify__toast-container--top-right {
+    right: 1em !important;
+    top: 1em !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Toastify__toast-container {
+    width: 500px !important;
+  }
+  .Toastify__toast-container--top-right {
+    right: 1em;
+    top: 1em;
+  }
+}

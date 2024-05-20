@@ -38,7 +38,7 @@ const carouselHeadings = ref([
   {
     heading: "Take control of your Expenses",
     subtext:
-      "Trackabl helps manage your expenses & keep track all transactions.",
+      "Trackabl helps manage your expenses & keep track of all transactions.",
   },
   {
     heading: "Insightful analytics, Smart spending",
