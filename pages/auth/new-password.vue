@@ -67,28 +67,25 @@
       </div>
     </div>
   </div>
+
+  <PasswordRecoverySuccessModal
+    :setup="{
+      open: true,
+    }"
+  />
 </template>
 <script lang="ts" setup>
 definePageMeta({
   layout: "auth-page-layout",
 });
 
-import { useFormInputManipulator } from "@/composables/FormInputManipulator";
+import PasswordRecoverySuccessModal from "@/components/Modals/PasswordRecoverySuccess.vue";
 
+import { useFormInputManipulator } from "@/composables/FormInputManipulator";
 const { HidePassword, ShowPassword } = useFormInputManipulator();
 
 const isPasswordVisible = ref(false);
 const isFormSubmitted = ref(false);
-
-const mangePasswordVisibility = () => {
-  if (isPasswordVisible.value) {
-    HidePassword("SignInPassword");
-  } else {
-    ShowPassword("SignInPassword");
-  }
-
-  isPasswordVisible.value = !isPasswordVisible.value;
-};
 
 const getConfirmedPassword = (data: { status: boolean; data: string }) => {
   // console.log(data);
