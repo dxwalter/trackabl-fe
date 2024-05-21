@@ -166,6 +166,11 @@ const checkForSpecialCharacters = (password: string) => {
 const validatePassword = (password: string) => {
   // reset password score
   passwordScore.value = 0;
+  passwordValidationRequirement.value = {
+    containsNumbersAndSymbols: false,
+    containsUpperCaseAndLowercase: false,
+    mustBeAtleastSixCharacters: false,
+  };
 
   // password length >= 6
   const passwordLength = password.length >= 6;
