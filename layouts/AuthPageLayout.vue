@@ -2,7 +2,7 @@
   <div>
     <div class="xl:flex justify-between">
       <div
-        class="hidden xl:flex flex-col justify-between xl:w-6/12 bg-blue-500 h-screen px-9 py-8"
+        class="hidden xl:flex flex-col justify-between xl:w-6/12 bg-blue-500 h-screen px-9 py-8 overflow-hidden"
       >
         <!-- nav -->
         <div class="w-[140px]">
