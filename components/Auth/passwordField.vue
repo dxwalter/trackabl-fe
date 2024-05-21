@@ -5,28 +5,47 @@
         {{ setup.label }}
       </div>
 
-      <div class="password-score self-center flex">
-        <div
-          class="w-[16px] h-[4px] rounded-full bg-grey-300 mr-1"
-          :class="{
-            weak: passwordScore === 1,
-            average: passwordScore === 2,
-            strong: passwordScore === 3,
-          }"
-        ></div>
-        <div
-          class="w-[16px] h-[4px] rounded-full bg-grey-300 mr-1"
-          :class="{
-            average: passwordScore === 2,
-            strong: passwordScore === 3,
-          }"
-        ></div>
-        <div
-          class="w-[16px] h-[4px] rounded-full bg-grey-300 mr-1"
-          :class="{
-            strong: passwordScore === 3,
-          }"
-        ></div>
+      <div
+        class="password-score self-center flex"
+        v-if="props.setup.showGuideLinesOnActive"
+      >
+        <div class="self-center mr-1 text-xs">
+          <div class="weak-label text-red-600" v-if="passwordScore === 1">
+            Weak
+          </div>
+          <div
+            class="average-label text-warning-600"
+            v-if="passwordScore === 2"
+          >
+            Average
+          </div>
+          <div class="strong-label text-green-600" v-if="passwordScore === 3">
+            Strong
+          </div>
+        </div>
+        <div class="flex self-center">
+          <div
+            class="w-[16px] h-[4px] rounded-full bg-grey-300 mr-1"
+            :class="{
+              weak: passwordScore === 1,
+              average: passwordScore === 2,
+              strong: passwordScore === 3,
+            }"
+          ></div>
+          <div
+            class="w-[16px] h-[4px] rounded-full bg-grey-300 mr-1"
+            :class="{
+              average: passwordScore === 2,
+              strong: passwordScore === 3,
+            }"
+          ></div>
+          <div
+            class="w-[16px] h-[4px] rounded-full bg-grey-300 mr-1"
+            :class="{
+              strong: passwordScore === 3,
+            }"
+          ></div>
+        </div>
       </div>
     </div>
     <div
