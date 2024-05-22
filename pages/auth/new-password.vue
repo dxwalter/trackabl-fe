@@ -38,6 +38,7 @@
           </div>
           <div class="full mb-14">
             <AuthPasswordField
+              class="mb-1.5"
               :setup="{
                 label: 'Confirm New Password',
                 isRequired: true,
@@ -47,6 +48,9 @@
               }"
               @new-password-state="getConfirmedPassword"
             />
+            <div class="text-red-600 lato-medium text-xs">
+              Oops! The password doesn’t match. Try again
+            </div>
           </div>
           <div>
             <button
@@ -70,7 +74,7 @@
 
   <PasswordRecoverySuccessModal
     :setup="{
-      open: true,
+      open: false,
     }"
   />
 </template>

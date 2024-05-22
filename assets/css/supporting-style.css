@@ -357,3 +357,7 @@ button:disabled {
     top: 1em;
   }
 }
+
+button {
+  cursor: pointer;
+}

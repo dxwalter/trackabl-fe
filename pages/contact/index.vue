@@ -89,84 +89,84 @@
         </div>
       </div>
     </section>
-    <section id="contactForm">
-      <div class="app-container">
-        <div
-          class="py-12 xl:py-24 px-4 bg-grey-100 flex flex-col items-center w-full"
-        >
-          <div class="text-center mb-8 w-[270px]">
-            <div class="text-nav-blue-900 lato-semi-bold text-2xl mb-2">
-              Get in touch
-            </div>
-            <div class="text-grey-500">
-              Please fill out this form for any enquires.
-            </div>
-          </div>
-          <!-- form -->
-          <div class="w-full lg:w-[500px] xl:w-[616px]">
-            <form>
-              <!-- first & last name -->
-              <div class="mb-5 xl:flex">
-                <div class="w-full mb-5 xl:w-6/12 xl:mb-0 mr-2">
-                  <div class="text-navy-blue-900 text-sm mb-1.5 lato-medium">
-                    First name
-                  </div>
-                  <input
-                    type="text"
-                    required
-                    class="w-full px-[14px] py-3 text-grey-500 rounded-xl border border-grey-300"
-                    placeholder="Enter your First name"
-                  />
-                </div>
-                <div class="w-full xl:w-6/12 ml-2">
-                  <div class="text-navy-blue-900 text-sm mb-1.5 lato-medium">
-                    Last name
-                  </div>
-                  <input
-                    type="text"
-                    required
-                    class="w-full px-[14px] py-3 text-grey-500 rounded-xl border border-grey-300"
-                    placeholder="Enter your Last name"
-                  />
-                </div>
+    <div class="bg-grey-100">
+      <section id="contactForm">
+        <div class="app-container">
+          <div class="py-12 xl:py-24 px-4 flex flex-col items-center w-full">
+            <div class="text-center mb-8 w-[300px]">
+              <div class="text-nav-blue-900 lato-semi-bold text-2xl mb-2">
+                Get in touch
               </div>
-              <div class="mb-8">
-                <div class="full mb-5">
-                  <div class="text-navy-blue-900 text-sm mb-1.5 lato-medium">
-                    Email
+              <div class="text-grey-500">
+                Please fill out this form for any enquires.
+              </div>
+            </div>
+            <!-- form -->
+            <div class="w-full lg:w-[500px] xl:w-[616px]">
+              <form>
+                <!-- first & last name -->
+                <div class="mb-5 xl:flex">
+                  <div class="w-full mb-5 xl:w-6/12 xl:mb-0 mr-2">
+                    <div class="text-navy-blue-900 text-sm mb-1.5 lato-medium">
+                      First name
+                    </div>
+                    <input
+                      type="text"
+                      required
+                      class="w-full px-[14px] py-3 text-grey-500 rounded-xl border border-grey-300"
+                      placeholder="Enter your First name"
+                    />
                   </div>
-                  <input
-                    required
-                    type="email"
-                    class="w-full px-[14px] py-3 text-grey-500 rounded-xl border border-grey-300"
-                    placeholder="Enter your email address"
-                  />
+                  <div class="w-full xl:w-6/12 ml-2">
+                    <div class="text-navy-blue-900 text-sm mb-1.5 lato-medium">
+                      Last name
+                    </div>
+                    <input
+                      type="text"
+                      required
+                      class="w-full px-[14px] py-3 text-grey-500 rounded-xl border border-grey-300"
+                      placeholder="Enter your Last name"
+                    />
+                  </div>
                 </div>
+                <div class="mb-8">
+                  <div class="full mb-5">
+                    <div class="text-navy-blue-900 text-sm mb-1.5 lato-medium">
+                      Email
+                    </div>
+                    <input
+                      required
+                      type="email"
+                      class="w-full px-[14px] py-3 text-grey-500 rounded-xl border border-grey-300"
+                      placeholder="Enter your email address"
+                    />
+                  </div>
 
-                <div class="full">
-                  <div class="text-navy-blue-900 text-sm mb-1.5 lato-medium">
-                    Message
+                  <div class="full">
+                    <div class="text-navy-blue-900 text-sm mb-1.5 lato-medium">
+                      Message
+                    </div>
+                    <textarea
+                      class="w-full px-[14px] py-3 text-grey-500 rounded-xl border border-grey-300 resize-none text-black"
+                      rows="4"
+                      required
+                      placeholder="Enter your message"
+                    ></textarea>
                   </div>
-                  <textarea
-                    class="w-full px-[14px] py-3 text-grey-500 rounded-xl border border-grey-300 resize-none text-black"
-                    rows="4"
-                    required
-                    placeholder="Enter your message"
-                  ></textarea>
                 </div>
-              </div>
-              <div>
-                <button
-                  class="p-3 bg-blue-500 w-full text-center rounded-xl text-white lato-medium hover:bg-blue-600"
-                >
-                  Send message
-                </button>
-              </div>
-            </form>
+                <div>
+                  <button
+                    class="p-3 bg-blue-500 w-full text-center rounded-xl text-white lato-medium hover:bg-blue-600"
+                  >
+                    Send message
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 </template>
 

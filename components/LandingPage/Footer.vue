@@ -15,7 +15,7 @@
         </div>
         <div class="flex justify-center m-auto">
           <NuxtLink
-            to="#"
+            to="/auth/sign-up"
             class="button bg-white py-3 px-[57px] flex justify-center rounded-xl max-w-fit"
           >
             <div class="mr-2 lato-medium text-[16px] self-center text-blue-900">

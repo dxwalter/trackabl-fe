@@ -10,7 +10,7 @@
             <div
               class="text-white text-center lato-semi-bold text-5xl mb-2 xl:text-6xl"
             >
-              Terms of service
+              Privacy Policy
             </div>
             <div class="text-center text-grey-100 lg:w-[500px] xl:w-[720px]">
               Your privacy is important to us at Gasdat Enterprise. We respect
