@@ -2,14 +2,14 @@
   <div class="flex flex-col justify-between">
     <!-- Header -->
     <div
-      class="flex justify-center py-6 px-4 xl:py-9 xl:px-[112px] xl:justify-start mb-[68px]"
+      class="flex justify-center py-6 px-4 xl:py-9 xl:px-[112px] xl:justify-start mb-6"
     >
       <div class="w-[115px] xl:w-[140px]">
         <NuxtImg src="/blue-logo.svg" class="w-full" />
       </div>
     </div>
     <!-- content -->
-    <div class="xl:py-[120px] px-4 mb-10">
+    <div class="px-2 mb-10">
       <slot />
     </div>
     <!-- Footer -->

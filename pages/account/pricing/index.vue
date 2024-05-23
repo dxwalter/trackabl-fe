@@ -1,28 +1,22 @@
 <template>
   <div>
-    <div
-      class="xl:w-[1008px] m-auto xl:p-7 lg:border lg:border-grey-200 lg:bg-white lg:shadow"
-    >
-      <div class="py-12 2xl:py-24 bg-white">
-        <div class="px-4 2xl:px-[100px] mb-8">
-          <div class="flex justify-center mb-2">
-            <div
-              class="w-[10px] h-[10px] bg-blue-500 rounded-full mr-[10px] self-center"
-            ></div>
-            <div
-              class="text-grey-500 text-lg leading-7 self-center 2xl:text-xl"
-            >
-              Pricing
-            </div>
-          </div>
+    <div class="xl:w-[1008px] m-auto xl:p-7">
+      <div
+        class="bg-white 2xl:border 2xl:border-grey-200 2xl:bg-white 2xl:shadow 2xl:w-[1008px] 2xl:pt-7 2xl:pb-5 2xl:px-"
+      >
+        <div class="2xl:px-[100px] mb-6">
           <h1
-            class="text-navyBlue-900 text-3xl text-center lato-semi-bold mb-8 2xl:text-6xl 2xl:mb-12"
+            class="text-navyBlue-900 text-2xl text-left lato-semi-bold mb-2 2xl:text-6xl 2xl:mb-12 px-2 md:text-center 2xl:text-3xl 2xl:mb-2"
           >
-            Discover Our Simple Plan
+            Choose your plan
           </h1>
+          <div class="text-center text-grey-500 text-sm">
+            Get a plan that fits you, to achieve better overview of your
+            expenses.
+          </div>
         </div>
         <!-- tab -->
-        <div class="flex justify-center mb-8 xl:mb-12 px-2 2xl:px-[100px]">
+        <div class="flex justify-center mb-6 xl:mb-12 2xl:px-[100px]">
           <div
             class="rounded-lg p-[6px] border border-grey-100 w-fit pricing-period xl:flex"
           >
@@ -43,10 +37,10 @@
           </div>
         </div>
         <!-- price list -->
-        <div class="px-4 2xl:px-[100px] xl:flex xl:justify-center">
+        <div class="xl:flex xl:justify-center px-2">
           <!-- price -->
           <div
-            class="rounded-2xl p-6 border border-grey-100 w-full mb-4 xl:mb-0 xl:mr-2 xl:w-[479px]"
+            class="rounded-2xl p-6 border border-grey-100 w-full mb-4 xl:mb-0 xl:mr-2 md:w-[464px] md:m-auto md:mb-4"
           >
             <div class="mb-6">
               <div class="flex justify-between mb-4">
@@ -107,7 +101,7 @@
           </div>
           <!-- price 2 -->
           <div
-            class="rounded-2xl p-6 border border-grey-100 w-full xl:ml-2 xl:w-[479px]"
+            class="rounded-2xl p-6 border border-grey-100 w-full xl:ml-2 md:w-[464px] md:m-auto"
           >
             <div class="mb-6">
               <div class="flex justify-between mb-4">

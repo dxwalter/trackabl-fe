@@ -90,11 +90,11 @@ watch(
 .modal-container .modal-inner-container {
   width: 100%;
   max-height: calc(100vh - 100px);
-  height: calc(100vh - 100px);
+  height: calc(100vh - 150px);
   background-color: white;
   position: absolute;
   bottom: 0px;
-  padding: 40px 20px;
+  padding: 24px 16px 48px 16px;
   animation: animateBottom 1000ms ease-in-out;
   display: block;
 }
@@ -120,11 +120,15 @@ watch(
 
 @media (min-width: 768px) {
   .modal-container .modal-inner-container {
+    max-height: unset;
+    height: fit-content;
     width: 600px;
     left: 50%;
-    top: 50%;
+
+    top: 0;
+    padding: 48px;
     /* Center the element by translating it back half its width and height */
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     border-radius: 0;
     animation: fadeInAnimation ease 500ms;
     animation-iteration-count: 1;
@@ -144,8 +148,9 @@ watch(
 @media (min-width: 1024px) {
   .modal-container .modal-inner-container {
     width: 755px;
-    height: 603px;
+    min-height: 1px;
     padding: 48px;
+    align-self: center;
   }
 }
 
@@ -154,7 +159,7 @@ watch(
     transform: unset;
     left: 0;
     right: 0;
-    top: calc(100vh - 80vh);
+    top: 0;
   }
 }
 </style>

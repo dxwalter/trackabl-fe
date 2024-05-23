@@ -174,12 +174,3 @@
     </div>
   </section>
 </template>
-<style lang="css" scoped>
-.pricing-period .isActive {
-  background-color: #101828;
-  color: #ffffff;
-}
-.pricing-period .isActive:hover {
-  background-color: #0d131f;
-}
-</style>

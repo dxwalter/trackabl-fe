@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="xl:py-[60px] 2xl:py-[120px]">
     <div
       class="lg:w-[545px] m-auto lg:p-7 lg:border lg:border-grey-200 lg:bg-white lg:shadow"
     >
@@ -54,7 +54,7 @@
   </div>
   <ModalsEmailVerificationSuccessful
     :setup="{
-      open: true,
+      open: false,
     }"
   />
 </template>
