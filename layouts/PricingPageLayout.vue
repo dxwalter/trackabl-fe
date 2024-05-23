@@ -1,20 +1,20 @@
 <template>
-  <div class="h-screen flex flex-col justify-between">
+  <div class="flex flex-col justify-between">
     <!-- Header -->
     <div
-      class="flex justify-center py-6 px-4 xl:py-9 xl:px-[112px] xl:justify-start"
+      class="flex justify-center py-6 px-4 xl:py-9 xl:px-[112px] xl:justify-start mb-[68px]"
     >
       <div class="w-[115px] xl:w-[140px]">
         <NuxtImg src="/blue-logo.svg" class="w-full" />
       </div>
     </div>
     <!-- content -->
-    <div class="xl:py-[96px] px-4">
+    <div class="xl:py-[120px] px-4 mb-10">
       <slot />
     </div>
     <!-- Footer -->
-    <div class="py-8 px-4">
-      <div class="text-center text-grey-500 mb-6">
+    <div class="py-8 px-4 lg:flex lg:justify-between xl:px-[112px]">
+      <div class="text-center text-grey-500 mb-6 lg:self-center">
         © 2024 Trackable.io. All rights reserved.
       </div>
       <div class="flex justify-center self-center">
