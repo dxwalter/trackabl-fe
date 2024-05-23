@@ -14,7 +14,7 @@
       </div>
 
       <!-- welcome -->
-      <div class="flex text-nav-blue-900 lato-semi-bold text-2xl mb-2">
+      <div class="flex text-navyBlue-900 lato-semi-bold text-2xl mb-2">
         <span class="mr-2">Reset Password</span>
         <span>🔄</span>
       </div>

@@ -21,7 +21,7 @@
       </div>
 
       <!-- welcome -->
-      <div class="flex text-nav-blue-900 lato-semi-bold text-2xl mb-8">
+      <div class="flex text-navyBlue-900 lato-semi-bold text-2xl mb-8">
         <span class="mr-2">Welcome back </span>
         <span>👋🏽</span>
       </div>

@@ -94,7 +94,7 @@
         <div class="app-container">
           <div class="py-12 xl:py-24 px-4 flex flex-col items-center w-full">
             <div class="text-center mb-8 w-[300px]">
-              <div class="text-nav-blue-900 lato-semi-bold text-2xl mb-2">
+              <div class="text-navyBlue-900 lato-semi-bold text-2xl mb-2">
                 Get in touch
               </div>
               <div class="text-grey-500">

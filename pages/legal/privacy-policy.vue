@@ -38,7 +38,7 @@
             risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie
             aliquet sodales id est ac volutpat.
           </p>
-          <div class="text-nav-blue-900 text-3xl lato-semi-bold mb-6">
+          <div class="text-navyBlue-900 text-3xl lato-semi-bold mb-6">
             What information do we collect?
           </div>
           <p class="text-grey-500 leading-6 mb-6">
@@ -63,7 +63,7 @@
             velit eget ut tortor tellus. Sed vel, congue felis elit erat nam
             nibh orci.
           </p>
-          <div class="text-nav-blue-900 text-3xl lato-semi-bold mb-6">
+          <div class="text-navyBlue-900 text-3xl lato-semi-bold mb-6">
             How do we use your information?
           </div>
           <p class="text-grey-500 leading-6 mb-6">
