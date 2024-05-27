@@ -12,7 +12,7 @@
             <NuxtImg src="./successBadge.svg" class="w-full" />
           </div>
           <div
-            class="text-navy-blue-900 mb-2 text-2xl text-center lato-semi-bold"
+            class="text-navyBlue-900 mb-2 text-2xl text-center lato-semi-bold"
           >
             You are all set!
           </div>

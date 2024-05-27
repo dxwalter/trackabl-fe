@@ -27,6 +27,14 @@
         </div>
       </div>
     </div>
+
+    <div class="absolute bg-white w-fit p-1 manage-direction cursor-pointer">
+      <NuxtLink to="/account/expense/add">
+        <button class="w-[64px] h-[64px] bg-navyBlue-900 p-4 rounded-full">
+          <NuxtImg src="/plus.svg" class="w-full" />
+        </button>
+      </NuxtLink>
+    </div>
   </div>
 </template>
 
@@ -34,4 +42,11 @@
 const currentYear = new Date().getFullYear();
 </script>
 
-<style></style>
+<style lang="css" scoped>
+.manage-direction {
+  right: 40px;
+  bottom: 120px;
+  padding: 0;
+  background-color: transparent;
+}
+</style>

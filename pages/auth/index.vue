@@ -36,7 +36,7 @@
               <div class="w-[24px] mr-3 self-center">
                 <NuxtImg src="/google-login-icon.svg" class="w-full"></NuxtImg>
               </div>
-              <span class="text-navy-blue-900 lato-medium self-center block"
+              <span class="text-navyBlue-900 lato-medium self-center block"
                 >Sign in with Google</span
               >
             </button>
@@ -49,25 +49,25 @@
         </div>
         <form @submit.prevent="logUserIn">
           <div class="full mb-5">
-            <div class="text-navy-blue-900 text-sm mb-1.5 lato-medium">
+            <div class="text-navyBlue-900 text-sm mb-1.5 lato-medium">
               Email
             </div>
             <input
               required
               type="email"
-              class="w-full px-[14px] py-3 text-navy-blue-900 rounded-xl border border-grey-300 blue-active-form-field"
+              class="w-full px-[14px] py-3 text-navyBlue-900 rounded-xl border border-grey-300 blue-active-form-field"
               placeholder="Enter your email address"
             />
           </div>
           <div class="full mb-6">
-            <div class="text-navy-blue-900 text-sm mb-1.5 lato-medium">
+            <div class="text-navyBlue-900 text-sm mb-1.5 lato-medium">
               Password
             </div>
             <div class="flex rounded-xl border border-grey-300 overflow-hidden">
               <input
                 required
                 type="password"
-                class="w-full px-[14px] rounded-xl py-3 text-navy-blue-900 self-center password-field"
+                class="w-full px-[14px] rounded-xl py-3 text-navyBlue-900 self-center password-field"
                 id="SignInPassword"
                 placeholder="Enter your password"
               />

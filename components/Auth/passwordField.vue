@@ -1,7 +1,7 @@
 <template>
   <div class="full">
     <div class="mb-1.5 flex justify-between">
-      <div class="text-navy-blue-900 text-sm lato-medium self-center">
+      <div class="text-navyBlue-900 text-sm lato-medium self-center">
         {{ setup.label }}
       </div>
 
@@ -57,7 +57,7 @@
       <input
         :required="props.setup.isRequired"
         type="password"
-        class="w-full px-[14px] rounded-xl py-3 text-navy-blue-900 self-center password-field"
+        class="w-full px-[14px] rounded-xl py-3 text-navyBlue-900 self-center password-field"
         :id="props.setup.id"
         :placeholder="props.setup.placeholder"
         v-model="userPassword"

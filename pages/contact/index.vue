@@ -29,7 +29,7 @@
                 </div>
               </div>
               <div
-                class="text-center text-navy-blue-900 lato-semi-bold text-xl mb-2"
+                class="text-center text-navyBlue-900 lato-semi-bold text-xl mb-2"
               >
                 Contact address
               </div>
@@ -50,7 +50,7 @@
                 </div>
               </div>
               <div
-                class="text-center text-navy-blue-900 lato-semi-bold text-xl mb-2"
+                class="text-center text-navyBlue-900 lato-semi-bold text-xl mb-2"
               >
                 Office
               </div>
@@ -74,7 +74,7 @@
                 </div>
               </div>
               <div
-                class="text-center text-navy-blue-900 lato-semi-bold text-xl mb-2"
+                class="text-center text-navyBlue-900 lato-semi-bold text-xl mb-2"
               >
                 Phone
               </div>
@@ -107,7 +107,7 @@
                 <!-- first & last name -->
                 <div class="mb-5 xl:flex">
                   <div class="w-full mb-5 xl:w-6/12 xl:mb-0 mr-2">
-                    <div class="text-navy-blue-900 text-sm mb-1.5 lato-medium">
+                    <div class="text-navyBlue-900 text-sm mb-1.5 lato-medium">
                       First name
                     </div>
                     <input
@@ -118,7 +118,7 @@
                     />
                   </div>
                   <div class="w-full xl:w-6/12 ml-2">
-                    <div class="text-navy-blue-900 text-sm mb-1.5 lato-medium">
+                    <div class="text-navyBlue-900 text-sm mb-1.5 lato-medium">
                       Last name
                     </div>
                     <input
@@ -131,7 +131,7 @@
                 </div>
                 <div class="mb-8">
                   <div class="full mb-5">
-                    <div class="text-navy-blue-900 text-sm mb-1.5 lato-medium">
+                    <div class="text-navyBlue-900 text-sm mb-1.5 lato-medium">
                       Email
                     </div>
                     <input
@@ -143,7 +143,7 @@
                   </div>
 
                   <div class="full">
-                    <div class="text-navy-blue-900 text-sm mb-1.5 lato-medium">
+                    <div class="text-navyBlue-900 text-sm mb-1.5 lato-medium">
                       Message
                     </div>
                     <textarea

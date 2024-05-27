@@ -369,3 +369,27 @@ button {
 .pricing-period .isActive:hover {
   background-color: #0d131f;
 }
+
+.quicklinks-nav {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.quicklinks-nav a {
+  display: inline-block;
+}
+
+.quicklinks-nav::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .quicklinks-nav {
+    overflow: unset;
+    white-space: unset;
+  }
+
+  .quicklinks-nav a {
+    display: block;
+  }
+}

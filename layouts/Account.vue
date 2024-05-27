@@ -59,7 +59,10 @@
         <!-- content -->
         <div class="pt-[60px] xl:pt-[75px]">
           <!-- content body -->
-          <div class="px-[18px] pt-6 pb-40 xl:px-9 xl:pt-9"><slot /></div>
+          <!-- padding accros x-axis is impmented within the slot content -->
+          <div class="pt-6 pb-40 xl:pt-9 4xl:w-[1440px] 4xl:m-auto">
+            <slot />
+          </div>
           <!-- mobile footer nav -->
           <div class="xl:hidden">
             <AccountMobileFooterNav />
