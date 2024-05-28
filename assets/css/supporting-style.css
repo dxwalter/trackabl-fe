@@ -393,3 +393,26 @@ button {
     display: block;
   }
 }
+
+.search-input {
+  background-image: url(../img/search-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 18px;
+}
+
+.search-input::placeholder {
+  padding-left: 24px;
+}
+
+.search-input:focus {
+  background-image: unset;
+}
+
+.search-input:focus::placeholder {
+  padding-left: 0px;
+}
+
+.card-border-radius {
+  border-radius: 12px 12px 12px 0;
+}
