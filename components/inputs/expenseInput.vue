@@ -5,7 +5,7 @@
         How much?
       </div>
       <div class="flex">
-        <div class="flex self-center">
+        <div class="flex self-center cursor-pointer" @click="openCurrencyModal">
           <div class="w-[18px] mr-1 self-center">
             <NuxtImg src="/caret-down.svg" class="w-full" />
           </div>
@@ -23,14 +23,21 @@
     </div>
     <InputsCurrencyPopover
       :setup="{
-        modalActive: true,
+        openModal: isCurrencyModalOpen,
       }"
+      @close-currency-modal="openCurrencyModal"
     />
   </ClientOnly>
 </template>
 
 <script lang="ts" setup>
 const amount = ref("");
+
+const isCurrencyModalOpen = ref(false);
+const openCurrencyModal = () => {
+  console.log(isCurrencyModalOpen.value);
+  isCurrencyModalOpen.value = !isCurrencyModalOpen.value;
+};
 
 const emit = defineEmits(["expenseAmount"]);
 

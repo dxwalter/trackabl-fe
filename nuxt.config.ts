@@ -17,6 +17,9 @@ export default defineNuxtConfig({
     display: "swap",
     Lato: "400-900",
   },
+  build: {
+    transpile: ["@vuepic/vue-datepicker"],
+  },
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/image",

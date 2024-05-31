@@ -28,7 +28,10 @@
       </div>
     </div>
 
-    <div class="absolute bg-white w-fit p-1 manage-direction cursor-pointer">
+    <div
+      class="absolute bg-white w-fit p-1 manage-direction cursor-pointer"
+      v-if="!isRouteAddExpense"
+    >
       <NuxtLink to="/account/expense/add">
         <button class="w-[64px] h-[64px] bg-navyBlue-900 p-4 rounded-full">
           <NuxtImg src="/plus.svg" class="w-full" />
@@ -39,7 +42,11 @@
 </template>
 
 <script lang="ts" setup>
+import { useRoute } from "vue-router";
 const currentYear = new Date().getFullYear();
+const isRouteAddExpense = ref(
+  useRoute().path.toLowerCase().includes("expense/add")
+);
 </script>
 
 <style lang="css" scoped>
