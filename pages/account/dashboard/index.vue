@@ -23,7 +23,7 @@
         </div>
         <div class="flex xl:flex-col quicklinks-nav">
           <NuxtLink
-            to="#"
+            to="/account/expense/add"
             class="py-3 px-4 border border-grey-200 rounded-xl w-[186px] xl:w-[250px] 2xl:w-[418px] 3xl:w-full mr-2 xl:mr-0 block shrink-0 xl:mb-2"
           >
             <div class="w-[36px] mb-2">
@@ -32,15 +32,17 @@
             <div class="lato-medium text-blue-500">Add Expense</div>
           </NuxtLink>
 
-          <NuxtLink
-            to="#"
+          <button
             class="py-3 px-4 border border-grey-200 rounded-xl w-[186px] 2xl:w-[418px] xl:w-[250px] 3xl:w-full mr-2 xl:mr-0 block shrink-0"
+            @click="latchCategoryPopover"
           >
             <div class="w-[36px] mb-2">
               <NuxtImg src="/create-category-quick-link.svg" class="w-full" />
             </div>
-            <div class="lato-medium text-blue-500">Create a Category</div>
-          </NuxtLink>
+            <div class="lato-medium text-blue-500 text-left">
+              Create a Category
+            </div>
+          </button>
         </div>
       </div>
       <!-- Recent -->
@@ -49,10 +51,22 @@
       </div>
     </div>
   </div>
+
+  <AccountPopoversSuggestCategoryPopover
+    :setup="{
+      openModal: openCategorySuggestionModal,
+    }"
+    @close-add-category-popover="latchCategoryPopover"
+  />
 </template>
 
 <script lang="ts" setup>
 definePageMeta({
   layout: "account",
 });
+
+const openCategorySuggestionModal = ref(false);
+const latchCategoryPopover = () => {
+  openCategorySuggestionModal.value = !openCategorySuggestionModal.value;
+};
 </script>
