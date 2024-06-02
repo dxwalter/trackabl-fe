@@ -2,7 +2,11 @@
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ["~/assets/css/main.css", "~/assets/css/supporting-style.css"],
+  css: [
+    "~/assets/css/main.css",
+    "~/assets/css/supporting-style.css",
+    "animate.css/animate.min.css",
+  ],
 
   postcss: {
     plugins: {
@@ -25,8 +29,12 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/google-fonts",
     "vue3-carousel-nuxt",
+    "@pinia/nuxt",
   ],
   carousel: {
     prefix: "MyPrefix",
+  },
+  pinia: {
+    storesDirs: ["./stores/**"],
   },
 });

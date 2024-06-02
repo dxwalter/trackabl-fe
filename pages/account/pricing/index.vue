@@ -2,7 +2,7 @@
   <div>
     <div class="xl:w-[1008px] m-auto xl:p-7">
       <div
-        class="bg-white 2xl:border 2xl:border-grey-200 2xl:bg-white 2xl:shadow 2xl:w-[1008px] 2xl:pt-7 2xl:pb-5 2xl:px-"
+        class="bg-white 2xl:border 2xl:border-grey-200 2xl:bg-white 2xl:box-shadow 2xl:w-[1008px] 2xl:pt-7 2xl:pb-5 2xl:px-"
       >
         <div class="2xl:px-[100px] mb-6">
           <h1

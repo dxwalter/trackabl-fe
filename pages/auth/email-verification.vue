@@ -1,7 +1,7 @@
 <template>
   <div class="xl:py-[60px] 2xl:py-[120px]">
     <div
-      class="lg:w-[545px] m-auto lg:p-7 lg:border lg:border-grey-200 lg:bg-white lg:shadow"
+      class="lg:w-[545px] m-auto lg:p-7 lg:border lg:border-grey-200 lg:bg-white lg:box-shadow"
     >
       <div
         class="flex lg:justify-center text-navyBlue-900 lato-semi-bold text-2xl mb-6 lg:text-center lg:mb-8"

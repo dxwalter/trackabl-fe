@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    <InputsCurrencyPopover
+    <AccountPopoversCurrencyPopover
       :setup="{
         openModal: isCurrencyModalOpen,
       }"

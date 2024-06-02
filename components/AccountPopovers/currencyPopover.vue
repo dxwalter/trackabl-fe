@@ -17,7 +17,7 @@
           />
         </div>
         <!-- modal content -->
-        <div class="manage-container-height">
+        <div class="manage-modal-container-height">
           <!--  -->
           <div
             class="border border-grey-200 w-full card-border-radius px-6 py-3 flex justify-between mb-4"
@@ -240,13 +240,12 @@ const props = defineProps<{
   };
 }>();
 const CloseModal = () => {
-  console.log("Inner");
   emit("closeCurrencyModal");
 };
 </script>
 <style scoped>
-.manage-container-height {
-  height: calc(100vh - 300px);
+.manage-modal-container-height {
+  max-height: calc(100vh - 300px);
   overflow-y: scroll;
   padding-bottom: 20px;
 }

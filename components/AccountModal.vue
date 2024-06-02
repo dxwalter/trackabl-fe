@@ -93,7 +93,6 @@ watch(
 .modal-container .modal-inner-container {
   width: 100%;
   max-height: calc(100vh - 100px);
-  height: calc(100vh - 150px);
   background-color: white;
   position: absolute;
   bottom: 0px;

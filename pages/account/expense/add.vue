@@ -1,6 +1,6 @@
 <template>
   <div
-    class="lg:mt-20 xl:mt-0 lg:w-[545px] lg:m-auto lg:p-8 lg:border border-grey-200 box-shadow"
+    class="lg:mt-20 xl:mt-0 lg:w-[545px] lg:m-auto lg:p-8 lg:border border-grey-200 xl:box-shadow"
   >
     <div
       class="4xl:flex flex-col 4xl:justify-center 4xl:align-center px-[18px]"
@@ -25,7 +25,10 @@
           <InputsExpenseInput @expense-amount="getExpenseAmount" />
         </div>
         <div class="mb-4">
-          <InputsCategorySelector />
+          <InputsCategorySelector
+            @set-selected-ids="getCategoryIds"
+            @open-suggestion="openSuggestion"
+          />
         </div>
         <div class="mb-4">
           <InputsDateSelector />
@@ -55,6 +58,20 @@
       </div>
     </div>
   </div>
+  <AccountPopoversSuggestCategoryPopover
+    :setup="{
+      openModal: openCategorySuggestionModal,
+    }"
+    @close-add-category-popover="latchCategoryPopover"
+  />
+
+  <AccountPopoversSuggestSubcategoryPopover
+    :setup="{
+      openModal: openSubcategorySuggestionModal,
+      categoryId: categoryIdForSuggestion,
+    }"
+    @close-add-subcategory-popover="latchSubCategoryPopover"
+  />
 </template>
 
 <script lang="ts" setup>
@@ -62,9 +79,33 @@ definePageMeta({
   layout: "add-expense",
 });
 
+const openCategorySuggestionModal = ref(false);
+const latchCategoryPopover = () => {
+  openCategorySuggestionModal.value = !openCategorySuggestionModal.value;
+};
+
+const openSubcategorySuggestionModal = ref(false);
+const categoryIdForSuggestion = ref<null | number>(null);
+const latchSubCategoryPopover = () => {
+  openSubcategorySuggestionModal.value = !openSubcategorySuggestionModal.value;
+};
+const openSuggestion = (data: { type: string; categoryId?: number }) => {
+  if (data.type === "category") {
+    latchCategoryPopover();
+  } else {
+    categoryIdForSuggestion.value = data.categoryId ? data.categoryId : null;
+    latchSubCategoryPopover();
+  }
+};
+
 const getExpenseAmount = (data: number) => {
   // console.log(data);
 };
+
+const getCategoryIds = (data: {
+  categoryId: number;
+  subcategoryId: number;
+}) => {};
 </script>
 
 <style></style>

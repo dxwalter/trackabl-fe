@@ -16,7 +16,7 @@
         </div>
         <div>JPEG, JPG, PNG, or PDF</div>
       </div>
-      <input type="file" class="file-style" />
+      <input type="file" class="file-style cursor-pointer" />
     </div>
   </div>
 </template>
