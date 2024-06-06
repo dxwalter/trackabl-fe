@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "vue3-carousel-nuxt",
     "@pinia/nuxt",
+    "@nuxt/test-utils/module",
   ],
   carousel: {
     prefix: "MyPrefix",
