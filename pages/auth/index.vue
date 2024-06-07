@@ -76,7 +76,7 @@
                 style="text-underline-offset: 4px"
                 @click="mangePasswordVisibility"
               >
-                {{ isPasswordVisible ? "Hide" : "Show" }}
+                {{ isPasswordVisible ? 'Hide' : 'Show' }}
               </div>
             </div>
           </div>
@@ -109,10 +109,11 @@
 </template>
 <script lang="ts" setup>
 definePageMeta({
-  layout: "auth-page-layout",
+  layout: 'auth-page-layout',
 });
 
-import { useFormInputManipulator } from "@/composables/FormInputManipulator";
+import { useFormInputManipulator } from '@/composables/FormInputManipulator';
+import { ref } from 'vue';
 
 const { HidePassword, ShowPassword } = useFormInputManipulator();
 
@@ -121,9 +122,9 @@ const isFormSubmitted = ref(false);
 
 const mangePasswordVisibility = () => {
   if (isPasswordVisible.value) {
-    HidePassword("SignInPassword");
+    HidePassword('SignInPassword');
   } else {
-    ShowPassword("SignInPassword");
+    ShowPassword('SignInPassword');
   }
 
   isPasswordVisible.value = !isPasswordVisible.value;
