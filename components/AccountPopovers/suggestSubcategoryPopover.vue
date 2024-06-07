@@ -82,10 +82,11 @@
 </template>
 
 <script lang="ts" setup>
-import { useCategoryStore } from "@/stores/category";
+import { useCategoryStore } from '@/stores/category';
+import { ref, computed } from 'vue';
 const { list } = useCategoryStore();
 
-const emit = defineEmits(["closeAddSubcategoryPopover"]);
+const emit = defineEmits(['closeAddSubcategoryPopover']);
 
 const props = defineProps<{
   setup: {
@@ -94,14 +95,14 @@ const props = defineProps<{
   };
 }>();
 
-const subcategoryName = ref("");
+const subcategoryName = ref('');
 
 const categoryDetails = computed(() =>
   list.filter((cat) => cat.id === props.setup.categoryId)
 );
 
 const CloseModal = () => {
-  emit("closeAddSubcategoryPopover");
+  emit('closeAddSubcategoryPopover');
 };
 </script>
 
