@@ -56,7 +56,7 @@
     >
       <input
         :required="props.setup.isRequired"
-        type="password"
+        :type="type"
         class="w-full px-[14px] rounded-xl py-3 text-navyBlue-900 self-center password-field"
         :id="props.setup.id"
         :placeholder="props.setup.placeholder"
@@ -66,8 +66,9 @@
         class="self-center h-full px-[14px] text-blue-700 text-sm underline cursor-pointer"
         style="text-underline-offset: 4px"
         @click="mangePasswordVisibility"
+        data-test-password-visibility="true"
       >
-        {{ isPasswordVisible ? "Hide" : "Show" }}
+        {{ isPasswordVisible ? 'Hide' : 'Show' }}
       </div>
     </div>
     <div v-if="props.setup.showGuideLinesOnActive && isPasswordFieldActive">
@@ -112,7 +113,7 @@
 </template>
 
 <script lang="ts" setup>
-const emit = defineEmits(["newPasswordState"]);
+const emit = defineEmits(['newPasswordState']);
 const props = defineProps<{
   setup: {
     label: string;
@@ -123,12 +124,13 @@ const props = defineProps<{
   };
 }>();
 
-import { useFormInputManipulator } from "@/composables/FormInputManipulator";
+import { useFormInputManipulator } from '@/composables/FormInputManipulator';
 
 const { HidePassword, ShowPassword } = useFormInputManipulator();
 
-const userPassword = ref<string>("");
+const userPassword = ref<string>('');
 const passwordScore = ref(0);
+const type = ref('password');
 
 const isPasswordVisible = ref(false);
 const isPasswordFieldActive = ref(false);
@@ -141,8 +143,10 @@ const passwordValidationRequirement = ref({
 const mangePasswordVisibility = () => {
   if (isPasswordVisible.value) {
     HidePassword(props.setup.id);
+    type.value = 'password';
   } else {
-    ShowPassword(props.setup.id);
+    const kennyd = ShowPassword(props.setup.id);
+    type.value = 'text';
   }
 
   isPasswordVisible.value = !isPasswordVisible.value;
@@ -191,7 +195,7 @@ const validatePassword = (password: string) => {
     passwordValidationRequirement.value.containsNumbersAndSymbols = true;
   }
 
-  emit("newPasswordState", {
+  emit('newPasswordState', {
     status: passwordScore.value === 3 ? true : false,
     data: password,
   });

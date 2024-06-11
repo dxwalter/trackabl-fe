@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="flex justify-between">
+    <div class="flex justify-between" data-test-component="true">
       <div class="lato-semi-bold text-navyBlue-900 mb-2 xl:text-lg">
         Recent Transaction
       </div>
 
       <NuxtLink
         to="/account/analytics"
-        class="lato-semi-bold text-blue-500 underline"
+        class="lato-semi-bold text-blue-500 underline view-all-link"
         style="text-underline-offset: 4px"
       >
         View All
@@ -21,7 +21,10 @@
       <div class="w-[60px] m-auto mb-1">
         <NuxtImg src="/recent-transaction.svg" class="w-full" />
       </div>
-      <div class="text-center text-navyBlue-900 lato-medium text-sm mb-1">
+      <div
+        class="text-center text-navyBlue-900 lato-medium text-sm mb-1"
+        id="noTransaction"
+      >
         Made a transaction today?
       </div>
       <div class="text-xs text-grey-500 text-center">
@@ -29,7 +32,7 @@
       </div>
     </div>
     <!-- 00 -->
-    <div class="py-5" v-if="recentTransactions.length">
+    <div class="py-5" v-if="recentTransactions?.length">
       <NuxtLink
         :to="`/account/expense/${expense.id}`"
         class="flex justify-between mb-6"
@@ -66,73 +69,29 @@
 </template>
 
 <script lang="ts" setup>
-const recentTransactions = computed(() => [
-  {
-    id: 1,
+import { withDefaults, defineProps } from 'vue';
 
-    subactegoryName: "Cooking gas",
-    category: {
-      name: "Housing",
-      color: "#f79009",
-      icon: "/house-category-icon.svg",
-    },
-    expenseCurrency: "₦",
-    expenseAmount: "36,000",
-    expenseDate: "Sun, 16 Jan",
-  },
-  {
-    id: 2,
+interface Expense {
+  id: number;
+  subactegoryName: string;
+  category: {
+    name: string;
+    color: string;
+    icon: string;
+  };
+  expenseCurrency: string;
+  expenseAmount: string;
+  expenseDate: string;
+}
 
-    subactegoryName: "A/C Repair",
-    category: {
-      name: "Car",
-      color: "#12B76A",
-      icon: "/car-category.svg",
-    },
-    expenseCurrency: "₦",
-    expenseAmount: "12,000,000",
-    expenseDate: "Sun, 16 Jan",
-  },
+const props = withDefaults(
+  defineProps<{
+    recentTransactions: Expense[];
+  }>(),
   {
-    id: 3,
-
-    subactegoryName: "Bolu Upkeep",
-    category: {
-      name: "Family",
-      color: "#004EC1",
-      icon: "/family-category.svg",
-    },
-    expenseCurrency: "₦",
-    expenseAmount: "10,000",
-    expenseDate: "Sun, 16 Jan",
-  },
-  {
-    id: 4,
-
-    subactegoryName: "Food",
-    category: {
-      name: "Housing",
-      color: "#f79009",
-      icon: "/house-category-icon.svg",
-    },
-    expenseCurrency: "₦",
-    expenseAmount: "36,000",
-    expenseDate: "Sun, 16 Jan",
-  },
-  {
-    id: 5,
-
-    subactegoryName: "Internet",
-    category: {
-      name: "Housing",
-      color: "#f79009",
-      icon: "/house-category-icon.svg",
-    },
-    expenseCurrency: "₦",
-    expenseAmount: "36,000",
-    expenseDate: "Sun, 16 Jan",
-  },
-]);
+    recentTransactions: () => [],
+  }
+);
 </script>
 
 <style></style>

@@ -50,6 +50,7 @@ describe('CurrencyModal.vue', () => {
   });
 
   it('emits closeCurrencyModal event when CloseModal is called', async () => {
+    console.log(wrapper.vm);
     await wrapper.vm.CloseModal();
     expect(wrapper.emitted().closeCurrencyModal).toBeTruthy();
   });
