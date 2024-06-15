@@ -11,7 +11,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "test": "vitest",
-    "start:app": "pm2 deploy ecosystem.config.js development"
+    "start:app": "pm2 deploy ecosystem.config.cjs development"
   },
   "dependencies": {
     "@nuxt/image": "^1.7.0",

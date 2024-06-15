@@ -15,7 +15,7 @@ module.exports = {
       repo: "git@git-repo.git",
       ssh_options: ["ForwardAgent=yes"],
       path: "/var/www/trackabl-frontent/actions-runner/_work/trackabl-fe/trackabl-fe",
-      "post-deploy": "pm2 startOrRestart ecosystem.config.js --env production",
+      "post-deploy": "pm2 startOrRestart ecosystem.config.cjs --env production",
     },
   },
 };
