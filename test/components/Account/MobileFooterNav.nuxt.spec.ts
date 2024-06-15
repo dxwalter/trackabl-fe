@@ -91,6 +91,6 @@ describe('FooterMenu.vue', () => {
     expect(addButton.exists()).toBe(true);
     const addLink = addButton.findComponent(NuxtLink);
     expect(addLink.exists()).toBe(true);
-    expect(addLink.props('to')).toBe('/account/expense/add.vue');
+    expect(addLink.props('to')).toBe('/account/expense/add');
   });
 });

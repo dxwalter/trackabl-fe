@@ -89,7 +89,44 @@ const props = withDefaults(
     recentTransactions: Expense[];
   }>(),
   {
-    recentTransactions: () => [],
+    recentTransactions: () => [
+      {
+        id: 1,
+        subactegoryName: 'Cooking gas',
+        category: {
+          name: 'Housing',
+          color: '#f79009',
+          icon: '/house-category-icon.svg',
+        },
+        expenseCurrency: '₦',
+        expenseAmount: '36,000',
+        expenseDate: 'Sun, 16 Jan',
+      },
+      {
+        id: 2,
+        subactegoryName: 'A/C Repair',
+        category: {
+          name: 'Car',
+          color: '#12B76A',
+          icon: '/car-category.svg',
+        },
+        expenseCurrency: '₦',
+        expenseAmount: '12,000,000',
+        expenseDate: 'Sun, 16 Jan',
+      },
+      {
+        id: 3,
+        subactegoryName: 'Bolu Upkeep',
+        category: {
+          name: 'Family',
+          color: '#004EC1',
+          icon: '/family-category.svg',
+        },
+        expenseCurrency: '₦',
+        expenseAmount: '10,000',
+        expenseDate: 'Sun, 16 Jan',
+      },
+    ],
   }
 );
 </script>

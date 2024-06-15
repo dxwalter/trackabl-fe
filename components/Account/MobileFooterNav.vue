@@ -23,7 +23,7 @@
         <div
           class="absolute bg-white w-fit p-1 manage-direction cursor-pointer"
         >
-          <NuxtLink to="/account/expense/add.vue">
+          <NuxtLink to="/account/expense/add">
             <button class="w-[64px] h-[64px] bg-navyBlue-900 p-4 rounded-full">
               <NuxtImg src="/plus.svg" class="w-full" />
             </button>
