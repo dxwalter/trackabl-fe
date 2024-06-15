@@ -10,8 +10,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test": "vitest",
-    "start:app": "node ecosystem.config.cjs"
+    "test": "vitest"
   },
   "dependencies": {
     "@nuxt/image": "^1.7.0",
