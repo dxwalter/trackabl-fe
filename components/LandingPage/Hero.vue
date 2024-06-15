@@ -7,7 +7,7 @@
             <div
               class="w-full text-[48px] 2xl:text-[72px] text-white text-center 2xl:text-left lato-semi-bold leading-[60px] mb-5 2xl:mb-6 lg:w-[500px] 2xl:w-full m-auto 2xl:ml-0 2xl:leading-[90px]"
             >
-              Take control of your finances with Trackabl
+              Take control of your finances with Trackable
             </div>
             <div
               class="text-center 2xl:text-left text-grey-300 leading-7 2xl:leading-[30px] text-[18px] 2xl:text-[20px] lato-regular mb-6 2xl:mb-12 lg:w-[500px] 3xl:w-[595px] m-auto 2xl:ml-0"
