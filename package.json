@@ -10,7 +10,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test": "vitest"
+    "test": "vitest",
+    "start:app": "pm2 deploy ecosystem.config.js development"
   },
   "dependencies": {
     "@nuxt/image": "^1.7.0",
