@@ -12,7 +12,7 @@
             :style="{ backgroundColor: selectedCategory[0].color }"
           >
             <div class="w-[16px]">
-              <NuxtImg :src="selectedCategory[0].icon" class="w-full" />
+              <img :src="selectedCategory[0].icon" class="w-full" />
             </div>
           </div>
           <div class="flex justify-between w-full self-center">
@@ -28,7 +28,7 @@
         </div>
 
         <div class="w-[20px] self-center">
-          <NuxtImg src="/caret-thin-down.svg" class="w-full" />
+          <img src="~/assets/img/caret-thin-down.svg" class="w-full" />
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@
       <div class="flex justify-between mb-6 2xl:mb-14">
         <div class="w-[20px] self-center">
           <NuxtLink to="/auth">
-            <NuxtImg src="/arrow-left.svg" class="w-full" />
+            <img src="~/assets/img/arrow-left.svg" class="w-full" />
           </NuxtLink>
         </div>
 
@@ -34,7 +34,7 @@
               class="flex justify-center w-full bg-white px-8 py-4 border rounded-xl border-grey-300"
             >
               <div class="w-[24px] mr-3 self-center">
-                <NuxtImg src="/google-login-icon.svg" class="w-full"></NuxtImg>
+                <img src="~/assets/img/google-login-icon.svg" class="w-full" />
               </div>
               <span class="text-navyBlue-900 lato-medium self-center block"
                 >Sign up with Google</span
@@ -107,7 +107,7 @@
             >
               <div class="button-text">Continue</div>
               <div class="w-6 button-spinner">
-                <NuxtImg src="/button-loader.svg" class="w-full" />
+                <img src="~/assets/img/button-loader.svg" class="w-full" />
               </div>
             </button>
           </div>

@@ -8,7 +8,7 @@
       <div class="flex justify-between mb-6 2xl:mb-14 w-full xl:hidden">
         <div class="w-[20px] self-center">
           <NuxtLink to="/auth">
-            <NuxtImg src="/arrow-left.svg" class="w-full" />
+            <img src="~/assets/img/arrow-left.svg" class="w-full" />
           </NuxtLink>
         </div>
 

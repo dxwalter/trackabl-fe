@@ -4,7 +4,7 @@
       <div class="flex justify-between w-full">
         <div class="w-[140px] xl:w-[170px] self-center">
           <NuxtLink to="/">
-            <NuxtImg src="/white-logo.svg" class="w-full" />
+            <img src="~/assets/img/white-logo.svg" class="w-full" />
           </NuxtLink>
         </div>
         <div
@@ -54,7 +54,7 @@
                 Get Started
               </div>
               <div class="w-[18px] self-center">
-                <NuxtImg src="/arrow-right-white.svg" class="w-full" />
+                <img src="~/assets/img/arrow-right-white.svg" class="w-full" />
               </div>
             </NuxtLink>
           </div>

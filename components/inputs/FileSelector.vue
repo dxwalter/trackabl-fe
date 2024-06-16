@@ -7,7 +7,7 @@
       class="flex w-full py-[16px] px-[24px] border rounded-xl border-grey-300 cursor-pointer relative"
     >
       <div class="w-[40px] mr-3 self-center">
-        <NuxtImg src="/file-upload-icon.svg" class="w-full" />
+        <img src="~/assets/img/file-upload-icon.svg" class="w-full" />
       </div>
       <div class="text-xs text-grey-500 self-center">
         <div class="mb-1">

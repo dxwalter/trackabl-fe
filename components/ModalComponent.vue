@@ -16,7 +16,7 @@
                   class="border-0 rounded-full close-modal-btn w-[24px] h-[24px] flex justify-center item-ends border-0 cursor-pointer"
                   @click="closeModal"
                 >
-                  <NuxtImg src="/close-modal.svg" class="w-full" />
+                  <img src="~/assets/img/close-modal.svg" class="w-full" />
                 </button>
               </div>
             </div>

@@ -16,14 +16,14 @@
               24/04/2024
             </div>
             <div class="w-[20px] self-center">
-              <NuxtImg src="/calendar.svg" class="w-full" />
+              <img src="~/assets/img/calendar.svg" class="w-full" />
             </div>
           </div>
         </div> -->
 
         <template #input-icon>
           <div class="w-[20px] self-center">
-            <NuxtImg src="/calendar.svg" class="w-full" />
+            <img src="~/assets/img/calendar.svg" class="w-full" />
           </div>
         </template>
       </VueDatePicker>

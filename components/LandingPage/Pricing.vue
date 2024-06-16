@@ -76,21 +76,21 @@
               <!--  -->
               <div class="flex mb-4">
                 <div class="w-[24px] mr-3">
-                  <NuxtImg src="/check-icon.svg" class="w-full" />
+                  <img src="~/assets/img/check-icon.svg" class="w-full" />
                 </div>
                 <div class="text-grey-500">Unlock all Features</div>
               </div>
               <!--  -->
               <div class="flex mb-4">
                 <div class="w-[24px] mr-3">
-                  <NuxtImg src="/check-icon.svg" class="w-full" />
+                  <img src="~/assets/img/check-icon.svg" class="w-full" />
                 </div>
                 <div class="text-grey-500">Basic reporting + analytics</div>
               </div>
               <!--  -->
               <div class="flex mb-4">
                 <div class="w-[24px] mr-3">
-                  <NuxtImg src="/check-icon.svg" class="w-full" />
+                  <img src="~/assets/img/check-icon.svg" class="w-full" />
                 </div>
                 <div class="text-grey-500">Up to 10 individual users</div>
               </div>
@@ -142,21 +142,21 @@
               <!--  -->
               <div class="flex mb-4">
                 <div class="w-[24px] mr-3">
-                  <NuxtImg src="/check-icon.svg" class="w-full" />
+                  <img src="~/assets/img/check-icon.svg" class="w-full" />
                 </div>
                 <div class="text-grey-500">Unlock all Features</div>
               </div>
               <!--  -->
               <div class="flex mb-4">
                 <div class="w-[24px] mr-3">
-                  <NuxtImg src="/check-icon.svg" class="w-full" />
+                  <img src="~/assets/img/check-icon.svg" class="w-full" />
                 </div>
                 <div class="text-grey-500">Basic reporting + analytics</div>
               </div>
               <!--  -->
               <div class="flex mb-4">
                 <div class="w-[24px] mr-3">
-                  <NuxtImg src="/check-icon.svg" class="w-full" />
+                  <img src="~/assets/img/check-icon.svg" class="w-full" />
                 </div>
                 <div class="text-grey-500">Up to 10 individual users</div>
               </div>

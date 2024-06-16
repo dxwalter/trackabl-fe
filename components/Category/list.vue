@@ -14,7 +14,7 @@
           }"
         >
           <div class="w-[20px]">
-            <NuxtImg :src="category.icon" class="w-full" />
+            <img :src="category.icon" class="w-full" />
           </div>
         </div>
 
@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="w-[16px] self-center">
-        <NuxtImg src="/caret-right.svg" class="w-full" />
+        <img src="~/assets/img/caret-right.svg" class="w-full" />
       </div>
     </div>
   </div>
