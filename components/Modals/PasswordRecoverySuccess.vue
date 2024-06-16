@@ -9,7 +9,7 @@
       >
         <div class="flex flex-col justify-center items-center">
           <div class="w-[198px] mb-6">
-            <img src="./successBadge.svg" class="w-full" />
+            <NuxtImg src="/successBadge.svg" class="w-full" />
           </div>
           <div
             class="text-navyBlue-900 mb-2 text-2xl text-center lato-semi-bold"
