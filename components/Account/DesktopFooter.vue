@@ -13,7 +13,7 @@
             target="_blank"
             class="sm-links"
           >
-            <img src="~/assets/img/facebook-grey.svg" class="w-full">
+            <NuxtImg src="/facebook-grey.svg" class="w-full"></NuxtImg>
           </NuxtLink>
         </div>
         <div class="w-[18px] self-center mx-4">
@@ -22,7 +22,7 @@
             to="https://twitter.com/officialtrackbl"
             target="_blank"
           >
-            <img src="~/assets/img/x-grey.svg" class="w-full"></NuxtImg
+            <NuxtImg src="/x-grey.svg" class="w-full"></NuxtImg
           ></NuxtLink>
         </div>
         <div class="w-[24px] self-center">
@@ -30,7 +30,7 @@
             class="sm-links"
             to="https://www.instagram.com/trackabl/"
             target="_blank"
-            ><img src="~/assets/img/instagram-grey.svg" class="w-full"></NuxtImg
+            ><NuxtImg src="/instagram-grey.svg" class="w-full"></NuxtImg
           ></NuxtLink>
         </div>
       </div>
@@ -42,7 +42,7 @@
     >
       <NuxtLink to="/account/expense/add">
         <button class="w-[64px] h-[64px] bg-navyBlue-900 p-4 rounded-full">
-          <img src="~/assets/img/plus.svg" class="w-full" />
+          <NuxtImg src="/plus.svg" class="w-full" />
         </button>
       </NuxtLink>
     </div>
@@ -50,12 +50,12 @@
 </template>
 
 <script lang="ts" setup>
-import { useRoute } from 'vue-router';
-import { ref } from 'vue';
+import { useRoute } from "vue-router";
+import { ref } from "vue";
 
 const currentYear = new Date().getFullYear();
 const isRouteAddExpense = ref(
-  useRoute().path.toLowerCase().includes('expense/add')
+  useRoute().path.toLowerCase().includes("expense/add")
 );
 </script>
 

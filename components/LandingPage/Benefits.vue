@@ -103,7 +103,9 @@
           >
             <div
               class="w-full h-full landing-analytics-image"
-              style="background-image: url('/analytics.png')"
+              :style="{
+                backgroundImage: `url(/_nuxt/assets/img/analytics.png)`,
+              }"
             ></div>
           </div>
         </div>

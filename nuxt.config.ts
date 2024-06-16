@@ -7,7 +7,9 @@ export default defineNuxtConfig({
     "~/assets/css/supporting-style.css",
     "animate.css/animate.min.css",
   ],
-
+  image: {
+    dir: "assets/img",
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
