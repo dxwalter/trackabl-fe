@@ -40,9 +40,12 @@
           <div
             class="flex justify-center md:w-60 m-auto lg:w-[300px] 2xl:w-6/12 3xl:w-5/12"
           >
-            <NuxtImg :src="IphoneMockUp" class="w-full 2xl:hidden"></NuxtImg>
             <NuxtImg
-              :src="DesktopMockup"
+              src="/iPhone-12-Pro-mockup.png"
+              class="w-full 2xl:hidden"
+            ></NuxtImg>
+            <NuxtImg
+              src="/iPhone-12-Pro-mockup-desktop.png"
               class="w-full hidden 2xl:block"
             ></NuxtImg>
           </div>
@@ -52,7 +55,4 @@
     </div>
   </section>
 </template>
-<script setup lang="ts">
-import IphoneMockUp from "/iPhone-12-Pro-mockup.png";
-import DesktopMockup from "/iPhone-12-Pro-mockup-desktop.png";
-</script>
+<script setup lang="ts"></script>

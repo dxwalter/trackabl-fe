@@ -98,20 +98,20 @@
 </template>
 
 <script lang="ts" setup>
-import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Slide } from 'vue3-carousel';
-import DonutChart from './DonutChart.vue';
-import { ref } from 'vue';
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide } from "vue3-carousel";
+import DonutChart from "./DonutChart.vue";
+import { ref } from "vue";
 
 const categories = ref([
-  { id: 1, name: 'Food & Drinks', amount: '1500', icon: 'food-icon.svg' },
-  { id: 2, name: 'Housing', amount: '0.00', icon: 'food-icon.svg' },
-  { id: 3, name: 'Shopping', amount: '0.00', icon: 'food-icon.svg' },
-  { id: 4, name: 'Family', amount: '0.00', icon: 'food-icon.svg' },
-  { id: 5, name: 'Healthcare', amount: '0.00', icon: 'food-icon.svg' },
-  { id: 6, name: 'Entertainment', amount: '0.00', icon: 'food-icon.svg' },
-  { id: 7, name: 'Transportation', amount: '0.00', icon: 'food-icon.svg' },
-  { id: 8, name: 'Travel/Vacation', amount: '0.00', icon: 'food-icon.svg' },
+  { id: 1, name: "Food & Drinks", amount: "1500", icon: "food-icon.svg" },
+  { id: 2, name: "Housing", amount: "0.00", icon: "food-icon.svg" },
+  { id: 3, name: "Shopping", amount: "0.00", icon: "food-icon.svg" },
+  { id: 4, name: "Family", amount: "0.00", icon: "food-icon.svg" },
+  { id: 5, name: "Healthcare", amount: "0.00", icon: "food-icon.svg" },
+  { id: 6, name: "Entertainment", amount: "0.00", icon: "food-icon.svg" },
+  { id: 7, name: "Transportation", amount: "0.00", icon: "food-icon.svg" },
+  { id: 8, name: "Travel/Vacation", amount: "0.00", icon: "food-icon.svg" },
 ]);
 
 const openCategorySuggestionModal = ref(false);
@@ -130,62 +130,62 @@ const chunkArray = (array: any[], chunkSize: number) => {
 const chunkedCategories = chunkArray(categories.value, 2);
 
 const breakpoints = {
-  0: { itemsToShow: 1, snapAlign: 'center' },
-  640: { itemsToShow: 1, snapAlign: 'center' },
-  768: { itemsToShow: 1, snapAlign: 'center' },
-  1024: { itemsToShow: 1, snapAlign: 'center' },
-  1280: { itemsToShow: 1, snapAlign: 'center' },
-  1440: { itemsToShow: 1, snapAlign: 'center' },
+  0: { itemsToShow: 1, snapAlign: "center" },
+  640: { itemsToShow: 1, snapAlign: "center" },
+  768: { itemsToShow: 1, snapAlign: "center" },
+  1024: { itemsToShow: 1, snapAlign: "center" },
+  1280: { itemsToShow: 1, snapAlign: "center" },
+  1440: { itemsToShow: 1, snapAlign: "center" },
 };
 
 const transactions = [
   {
     id: 1,
-    description: 'Cooking gas',
-    amount: '₦ 12,000',
-    category: 'Housing',
-    date: 'Sun, 16 Jan',
-    label: '#F79009',
+    description: "Cooking gas",
+    amount: "₦ 12,000",
+    category: "Housing",
+    date: "Sun, 16 Jan",
+    label: "#F79009",
   },
   {
     id: 2,
-    description: 'A/C Repair',
-    amount: '₦ 36,000',
-    category: 'Car',
-    date: 'Sun, 16 Jan',
-    label: '#12B76A',
+    description: "A/C Repair",
+    amount: "₦ 36,000",
+    category: "Car",
+    date: "Sun, 16 Jan",
+    label: "#12B76A",
   },
   {
     id: 3,
-    description: 'Bolu Upkeep',
-    amount: '₦ 10,000',
-    category: 'Family',
-    date: 'Sun, 16 Jan',
-    label: '#004EC1',
+    description: "Bolu Upkeep",
+    amount: "₦ 10,000",
+    category: "Family",
+    date: "Sun, 16 Jan",
+    label: "#004EC1",
   },
   {
     id: 4,
-    description: 'Food',
-    amount: '₦ 12,000',
-    category: 'Housing',
-    date: 'Sun, 16 Jan',
-    label: '#F79009',
+    description: "Food",
+    amount: "₦ 12,000",
+    category: "Housing",
+    date: "Sun, 16 Jan",
+    label: "#F79009",
   },
   {
     id: 5,
-    description: 'A/C Repair',
-    amount: '₦ 36,000',
-    category: 'Car',
-    date: 'Sun, 16 Jan',
-    label: '#12B76A',
+    description: "A/C Repair",
+    amount: "₦ 36,000",
+    category: "Car",
+    date: "Sun, 16 Jan",
+    label: "#12B76A",
   },
   {
     id: 6,
-    description: 'Internet',
-    amount: '₦ 12,000',
-    category: 'Housing',
-    date: 'Sun, 16 Jan',
-    label: '#F79009',
+    description: "Internet",
+    amount: "₦ 12,000",
+    category: "Housing",
+    date: "Sun, 16 Jan",
+    label: "#F79009",
   },
 ];
 </script>
