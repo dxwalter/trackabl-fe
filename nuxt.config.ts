@@ -36,7 +36,6 @@ export default defineNuxtConfig({
     [
       "@nuxt/image",
       {
-        provider: "static",
         dir: "assets/img",
       },
     ],
