@@ -28,11 +28,18 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxtjs/tailwindcss",
-    "@nuxt/image",
+    // "@nuxt/image",
     "@nuxtjs/google-fonts",
     "vue3-carousel-nuxt",
     "@pinia/nuxt",
     "@nuxt/test-utils/module",
+    [
+      "@nuxt/image",
+      {
+        provider: "static",
+        dir: "assets/img",
+      },
+    ],
   ],
   carousel: {
     prefix: "MyPrefix",
