@@ -18,7 +18,7 @@
             </div>
             <div class="flex justify-center">
               <div class="w-[16px] self-center mr-1">
-                <NuxtImg
+                <img
                   :src="slide.trendStatus ? '/trend-up.svg' : '/trend-down.svg'"
                   class="w-full"
                 />
@@ -40,77 +40,77 @@
 </template>
 
 <script lang="ts" setup>
-import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel';
-import { computed } from 'vue';
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
+import { computed } from "vue";
 
 const breakpoints = {
   0: {
     itemsToShow: 1.02,
-    snapAlign: 'left',
+    snapAlign: "left",
   },
   375: {
     itemsToShow: 1.05,
-    snapAlign: 'left',
+    snapAlign: "left",
   },
   640: {
     itemsToShow: 2,
-    snapAlign: 'left',
+    snapAlign: "left",
   },
   768: {
     itemsToShow: 2.05,
-    snapAlign: 'left',
+    snapAlign: "left",
   },
   900: {
     itemsToShow: 2.9,
-    snapAlign: 'left',
+    snapAlign: "left",
   },
   1024: {
     itemsToShow: 2.9,
-    snapAlign: 'left',
+    snapAlign: "left",
   },
   1280: {
     itemsToShow: 3.9,
-    snapAlign: 'left',
+    snapAlign: "left",
   },
   1440: {
     itemsToShow: 4,
-    snapAlign: 'left',
+    snapAlign: "left",
   },
 };
 
 const dataValue = ref([
   {
-    title: 'Today spend',
-    date: 'Mon, 15 Apr',
-    currency: '₦',
-    amount: '12,000',
+    title: "Today spend",
+    date: "Mon, 15 Apr",
+    currency: "₦",
+    amount: "12,000",
     trendStatus: true,
-    trendMessage: '47% up from yesterday',
+    trendMessage: "47% up from yesterday",
   },
   {
-    title: 'This week spend',
-    date: '15 Apr - 21 Apr',
-    currency: '₦',
-    amount: '28,000',
+    title: "This week spend",
+    date: "15 Apr - 21 Apr",
+    currency: "₦",
+    amount: "28,000",
     trendStatus: false,
-    trendMessage: '47% below than last week',
+    trendMessage: "47% below than last week",
   },
   {
     title: "This month's spend",
-    date: 'April',
-    currency: '₦',
-    amount: '148,000',
+    date: "April",
+    currency: "₦",
+    amount: "148,000",
     trendStatus: true,
-    trendMessage: '47% up than than month',
+    trendMessage: "47% up than than month",
   },
   {
     title: "This years's spend",
-    date: '2024',
-    currency: '₦',
-    amount: '5,000,000',
+    date: "2024",
+    currency: "₦",
+    amount: "5,000,000",
     trendStatus: false,
-    trendMessage: '47% below than month',
+    trendMessage: "47% below than month",
   },
 ]);
 

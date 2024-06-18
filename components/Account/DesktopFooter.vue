@@ -13,7 +13,7 @@
             target="_blank"
             class="sm-links"
           >
-            <NuxtImg src="/facebook-grey.svg" class="w-full"></NuxtImg>
+            <img src="~/assets/img/facebook-grey.svg" class="w-full" />
           </NuxtLink>
         </div>
         <div class="w-[18px] self-center mx-4">
@@ -22,16 +22,16 @@
             to="https://twitter.com/officialtrackbl"
             target="_blank"
           >
-            <NuxtImg src="/x-grey.svg" class="w-full"></NuxtImg
-          ></NuxtLink>
+            <img src="~/assets/img/x-grey.svg" class="w-full"
+          /></NuxtLink>
         </div>
         <div class="w-[24px] self-center">
           <NuxtLink
             class="sm-links"
             to="https://www.instagram.com/trackabl/"
             target="_blank"
-            ><NuxtImg src="/instagram-grey.svg" class="w-full"></NuxtImg
-          ></NuxtLink>
+            ><img src="~/assets/img/instagram-grey.svg" class="w-full"
+          /></NuxtLink>
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@
     >
       <NuxtLink to="/account/expense/add">
         <button class="w-[64px] h-[64px] bg-navyBlue-900 p-4 rounded-full">
-          <NuxtImg src="/plus.svg" class="w-full" />
+          <img src="~/assets/img/plus.svg" class="w-full" />
         </button>
       </NuxtLink>
     </div>

@@ -6,7 +6,7 @@
       >
         <!-- nav -->
         <div class="w-[140px]">
-          <NuxtImg src="/white-logo.svg" class="w-full"></NuxtImg>
+          <img src="~/assets/img/white-logo.svg" class="w-full" />
         </div>
         <!-- carousel -->
         <div class="flex justify-center w-full">
@@ -26,7 +26,7 @@
                   to="https://www.facebook.com/61559650231999"
                   target="_blank"
                 >
-                  <NuxtImg src="/facebook.svg" class="w-full"></NuxtImg>
+                  <img src="~/assets/img/facebook.svg" class="w-full" />
                 </NuxtLink>
               </div>
               <div class="w-[18px] self-center mx-4">
@@ -34,15 +34,15 @@
                   to="https://twitter.com/officialtrackbl"
                   target="_blank"
                 >
-                  <NuxtImg src="/x.svg" class="w-full"></NuxtImg
-                ></NuxtLink>
+                  <img src="~/assets/img/x.svg" class="w-full"
+                /></NuxtLink>
               </div>
               <div class="w-[24px] self-center">
                 <NuxtLink
                   to="https://www.instagram.com/trackabl/"
                   target="_blank"
-                  ><NuxtImg src="/instagram.svg" class="w-full"></NuxtImg
-                ></NuxtLink>
+                  ><img src="~/assets/img/instagram.svg" class="w-full"
+                /></NuxtLink>
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@
         <div class="w-full xl:hidden">
           <div class="w-[115px] mb-6 lg:mb-8 m-auto">
             <NuxtLink to="/auth">
-              <NuxtImg src="/blue-logo.svg" class="w-full" />
+              <img src="~/assets/img/blue-logo.svg" class="w-full" />
             </NuxtLink>
           </div>
         </div>

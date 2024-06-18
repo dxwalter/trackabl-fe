@@ -40,11 +40,11 @@
           <div
             class="flex justify-center md:w-60 m-auto lg:w-[300px] 2xl:w-6/12 3xl:w-5/12"
           >
-            <NuxtImg
+            <img
               src="~/assets/img/iPhone-12-Pro-mockup.png"
               class="w-full 2xl:hidden"
-            ></NuxtImg>
-            <NuxtImg
+            />
+            <img
               src="~/assets/img/iPhone-12-Pro-mockup-desktop.png"
               class="w-full hidden 2xl:block"
             />
