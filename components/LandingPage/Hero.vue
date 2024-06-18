@@ -7,7 +7,7 @@
             <div
               class="w-full text-[48px] 2xl:text-[72px] text-white text-center 2xl:text-left lato-semi-bold leading-[60px] mb-5 2xl:mb-6 lg:w-[500px] 2xl:w-full m-auto 2xl:ml-0 2xl:leading-[90px]"
             >
-              Take control of your finances with Trackable
+              Take control of your finances with Trackabl
             </div>
             <div
               class="text-center 2xl:text-left text-grey-300 leading-7 2xl:leading-[30px] text-[18px] 2xl:text-[20px] lato-regular mb-6 2xl:mb-12 lg:w-[500px] 3xl:w-[595px] m-auto 2xl:ml-0"
@@ -41,11 +41,11 @@
             class="flex justify-center md:w-60 m-auto lg:w-[300px] 2xl:w-6/12 3xl:w-5/12"
           >
             <NuxtImg
-              src="/iPhone-12-Pro-mockup.png"
+              src="~/assets/img/iPhone-12-Pro-mockup.png"
               class="w-full 2xl:hidden"
             ></NuxtImg>
             <NuxtImg
-              src="/iPhone-12-Pro-mockup-desktop.png"
+              src="~/assets/img/iPhone-12-Pro-mockup-desktop.png"
               class="w-full hidden 2xl:block"
             />
           </div>
