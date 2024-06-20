@@ -4,7 +4,7 @@
       @close-modal="CloseModal()"
       :setup="{
         modalActive: props.setup.openModal,
-        modalTitle: 'Expense currency',
+        modalTitle: 'Filter Year',
       }"
     >
       <div>
@@ -233,14 +233,14 @@
   </div>
 </template>
 <script setup lang="ts">
-const emit = defineEmits(["closeCurrencyModal"]);
+const emit = defineEmits(['closeCurrencyModal']);
 const props = defineProps<{
   setup: {
     openModal: boolean;
   };
 }>();
 const CloseModal = () => {
-  emit("closeCurrencyModal");
+  emit('closeCurrencyModal');
 };
 </script>
 <style scoped>

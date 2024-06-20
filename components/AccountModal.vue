@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts" setup>
-const emit = defineEmits(["closeModal"]);
+const emit = defineEmits(['closeModal']);
 
 const props = defineProps<{
   setup: {
@@ -44,16 +44,16 @@ const props = defineProps<{
 }>();
 
 const closeModal = () => {
-  emit("closeModal");
+  emit('closeModal');
 };
 
 const HideOverflowInBodyTag = () => {
-  const bodyElement = document.getElementsByTagName("body")[0];
-  bodyElement.classList.add("overflow-hidden");
+  const bodyElement = document?.getElementsByTagName('body')[0];
+  bodyElement?.classList?.add('overflow-hidden');
 };
 const ShowOverflowInBodyTag = () => {
-  const bodyElement = document.getElementsByTagName("body")[0];
-  bodyElement.classList.remove("overflow-hidden");
+  const bodyElement = document?.getElementsByTagName('body')[0];
+  bodyElement?.classList?.remove('overflow-hidden');
 };
 
 watch(

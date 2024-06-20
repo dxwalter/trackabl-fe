@@ -34,7 +34,7 @@ interface History {
 
 const props = withDefaults(
   defineProps<{
-    transaction: History[];
+    transaction: {};
   }>(),
   {
     transaction: () => [

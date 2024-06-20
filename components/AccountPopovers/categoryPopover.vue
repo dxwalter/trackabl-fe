@@ -61,16 +61,16 @@
 </template>
 
 <script lang="ts" setup>
-const emit = defineEmits(["setSelectedIds", "openSuggestion"]);
+const emit = defineEmits(['setSelectedIds', 'openSuggestion']);
 
-import { useCategoryStore } from "@/stores/category";
+import { useCategoryStore } from '@/stores/category';
 const { list } = useCategoryStore();
 
 // animation trigger
 const animateCategory = ref(false);
 const animateSubCategory = ref(false);
 
-const categorySearchKeyword = ref("");
+const categorySearchKeyword = ref('');
 const categoryList = computed(() => {
   return categorySearchKeyword.value.trim().length === 0
     ? list
@@ -83,13 +83,13 @@ const categoryList = computed(() => {
 
 const modalTitle = computed(() => {
   return !openSubcategoryList.value
-    ? "Select a Category"
-    : "Select a Subategory";
+    ? 'Select a Category'
+    : 'Select a Subategory';
 });
 
 const CloseModal = () => {
   openSubcategoryList.value = false;
-  emit("setSelectedIds", {
+  emit('setSelectedIds', {
     cateoryId: selectedCategoryId.value,
     subcategoryId: selectedSubcategoryId.value,
   });
@@ -117,17 +117,17 @@ const changeCategory = () => {
 const resetModalData = () => {
   openSubcategoryList.value = false;
   selectedCategoryId.value = null;
-  categorySearchKeyword.value = "";
+  categorySearchKeyword.value = '';
 };
 
 const showSuggestionPopover = () => {
   if (openSubcategoryList.value === false) {
-    emit("openSuggestion", {
-      type: "category",
+    emit('openSuggestion', {
+      type: 'category',
     });
   } else {
-    emit("openSuggestion", {
-      type: "subcategory",
+    emit('openSuggestion', {
+      type: 'subcategory',
       categoryId: selectedCategoryId.value,
     });
   }

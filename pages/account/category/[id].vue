@@ -3,13 +3,29 @@
     <div
       class="mb-6 px-[18px] xl:px-9 justify-between hidden xl:flex items-center"
     >
-      <div class="lato-semi-bold text-navyBlue-900 xl:text-2xl">
-        Expense Report
+      <div class="lato-semi-bold text-navyBlue-900 xl:text-2xl flex gap-6">
+        <NuxtImg src="/arrow-left.svg" class="w-6 h-6 self-center" />
+        <div class="flex gap-2.5">
+          <NuxtImg src="/food-category.svg" class="w-9 h-9" />
+          <p>Food & Drinks</p>
+        </div>
       </div>
+
       <div class="">
         <AnalyticsTab :tabs="tabs" @update:selectedTab="updateSelectedTab">
         </AnalyticsTab>
       </div>
+
+      <!-- <div
+        class="flex gap-[2px] px-2 py-1 border-b-2 border-blue-500 cursor-pointer"
+        @click="latchCategoryPopover"
+      >
+        <NuxtImg src="/add.svg" class="w-4 h-4 self-center" />
+        <p class="text-sm text-blue-500 font-medium leading-[20px]">
+          Add subcategory
+        </p>
+      </div> -->
+
       <div class="relative w-[185px]">
         <div
           class="py-3 flex px-3.5 rounded-xl cursor-pointer gap-2 justify-between border-grey-200 border text-grey-500"
@@ -48,17 +64,21 @@
       class="mb-6 px-[18px] xl:px-9 justify-between xl:hidden block items-center"
     >
       <div class="flex justify-between mb-4">
-        <div class="lato-semi-bold text-navyBlue-900 xl:text-2xl self-center">
-          Expense Report
+        <div class="lato-semi-bold text-navyBlue-900 xl:text-2xl flex gap-6">
+          <NuxtImg src="/arrow-left.svg" class="w-6 h-6 self-center" />
+          <div class="flex gap-2.5">
+            <NuxtImg src="/food-category.svg" class="w-9 h-9" />
+            <p class="self-center text-2xl">Food & Drinks</p>
+          </div>
         </div>
-        <div
-          class="py-3 flex px-3.5 rounded-xl cursor-pointer gap-2 justify-between border-grey-200 border text-grey-500"
-          @click="latchYearFilterPopover"
-        >
-          <p>{{ currentYearDate }}</p>
+      </div>
+      <div
+        class="py-3 md:flex px-3.5 rounded-xl cursor-pointer gap-2 justify-between border-grey-200 border text-grey-500 hidden"
+        @click="latchYearFilterPopover"
+      >
+        <p>{{ currentYearDate }}</p>
 
-          <img src="/arrow-down.svg" alt="" />
-        </div>
+        <img src="/arrow-down.svg" alt="" />
       </div>
       <div class="">
         <AnalyticsTab :tabs="tabs" @update:selectedTab="updateSelectedTab">
@@ -81,16 +101,16 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue';
+<script setup>
+import { useRoute } from 'vue-router';
 import AnalyticsTab from '@/components/Analytics/AnalyticsTab.vue';
-import AllExpenses from '@/components/Analytics/AllExpenses.vue';
+import SubCategoryExpenses from '@/components/Analytics/SubCategoryExpenses.vue';
+
+const route = useRoute();
 
 definePageMeta({
   layout: 'account',
 });
-
-const showYearDropdown = ref(false);
 
 const yearFilter = ref([
   { text: 'This year (2024)', checked: true },
@@ -107,10 +127,10 @@ const tabs = ref([
 ]);
 
 const tabComponents = {
-  tab1: AllExpenses,
-  tab2: AllExpenses,
-  tab3: AllExpenses,
-  tab4: AllExpenses,
+  tab1: SubCategoryExpenses,
+  tab2: SubCategoryExpenses,
+  tab3: SubCategoryExpenses,
+  tab4: SubCategoryExpenses,
 };
 
 const selectedTabContent = ref('tab1');
@@ -120,10 +140,7 @@ const updateSelectedTab = (slotName) => {
   selectedTabContent.value = slotName;
 };
 
-// const handleChangeDate = (year) => {
-//   console.log(year);
-// };
-
+const showYearDropdown = ref(false);
 const currentYearDate = ref(yearFilter.value[0].text);
 
 const handleChangeDate = (selectedYear) => {
@@ -141,3 +158,5 @@ const latchYearFilterPopover = () => {
   openYearFilterModal.value = !openYearFilterModal.value;
 };
 </script>
+
+<style lang="scss" scoped></style>

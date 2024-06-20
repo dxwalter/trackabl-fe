@@ -58,6 +58,29 @@
         </div>
         <!-- content -->
         <div class="pt-[60px] xl:pt-[75px]">
+          <div
+            class="flex justify-between py-4 px-12 bg-red-500 gap-8 text-[#FFFBFA]"
+            v-if="trialExpiry"
+          >
+            <div class="flex justify-center w-full">
+              <div class="flex gap-3">
+                <NuxtImg src="/info-circle.svg" class="w-5" />
+                <p class="text-[#FFFBFA] font-medium self-center">
+                  ATTENTION -
+                </p>
+              </div>
+              <div class="self-center">
+                <p class="font-medium">
+                  Your 7 days trial will be ending in 3 days
+                  <a href="#" class="underline">Renew Subscription</a>
+                </p>
+              </div>
+            </div>
+            <div class="cursor-pointer" @click="trialExpiry = false">
+              <NuxtImg src="/close.svg" class="w-9" />
+            </div>
+          </div>
+
           <!-- content body -->
           <!-- padding accros x-axis is impmented within the slot content -->
           <div class="pt-6 pb-40 xl:pt-9 4xl:w-[1440px] 4xl:m-auto">
@@ -78,6 +101,10 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { ref } from 'vue';
+
+const trialExpiry = ref(true);
+</script>
 
 <style></style>

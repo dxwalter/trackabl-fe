@@ -1,8 +1,87 @@
 <template>
-  <div>Profile</div>
+  <div>
+    <div class="mb-6 px-[18px] xl:px-9 flex justify-between">
+      <div class="w-[62px]">
+        <img src="/arrow-left.svg" alt="" class="self-center" />
+      </div>
+      <p class="text-2xl font-semibold self-center xl:hidden">Profile</p>
+      <p class="text-red-500 font-medium self-center xl:hidden">Sign Out</p>
+    </div>
+
+    <div
+      class="w-full xl:w-[545px] px-[18px] xl:px-8 xl:py-8 xl:border mt-6 xl:border-grey-200 xl:shadow-sm rounded mx-auto"
+    >
+      <div class="flex justify-between">
+        <div class="w-[62px]"></div>
+        <p
+          class="text-xl font-semibold self-center hidden xl:block text-[#101828]"
+        >
+          Profile
+        </p>
+        <p class="text-red-500 font-medium self-center hidden xl:block">
+          Sign Out
+        </p>
+      </div>
+
+      <div class="xl:mt-8 flex flex-col justify-center">
+        <img
+          src="/profile-icon.svg"
+          class="w-[96px] h-[96px] mx-auto rounded-[50%]"
+          alt=""
+        />
+        <div class="text-center mt-2">
+          <p class="text-grey-900 text-[18px]">Adeola Adedoyin</p>
+          <p class="text-grey-500 mt-2">adeola4real@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-col justify-center">
+        <div
+          class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between"
+        >
+          <p class="text-[#101828]">Edit Profile</p>
+          <img src="/public/caret-right.svg" alt="" />
+        </div>
+
+        <div
+          class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between mt-4"
+        >
+          <p class="text-[#101828]">Manage Subscription</p>
+          <img src="/public/caret-right.svg" alt="" />
+        </div>
+
+        <div
+          class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between mt-4"
+        >
+          <p class="text-[#101828]">Change Password</p>
+          <img src="/public/caret-right.svg" alt="" />
+        </div>
+
+        <div
+          class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between mt-4"
+        >
+          <p class="text-[#101828]">Notification</p>
+          <Toggle />
+        </div>
+
+        <div class="mt-[56px]">
+          <button
+            class="w-full text-white bg-red-500 py-3 px-4 rounded-xl border-blue-400 hover:bg-red-700"
+          >
+            Delete Account
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <script lang="ts" setup>
+import Toggle from '@/components/Toggle.vue';
+
+defineComponent({
+  Toggle,
+});
 definePageMeta({
-  layout: "account",
+  layout: 'account',
 });
 </script>

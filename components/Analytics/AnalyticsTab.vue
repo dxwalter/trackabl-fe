@@ -6,7 +6,7 @@
         :key="index"
         @click="selectTab(index)"
         :class="[
-          'py-3 px-4 rounded-xl lg:w-[124px] border-grey-200 border text-grey-500',
+          'py-3 px-4  grow rounded-xl lg:w-[124px] border-grey-200 border text-grey-500',
           {
             ' bg-primary': selectedTab === index,
             'text-white': selectedTab === index,
