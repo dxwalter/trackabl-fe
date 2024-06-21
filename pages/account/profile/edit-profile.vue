@@ -1,37 +1,34 @@
 <template>
   <div>
-    <div class="mb-6 px-[18px] xl:px-9 flex justify-between">
-      <div class="w-[62px]">
+    <div class="mb-6 px-[18px] xl:px-9 flex gap-6">
+      <div class="self-center">
         <img
           src="/arrow-left.svg"
           alt=""
-          class="self-center"
+          class="cursor-pointer"
           @click="$router.back()"
         />
       </div>
-      <p class="text-2xl font-semibold self-center xl:hidden">Profile</p>
-      <p class="text-red-500 font-medium self-center xl:hidden">Sign Out</p>
+      <p class="text-2xl font-semibold self-center xl:hidden">Edit Profile</p>
+      <!-- <p class="text-red-500 font-medium self-center xl:hidden">Sign Out</p> -->
     </div>
 
     <div
       class="w-full xl:w-[545px] px-[18px] xl:px-8 xl:py-8 xl:border mt-6 xl:border-grey-200 xl:shadow-sm rounded mx-auto"
     >
-      <div class="flex justify-between">
-        <div class="w-[62px]"></div>
+      <div class="flex justify-center">
         <p
           class="text-xl font-semibold self-center hidden xl:block text-[#101828]"
         >
-          Profile
+          Edit Profile
         </p>
-        <p class="text-red-500 font-medium self-center hidden xl:block">
+        <!-- <p class="text-red-500 font-medium self-center hidden xl:block">
           Sign Out
-        </p>
+        </p> -->
       </div>
 
       <div class="xl:mt-8 flex flex-col justify-center">
-        <div
-          class="bg-red-500 relative w-[96px] h-[96px] mx-auto rounded-[50%]"
-        >
+        <div class="relative w-[96px] h-[96px] mx-auto rounded-[50%]">
           <img src="/profile-icon.svg" class="w-full" alt="" />
           <img
             src="/edit.svg"

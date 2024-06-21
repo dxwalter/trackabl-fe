@@ -5,7 +5,7 @@
         <img
           src="/arrow-left.svg"
           alt=""
-          class="self-center"
+          class="self-center cursor-pointer"
           @click="$router.back()"
         />
       </div>
@@ -29,9 +29,7 @@
       </div>
 
       <div class="xl:mt-8 flex flex-col justify-center">
-        <div
-          class="bg-red-500 relative w-[96px] h-[96px] mx-auto rounded-[50%]"
-        >
+        <div class="relative w-[96px] h-[96px] mx-auto rounded-[50%]">
           <img src="/profile-icon.svg" class="w-full" alt="" />
           <img
             src="/edit.svg"
@@ -46,20 +44,21 @@
       </div>
 
       <div class="mt-8 flex flex-col justify-center">
-        <router-link
+        <nuxt-link
           to="/account/profile/edit-profile"
           class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between"
         >
           <p class="text-[#101828]">Edit Profile</p>
-          <img src="/public/caret-right.svg" alt="" />
-        </router-link>
+          <img src="/caret-right.svg" alt="" />
+        </nuxt-link>
 
-        <div
+        <nuxt-link
+          to="/account/profile/manage-subscription"
           class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between mt-4"
         >
           <p class="text-[#101828]">Manage Subscription</p>
-          <img src="/public/caret-right.svg" alt="" />
-        </div>
+          <img src="/caret-right.svg" alt="" />
+        </nuxt-link>
 
         <div
           class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between mt-4"
