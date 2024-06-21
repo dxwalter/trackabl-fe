@@ -2,7 +2,12 @@
   <div>
     <div class="mb-6 px-[18px] xl:px-9 flex justify-between">
       <div class="w-[62px]">
-        <img src="/arrow-left.svg" alt="" class="self-center" />
+        <img
+          src="/arrow-left.svg"
+          alt=""
+          class="self-center"
+          @click="$router.back()"
+        />
       </div>
       <p class="text-2xl font-semibold self-center xl:hidden">Profile</p>
       <p class="text-red-500 font-medium self-center xl:hidden">Sign Out</p>
@@ -24,11 +29,16 @@
       </div>
 
       <div class="xl:mt-8 flex flex-col justify-center">
-        <img
-          src="/profile-icon.svg"
-          class="w-[96px] h-[96px] mx-auto rounded-[50%]"
-          alt=""
-        />
+        <div
+          class="bg-red-500 relative w-[96px] h-[96px] mx-auto rounded-[50%]"
+        >
+          <img src="/profile-icon.svg" class="w-full" alt="" />
+          <img
+            src="/edit.svg"
+            alt=""
+            class="absolute bottom-0 right-0 xl:hidden"
+          />
+        </div>
         <div class="text-center mt-2">
           <p class="text-grey-900 text-[18px]">Adeola Adedoyin</p>
           <p class="text-grey-500 mt-2">adeola4real@gmail.com</p>
@@ -36,12 +46,13 @@
       </div>
 
       <div class="mt-8 flex flex-col justify-center">
-        <div
+        <router-link
+          to="/account/profile/edit-profile"
           class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between"
         >
           <p class="text-[#101828]">Edit Profile</p>
           <img src="/public/caret-right.svg" alt="" />
-        </div>
+        </router-link>
 
         <div
           class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between mt-4"
