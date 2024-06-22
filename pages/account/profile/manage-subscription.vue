@@ -60,7 +60,7 @@
           </nuxt-link>
 
           <nuxt-link
-            to="/account/profile/manage-subscription"
+            to="/account/profile/change-plan"
             class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between mt-4"
           >
             <p class="text-grey-500">Change plan</p>
@@ -69,7 +69,9 @@
         </div>
       </div>
       <div class="mt-[56px]">
-        <button class="w-full text-white py-3 px-4 rounded-xl hover:bg-red-700">
+        <button
+          class="w-full bg-red-500 text-white py-3 px-4 rounded-xl cursor-pointer"
+        >
           Cancel Free Trial
         </button>
         <p class="text-sm text-grey-500 mt-2 text-center">
