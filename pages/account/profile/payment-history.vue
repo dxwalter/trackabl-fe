@@ -51,9 +51,7 @@
           class="hidden xl:block"
           :payments="payments"
         />
-        <AccountTablesPaymentHistoryCard
-          :payments="payments"
-        />
+        <AccountTablesPaymentHistoryCard :payments="payments" />
         <pagination
           class="border-grey-300 border-t"
           :current-page="1"
@@ -116,7 +114,7 @@ const payments = ref([
     date: 'November 6, 2023',
     purchase: 'Monthly subscription',
     servicePeriod: '6/11/2023–5/12/2023',
-    amount: '₦4,400',
+    amount: '₦4,200',
     status: 'Failed',
   },
   {
