@@ -9,7 +9,9 @@
           @click="$router.back()"
         />
       </div>
-      <p class="text-2xl font-semibold self-center xl:hidden">Profile</p>
+      <p class="lato-medium text-2xl font-semibold self-center xl:hidden">
+        Profile
+      </p>
       <p class="text-red-500 font-medium self-center xl:hidden">Sign Out</p>
     </div>
 
@@ -19,7 +21,7 @@
       <div class="flex justify-between">
         <div class="w-[62px]"></div>
         <p
-          class="text-xl font-semibold self-center hidden xl:block text-[#101828]"
+          class="lato-medium text-xl font-semibold self-center hidden xl:block text-[#101828]"
         >
           Profile
         </p>

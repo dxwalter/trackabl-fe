@@ -9,7 +9,9 @@
           @click="$router.back()"
         />
       </div>
-      <p class="text-2xl text-navyBlue-900 font-semibold self-center xl:hidden">
+      <p
+        class="lato-medium text-2xl text-navyBlue-900 font-semibold self-center xl:hidden"
+      >
         Manage Subscription
       </p>
     </div>
@@ -20,7 +22,7 @@
       <div class="flex justify-center">
         <div class="w-[62px]"></div>
         <p
-          class="text-[30px] font-semibold self-center hidden xl:block text-[#101828]"
+          class="lato-medium text-[30px] font-semibold self-center hidden xl:block text-[#101828]"
         >
           Manage Subscription
         </p>
@@ -50,7 +52,7 @@
         </div>
         <div class="mt-8 flex flex-col justify-center">
           <nuxt-link
-            to="/account/profile/edit-profile"
+            to="/account/profile/payment-history"
             class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between"
           >
             <p class="text-grey-500">View payment history</p>

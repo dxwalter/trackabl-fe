@@ -9,57 +9,57 @@
 }
 
 .lato-regular {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .lato-medium {
-  font-family: "LatoMedium", sans-serif;
+  font-family: 'LatoMedium', sans-serif;
 }
 
 .lato-semi-bold {
-  font-family: "LatoSemiBold", sans-serif;
+  font-family: 'LatoSemiBold', sans-serif;
 }
 
 .lato-bold {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
 .lato-black {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 900;
   font-style: normal;
 }
 
 .lato-thin-italic {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 100;
   font-style: italic;
 }
 
 .lato-light-italic {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-style: italic;
 }
 
 .lato-regular-italic {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
 .lato-bold-italic {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-style: italic;
 }
 
 .lato-black-italic {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 900;
   font-style: italic;
 }
@@ -68,10 +68,14 @@ html {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
+}
+
+td {
+  font-family: 'lato', sans-serif;
 }
 
 .hamburger-menu-close {
@@ -84,11 +88,11 @@ body {
 }
 
 .menu-is-closed {
-  background-image: url("../img/closed-menu-icon.svg");
+  background-image: url('../img/closed-menu-icon.svg');
 }
 
 .menu-is-open {
-  background-image: url("../img/opened-menu-icon.svg");
+  background-image: url('../img/opened-menu-icon.svg');
 }
 
 .app-container {
@@ -135,7 +139,7 @@ body {
 }
 
 .open-nav-for-mobile::after {
-  content: " ";
+  content: ' ';
   width: 100%;
   height: 100%;
 
