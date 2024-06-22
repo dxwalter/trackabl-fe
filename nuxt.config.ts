@@ -7,7 +7,9 @@ export default defineNuxtConfig({
     "~/assets/css/supporting-style.css",
     "animate.css/animate.min.css",
   ],
-
+  image: {
+    dir: "assets/img",
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -26,11 +28,17 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxtjs/tailwindcss",
-    "@nuxt/image",
+    // "@nuxt/image",
     "@nuxtjs/google-fonts",
     "vue3-carousel-nuxt",
     "@pinia/nuxt",
     "@nuxt/test-utils/module",
+    [
+      "@nuxt/image",
+      {
+        dir: "assets/img",
+      },
+    ],
   ],
   carousel: {
     prefix: "MyPrefix",

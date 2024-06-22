@@ -6,7 +6,7 @@
       <div class="flex justify-between mb-6 2xl:mb-14">
         <div class="w-[20px] self-center">
           <NuxtLink to="/">
-            <NuxtImg src="/arrow-left.svg" class="w-full" />
+            <img src="~/assets/img/arrow-left.svg" class="w-full" />
           </NuxtLink>
         </div>
 
@@ -34,7 +34,7 @@
               class="flex justify-center w-full bg-white px-8 py-4 border rounded-xl border-grey-300"
             >
               <div class="w-[24px] mr-3 self-center">
-                <NuxtImg src="/google-login-icon.svg" class="w-full"></NuxtImg>
+                <img src="~/assets/img/google-login-icon.svg" class="w-full" />
               </div>
               <span class="text-navyBlue-900 lato-medium self-center block"
                 >Sign in with Google</span
@@ -76,7 +76,7 @@
                 style="text-underline-offset: 4px"
                 @click="mangePasswordVisibility"
               >
-                {{ isPasswordVisible ? 'Hide' : 'Show' }}
+                {{ isPasswordVisible ? "Hide" : "Show" }}
               </div>
             </div>
           </div>
@@ -98,7 +98,7 @@
             >
               <div class="button-text">Continue</div>
               <div class="w-6 button-spinner">
-                <NuxtImg src="/button-loader.svg" class="w-full" />
+                <img src="~/assets/img/button-loader.svg" class="w-full" />
               </div>
             </button>
           </div>
@@ -109,11 +109,11 @@
 </template>
 <script lang="ts" setup>
 definePageMeta({
-  layout: 'auth-page-layout',
+  layout: "auth-page-layout",
 });
 
-import { useFormInputManipulator } from '@/composables/FormInputManipulator';
-import { ref } from 'vue';
+import { useFormInputManipulator } from "@/composables/FormInputManipulator";
+import { ref } from "vue";
 
 const { HidePassword, ShowPassword } = useFormInputManipulator();
 
@@ -122,9 +122,9 @@ const isFormSubmitted = ref(false);
 
 const mangePasswordVisibility = () => {
   if (isPasswordVisible.value) {
-    HidePassword('SignInPassword');
+    HidePassword("SignInPassword");
   } else {
-    ShowPassword('SignInPassword');
+    ShowPassword("SignInPassword");
   }
 
   isPasswordVisible.value = !isPasswordVisible.value;

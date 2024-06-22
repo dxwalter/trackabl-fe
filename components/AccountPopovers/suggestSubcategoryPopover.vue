@@ -19,7 +19,7 @@
             }"
           >
             <div class="w-[20px]">
-              <NuxtImg :src="categoryDetails[0].icon" class="w-full" />
+              <img :src="categoryDetails[0].icon" class="w-full" />
             </div>
           </div>
 
@@ -82,11 +82,11 @@
 </template>
 
 <script lang="ts" setup>
-import { useCategoryStore } from '@/stores/category';
-import { ref, computed } from 'vue';
+import { useCategoryStore } from "@/stores/category";
+import { ref, computed } from "vue";
 const { list } = useCategoryStore();
 
-const emit = defineEmits(['closeAddSubcategoryPopover']);
+const emit = defineEmits(["closeAddSubcategoryPopover"]);
 
 const props = defineProps<{
   setup: {
@@ -95,14 +95,14 @@ const props = defineProps<{
   };
 }>();
 
-const subcategoryName = ref('');
+const subcategoryName = ref("");
 
 const categoryDetails = computed(() =>
   list.filter((cat) => cat.id === props.setup.categoryId)
 );
 
 const CloseModal = () => {
-  emit('closeAddSubcategoryPopover');
+  emit("closeAddSubcategoryPopover");
 };
 </script>
 

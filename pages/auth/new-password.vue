@@ -6,7 +6,7 @@
       <div class="flex justify-between mb-6 2xl:mb-14">
         <div class="w-[20px] self-center">
           <NuxtLink to="/auth">
-            <NuxtImg src="/arrow-left.svg" class="w-full" />
+            <img src="~/assets/img/arrow-left.svg" class="w-full" />
           </NuxtLink>
         </div>
 
@@ -63,7 +63,7 @@
             >
               <div class="button-text">Continue</div>
               <div class="w-6 button-spinner">
-                <NuxtImg src="/button-loader.svg" class="w-full" />
+                <img src="~/assets/img/button-loader.svg" class="w-full" />
               </div>
             </button>
           </div>

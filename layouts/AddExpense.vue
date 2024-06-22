@@ -6,12 +6,12 @@
     >
       <div class="flex w-[115px] xl:w-[140px] self-center">
         <NuxtLink to="/account/dashboard" class="w-full">
-          <NuxtImg src="/blue-logo.svg" class="w-full" />
+          <img src="~/assets/img/blue-logo.svg" class="w-full" />
         </NuxtLink>
       </div>
       <div class="w-9 self-center xl:hidden">
         <NuxtLink to="/account/profile" class="w-full">
-          <NuxtImg src="/profile-icon.svg" class="w-full" />
+          <img src="~/assets/img/profile-icon.svg" class="w-full" />
         </NuxtLink>
       </div>
     </div>
@@ -28,7 +28,7 @@
                 class="flex flex-col items-center"
               >
                 <div class="w-[24px] mb-1">
-                  <NuxtImg src="/menu-icons/home.svg" class="w-full" />
+                  <img src="~/assets/img/menu-icons/home.svg" class="w-full" />
                 </div>
                 <div class="text-grey-500 text-xs">Home</div>
               </NuxtLink>
@@ -40,7 +40,10 @@
                 class="flex flex-col items-center"
               >
                 <div class="w-[24px] mb-1">
-                  <NuxtImg src="/menu-icons/analytics.svg" class="w-full" />
+                  <img
+                    src="~/assets/img/menu-icons/analytics.svg"
+                    class="w-full"
+                  />
                 </div>
                 <div class="text-grey-500 text-xs">Analytics</div>
               </NuxtLink>
@@ -50,7 +53,7 @@
             <div class="border-t-2 border-t-grey-200 pt-6 pb-[2px]">
               <div class="self-center w-[48px]">
                 <NuxtLink to="/account/profile" class="w-full">
-                  <NuxtImg src="/profile-icon.svg" class="w-full" />
+                  <img src="~/assets/img/profile-icon.svg" class="w-full" />
                 </NuxtLink>
               </div>
             </div>

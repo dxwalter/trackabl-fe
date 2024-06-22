@@ -7,7 +7,7 @@
       <div class="flex">
         <div class="flex self-center cursor-pointer" @click="openCurrencyModal">
           <div class="w-[18px] mr-1 self-center">
-            <NuxtImg src="/caret-down.svg" class="w-full" />
+            <img src="~/assets/img/caret-down.svg" class="w-full" />
           </div>
           <div class="text-white text-2xl lato-semi-bold self-center">₦</div>
         </div>

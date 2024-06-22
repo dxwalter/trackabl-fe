@@ -34,7 +34,7 @@
               </div>
             </div>
             <div class="w-[16px] self-center">
-              <NuxtImg src="/caret-right.svg" class="w-full" />
+              <img src="~/assets/img/caret-right.svg" class="w-full" />
             </div>
           </div>
           <!--  -->
@@ -53,7 +53,7 @@
               </div>
             </div>
             <div class="w-[16px] self-center">
-              <NuxtImg src="/caret-right.svg" class="w-full" />
+              <img src="~/assets/img/caret-right.svg" class="w-full" />
             </div>
           </div>
           <!--  -->
@@ -72,7 +72,7 @@
               </div>
             </div>
             <div class="w-[16px] self-center">
-              <NuxtImg src="/caret-right.svg" class="w-full" />
+              <img src="~/assets/img/caret-right.svg" class="w-full" />
             </div>
           </div>
           <!--  -->
@@ -91,7 +91,7 @@
               </div>
             </div>
             <div class="w-[16px] self-center">
-              <NuxtImg src="/caret-right.svg" class="w-full" />
+              <img src="~/assets/img/caret-right.svg" class="w-full" />
             </div>
           </div>
           <!--  -->
@@ -110,7 +110,7 @@
               </div>
             </div>
             <div class="w-[16px] self-center">
-              <NuxtImg src="/caret-right.svg" class="w-full" />
+              <img src="~/assets/img/caret-right.svg" class="w-full" />
             </div>
           </div>
           <!--  -->
@@ -129,7 +129,7 @@
               </div>
             </div>
             <div class="w-[16px] self-center">
-              <NuxtImg src="/caret-right.svg" class="w-full" />
+              <img src="~/assets/img/caret-right.svg" class="w-full" />
             </div>
           </div>
           <!--  -->
@@ -148,7 +148,7 @@
               </div>
             </div>
             <div class="w-[16px] self-center">
-              <NuxtImg src="/caret-right.svg" class="w-full" />
+              <img src="~/assets/img/caret-right.svg" class="w-full" />
             </div>
           </div>
           <!--  -->
@@ -167,7 +167,7 @@
               </div>
             </div>
             <div class="w-[16px] self-center">
-              <NuxtImg src="/caret-right.svg" class="w-full" />
+              <img src="~/assets/img/caret-right.svg" class="w-full" />
             </div>
           </div>
           <!--  -->
@@ -186,7 +186,7 @@
               </div>
             </div>
             <div class="w-[16px] self-center">
-              <NuxtImg src="/caret-right.svg" class="w-full" />
+              <img src="~/assets/img/caret-right.svg" class="w-full" />
             </div>
           </div>
           <!--  -->
@@ -205,7 +205,7 @@
               </div>
             </div>
             <div class="w-[16px] self-center">
-              <NuxtImg src="/caret-right.svg" class="w-full" />
+              <img src="~/assets/img/caret-right.svg" class="w-full" />
             </div>
           </div>
           <!--  -->
@@ -224,7 +224,7 @@
               </div>
             </div>
             <div class="w-[16px] self-center">
-              <NuxtImg src="/caret-right.svg" class="w-full" />
+              <img src="~/assets/img/caret-right.svg" class="w-full" />
             </div>
           </div>
         </div>
