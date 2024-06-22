@@ -29,14 +29,13 @@
           </div>
           <div class="w-[18px] self-center mx-4">
             <NuxtLink to="https://twitter.com/officialtrackbl" target="_blank">
-              <img src="/assets/img/x-grey.svg" class="w-full"/ ></NuxtLink
-            >
+              <img src="/assets/img/x-grey.svg" class="w-full"
+            /></NuxtLink>
           </div>
           <div class="w-[24px] self-center">
             <NuxtLink to="https://www.instagram.com/trackabl/" target="_blank"
-              ><img src="/assets/img/instagram-grey.svg" class="w-full"/
-              ></NuxtLink
-            >
+              ><img src="/assets/img/instagram-grey.svg" class="w-full"
+            /></NuxtLink>
           </div>
         </div>
       </div>
