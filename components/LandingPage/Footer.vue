@@ -22,11 +22,7 @@
               Try for free
             </div>
             <div class="w-[18px] self-center">
-              <<<<<<< HEAD
-              <img src="~/assets/img/arrow-right-black.svg" class="w-full" />
-              =======
               <img src="/assets/img/arrow-right-black.svg" class="w-full" />
-              >>>>>>> temp-branch
             </div>
           </NuxtLink>
         </div>

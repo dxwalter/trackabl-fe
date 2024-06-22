@@ -19,11 +19,8 @@
       v-if="!recentTransactions.length"
     >
       <div class="w-[60px] m-auto mb-1">
-        <<<<<<< HEAD
-        <img src="~/assets/img/recent-transaction.svg" class="w-full" />
-        =======
         <img src="/assets/img/recent-transaction.svg" class="w-full" />
-        >>>>>>> temp-branch
+        temp-branch
       </div>
       <div
         class="text-center text-navyBlue-900 lato-medium text-sm mb-1"
@@ -73,7 +70,7 @@
 </template>
 
 <script lang="ts" setup>
-import { withDefaults, defineProps } from "vue";
+import { withDefaults, defineProps } from 'vue';
 
 interface Expense {
   id: number;
@@ -96,51 +93,39 @@ const props = withDefaults(
     recentTransactions: () => [
       {
         id: 1,
-        subactegoryName: "Cooking gas",
+        subactegoryName: 'Cooking gas',
         category: {
-<<<<<<< HEAD
-          name: "Housing",
-          color: "#f79009",
-          icon: "/house-category-icon.svg",
-=======
           name: 'Housing',
           color: '#f79009',
           icon: '/assets/img/house-category-icon.svg',
->>>>>>> temp-branch
         },
-        expenseCurrency: "₦",
-        expenseAmount: "36,000",
-        expenseDate: "Sun, 16 Jan",
+        expenseCurrency: '₦',
+        expenseAmount: '36,000',
+        expenseDate: 'Sun, 16 Jan',
       },
       {
         id: 2,
-        subactegoryName: "A/C Repair",
+        subactegoryName: 'A/C Repair',
         category: {
           name: 'Car',
           color: '#12B76A',
           icon: '/assets/img/car-category.svg',
         },
-        expenseCurrency: "₦",
-        expenseAmount: "12,000,000",
-        expenseDate: "Sun, 16 Jan",
+        expenseCurrency: '₦',
+        expenseAmount: '12,000,000',
+        expenseDate: 'Sun, 16 Jan',
       },
       {
         id: 3,
-        subactegoryName: "Bolu Upkeep",
+        subactegoryName: 'Bolu Upkeep',
         category: {
-<<<<<<< HEAD
-          name: "Family",
-          color: "#004EC1",
-          icon: "/family-category.svg",
-=======
           name: 'Family',
           color: '#004EC1',
           icon: '/assets/img/family-category.svg',
->>>>>>> temp-branch
         },
-        expenseCurrency: "₦",
-        expenseAmount: "10,000",
-        expenseDate: "Sun, 16 Jan",
+        expenseCurrency: '₦',
+        expenseAmount: '10,000',
+        expenseDate: 'Sun, 16 Jan',
       },
     ],
   }

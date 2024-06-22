@@ -53,9 +53,10 @@
               <div class="mb-8 xl:mb-0 lg:w-[370px]">
                 <div class="flex justify-center mb-4">
                   <div class="w-[58px] h-[58px] rounded-full p-1 bg-blue-400">
-                    <img <<<<<<< HEAD src="~/assets/img/about-excellence.svg"
-                    ======= src="/assets/img/about-excellence.svg" >>>>>>>
-                    temp-branch class="w-full" />
+                    <img
+                      src="/assets/img/about-excellence.svg"
+                      class="w-full"
+                    />
                   </div>
                 </div>
                 <div class="text-center text-white lato-semi-bold text-xl mb-2">
@@ -90,10 +91,10 @@
               <div class="lg:w-[370px]">
                 <div class="flex justify-center mb-4">
                   <div class="w-[58px] h-[58px] rounded-full p-1 bg-blue-400">
-                    <img <<<<<<< HEAD
-                    src="~/assets/img/about-user-friendly-interface.svg" =======
-                    src="/assets/img/about-user-friendly-interface.svg" >>>>>>>
-                    temp-branch class="w-full" />
+                    <img
+                      src="/assets/img/about-user-friendly-interface.svg"
+                      class="w-full"
+                    />
                   </div>
                 </div>
                 <div class="text-center text-white lato-semi-bold text-xl mb-2">

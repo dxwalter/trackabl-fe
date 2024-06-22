@@ -53,11 +53,7 @@
             <div class="border-t-2 border-t-grey-200 pt-6 pb-[2px]">
               <div class="self-center w-[48px]">
                 <NuxtLink to="/account/profile" class="w-full">
-<<<<<<< HEAD
-                  <img src="~/assets/img/profile-icon.svg" class="w-full" />
-=======
                   <img src="/assets/img/profile-icon.svg" class="w-full" />
->>>>>>> temp-branch
                 </NuxtLink>
               </div>
             </div>
