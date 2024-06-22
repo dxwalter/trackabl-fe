@@ -33,7 +33,7 @@
             >
               <p>{{ year.text }}</p>
               <img
-                src="/check.svg"
+                src="/assets/img/check.svg"
                 class="self-center"
                 alt=""
                 v-if="year.checked"

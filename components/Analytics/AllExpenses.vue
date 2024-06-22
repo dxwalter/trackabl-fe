@@ -66,7 +66,11 @@
           v-else
         >
           <div class="w-[60px] m-auto mb-1">
+<<<<<<< HEAD
             <img src="~/assets/img/recent-transaction.svg" class="w-full" />
+=======
+            <img src="/assets/img/recent-transaction.svg" class="w-full" />
+>>>>>>> temp-branch
           </div>
           <div
             class="text-center text-navyBlue-900 lato-medium text-sm mb-1"

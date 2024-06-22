@@ -14,7 +14,11 @@
         <div class="w-[124px] flex justify-center">
           <NuxtLink to="/account/analytics" class="flex flex-col items-center">
             <div class="w-[24px] mb-1">
+              <<<<<<< HEAD
               <img src="~/assets/img/menu-icons/analytics.svg" class="w-full" />
+              =======
+              <img src="/assets/img/menu-icons/analytics.svg" class="w-full" />
+              >>>>>>> temp-branch
             </div>
             <div class="text-grey-500 text-xs">Analytics</div>
           </NuxtLink>
@@ -25,7 +29,7 @@
         >
           <NuxtLink to="/account/expense/add">
             <button class="w-[64px] h-[64px] bg-navyBlue-900 p-4 rounded-full">
-              <img src="~/assets/img/plus.svg" class="w-full" />
+              <img src="/assets/img/plus.svg" class="w-full" />
             </button>
           </NuxtLink>
         </div>

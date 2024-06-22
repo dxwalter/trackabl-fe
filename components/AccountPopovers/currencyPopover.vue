@@ -34,7 +34,140 @@
               </div>
             </div>
             <div class="w-[16px] self-center">
-              <img src="~/assets/img/caret-right.svg" class="w-full" />
+              <img src="/assets/img/caret-right.svg" class="w-full" />
+            </div>
+          </div>
+          <!--  -->
+          <div
+            class="border border-grey-200 w-full card-border-radius px-6 py-3 flex justify-between mb-4"
+          >
+            <div class="flex self-center">
+              <div
+                class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg"
+              >
+                ₦
+              </div>
+              <div>
+                <div class="lato-medium text-navyBlue-900 mb-1">Naira</div>
+                <div class="text-xs text-grey-500">Nigeria</div>
+              </div>
+            </div>
+            <div class="w-[16px] self-center">
+              <img src="/assets/img/caret-right.svg" class="w-full" />
+            </div>
+          </div>
+          <!--  -->
+          <div
+            class="border border-grey-200 w-full card-border-radius px-6 py-3 flex justify-between mb-4"
+          >
+            <div class="flex self-center">
+              <div
+                class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg"
+              >
+                ₦
+              </div>
+              <div>
+                <div class="lato-medium text-navyBlue-900 mb-1">Naira</div>
+                <div class="text-xs text-grey-500">Nigeria</div>
+              </div>
+            </div>
+            <div class="w-[16px] self-center">
+              <img src="/assets/img/caret-right.svg" class="w-full" />
+            </div>
+          </div>
+          <!--  -->
+          <div
+            class="border border-grey-200 w-full card-border-radius px-6 py-3 flex justify-between mb-4"
+          >
+            <div class="flex self-center">
+              <div
+                class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg"
+              >
+                ₦
+              </div>
+              <div>
+                <div class="lato-medium text-navyBlue-900 mb-1">Naira</div>
+                <div class="text-xs text-grey-500">Nigeria</div>
+              </div>
+            </div>
+            <div class="w-[16px] self-center">
+              <img src="/assets/img/caret-right.svg" class="w-full" />
+            </div>
+          </div>
+          <!--  -->
+          <div
+            class="border border-grey-200 w-full card-border-radius px-6 py-3 flex justify-between mb-4"
+          >
+            <div class="flex self-center">
+              <div
+                class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg"
+              >
+                ₦
+              </div>
+              <div>
+                <div class="lato-medium text-navyBlue-900 mb-1">Naira</div>
+                <div class="text-xs text-grey-500">Nigeria</div>
+              </div>
+            </div>
+            <div class="w-[16px] self-center">
+              <img src="/assets/img/caret-right.svg" class="w-full" />
+            </div>
+          </div>
+          <!--  -->
+          <div
+            class="border border-grey-200 w-full card-border-radius px-6 py-3 flex justify-between mb-4"
+          >
+            <div class="flex self-center">
+              <div
+                class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg"
+              >
+                ₦
+              </div>
+              <div>
+                <div class="lato-medium text-navyBlue-900 mb-1">Naira</div>
+                <div class="text-xs text-grey-500">Nigeria</div>
+              </div>
+            </div>
+            <div class="w-[16px] self-center">
+              <img src="/assets/img/caret-right.svg" class="w-full" />
+            </div>
+          </div>
+          <!--  -->
+          <div
+            class="border border-grey-200 w-full card-border-radius px-6 py-3 flex justify-between mb-4"
+          >
+            <div class="flex self-center">
+              <div
+                class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg"
+              >
+                ₦
+              </div>
+              <div>
+                <div class="lato-medium text-navyBlue-900 mb-1">Naira</div>
+                <div class="text-xs text-grey-500">Nigeria</div>
+              </div>
+            </div>
+            <div class="w-[16px] self-center">
+              <img src="/assets/img/caret-right.svg" class="w-full" />
+            </div>
+          </div>
+          <!--  -->
+          <div
+            class="border border-grey-200 w-full card-border-radius px-6 py-3 flex justify-between mb-4"
+          >
+            <div class="flex self-center">
+              <div
+                class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg"
+              >
+                ₦
+              </div>
+              <div>
+                <div class="lato-medium text-navyBlue-900 mb-1">Naira</div>
+                <div class="text-xs text-grey-500">Nigeria</div>
+              </div>
+            </div>
+            <div class="w-[16px] self-center">
+              <img src="/assets/img/caret-right.svg" class="w-full" />
             </div>
           </div>
           <!--  -->
@@ -72,7 +205,7 @@
               </div>
             </div>
             <div class="w-[16px] self-center">
-              <img src="~/assets/img/caret-right.svg" class="w-full" />
+              <img src="/assets/img/caret-right.svg" class="w-full" />
             </div>
           </div>
           <!--  -->
@@ -91,140 +224,7 @@
               </div>
             </div>
             <div class="w-[16px] self-center">
-              <img src="~/assets/img/caret-right.svg" class="w-full" />
-            </div>
-          </div>
-          <!--  -->
-          <div
-            class="border border-grey-200 w-full card-border-radius px-6 py-3 flex justify-between mb-4"
-          >
-            <div class="flex self-center">
-              <div
-                class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg"
-              >
-                ₦
-              </div>
-              <div>
-                <div class="lato-medium text-navyBlue-900 mb-1">Naira</div>
-                <div class="text-xs text-grey-500">Nigeria</div>
-              </div>
-            </div>
-            <div class="w-[16px] self-center">
-              <img src="~/assets/img/caret-right.svg" class="w-full" />
-            </div>
-          </div>
-          <!--  -->
-          <div
-            class="border border-grey-200 w-full card-border-radius px-6 py-3 flex justify-between mb-4"
-          >
-            <div class="flex self-center">
-              <div
-                class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg"
-              >
-                ₦
-              </div>
-              <div>
-                <div class="lato-medium text-navyBlue-900 mb-1">Naira</div>
-                <div class="text-xs text-grey-500">Nigeria</div>
-              </div>
-            </div>
-            <div class="w-[16px] self-center">
-              <img src="~/assets/img/caret-right.svg" class="w-full" />
-            </div>
-          </div>
-          <!--  -->
-          <div
-            class="border border-grey-200 w-full card-border-radius px-6 py-3 flex justify-between mb-4"
-          >
-            <div class="flex self-center">
-              <div
-                class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg"
-              >
-                ₦
-              </div>
-              <div>
-                <div class="lato-medium text-navyBlue-900 mb-1">Naira</div>
-                <div class="text-xs text-grey-500">Nigeria</div>
-              </div>
-            </div>
-            <div class="w-[16px] self-center">
-              <img src="~/assets/img/caret-right.svg" class="w-full" />
-            </div>
-          </div>
-          <!--  -->
-          <div
-            class="border border-grey-200 w-full card-border-radius px-6 py-3 flex justify-between mb-4"
-          >
-            <div class="flex self-center">
-              <div
-                class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg"
-              >
-                ₦
-              </div>
-              <div>
-                <div class="lato-medium text-navyBlue-900 mb-1">Naira</div>
-                <div class="text-xs text-grey-500">Nigeria</div>
-              </div>
-            </div>
-            <div class="w-[16px] self-center">
-              <img src="~/assets/img/caret-right.svg" class="w-full" />
-            </div>
-          </div>
-          <!--  -->
-          <div
-            class="border border-grey-200 w-full card-border-radius px-6 py-3 flex justify-between mb-4"
-          >
-            <div class="flex self-center">
-              <div
-                class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg"
-              >
-                ₦
-              </div>
-              <div>
-                <div class="lato-medium text-navyBlue-900 mb-1">Naira</div>
-                <div class="text-xs text-grey-500">Nigeria</div>
-              </div>
-            </div>
-            <div class="w-[16px] self-center">
-              <img src="~/assets/img/caret-right.svg" class="w-full" />
-            </div>
-          </div>
-          <!--  -->
-          <div
-            class="border border-grey-200 w-full card-border-radius px-6 py-3 flex justify-between mb-4"
-          >
-            <div class="flex self-center">
-              <div
-                class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg"
-              >
-                ₦
-              </div>
-              <div>
-                <div class="lato-medium text-navyBlue-900 mb-1">Naira</div>
-                <div class="text-xs text-grey-500">Nigeria</div>
-              </div>
-            </div>
-            <div class="w-[16px] self-center">
-              <img src="~/assets/img/caret-right.svg" class="w-full" />
-            </div>
-          </div>
-          <!--  -->
-          <div
-            class="border border-grey-200 w-full card-border-radius px-6 py-3 flex justify-between mb-4"
-          >
-            <div class="flex self-center">
-              <div
-                class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg"
-              >
-                ₦
-              </div>
-              <div>
-                <div class="lato-medium text-navyBlue-900 mb-1">Naira</div>
-                <div class="text-xs text-grey-500">Nigeria</div>
-              </div>
-            </div>
-            <div class="w-[16px] self-center">
-              <img src="~/assets/img/caret-right.svg" class="w-full" />
+              <img src="/assets/img/caret-right.svg" class="w-full" />
             </div>
           </div>
         </div>

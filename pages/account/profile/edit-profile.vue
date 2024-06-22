@@ -3,7 +3,7 @@
     <div class="mb-6 px-[18px] xl:px-9 flex gap-6">
       <div class="self-center">
         <img
-          src="/arrow-left.svg"
+          src="/assets/img/arrow-left.svg"
           alt=""
           class="cursor-pointer"
           @click="$router.back()"
@@ -29,9 +29,9 @@
 
       <div class="xl:mt-8 flex flex-col justify-center">
         <div class="relative w-[96px] h-[96px] mx-auto rounded-[50%]">
-          <img src="/profile-icon.svg" class="w-full" alt="" />
+          <img src="/assets/img/profile-icon.svg" class="w-full" alt="" />
           <img
-            src="/edit.svg"
+            src="/assets/img/edit.svg"
             alt=""
             class="absolute bottom-0 right-0 cursor-pointer"
             @click="latchEditProfilePopover"

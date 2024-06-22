@@ -25,7 +25,7 @@
             <div class="mb-6 xl:mb-0 xl:w-[384px]">
               <div class="flex justify-center mb-4">
                 <div class="w-[58px] h-[58px] rounded-full p-1 bg-blue-400">
-                  <img src="~/assets/img/contact-address.svg" class="w-full" />
+                  <img src="/assets/img/contact-address.svg" class="w-full" />
                 </div>
               </div>
               <div
@@ -46,7 +46,7 @@
             <div class="mb-6 xl:mb-0 xl:w-[384px]">
               <div class="flex justify-center mb-4">
                 <div class="w-[58px] h-[58px] rounded-full p-1 bg-red-500">
-                  <img src="~/assets/img/contact-office.svg" class="w-full" />
+                  <img src="/assets/img/contact-office.svg" class="w-full" />
                 </div>
               </div>
               <div
@@ -70,7 +70,7 @@
             <div class="xl:w-[384px]">
               <div class="flex justify-center mb-4">
                 <div class="w-[58px] h-[58px] rounded-full p-1 bg-green-500">
-                  <img src="~/assets/img/contact-phone.svg" class="w-full" />
+                  <img src="/assets/img/contact-phone.svg" class="w-full" />
                 </div>
               </div>
               <div
@@ -172,7 +172,7 @@
 
 <script lang="ts" setup>
 definePageMeta({
-  layout: "landing-page-layout",
+  layout: 'landing-page-layout',
 });
 </script>
 

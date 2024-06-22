@@ -4,9 +4,9 @@
       class="mb-6 px-[18px] xl:px-9 justify-between hidden xl:flex items-center"
     >
       <div class="lato-semi-bold text-navyBlue-900 xl:text-2xl flex gap-6">
-        <NuxtImg src="/arrow-left.svg" class="w-6 h-6 self-center" />
+        <img src="/assets/img/arrow-left.svg" class="w-6 h-6 self-center" />
         <div class="flex gap-2.5">
-          <NuxtImg src="/food-category.svg" class="w-9 h-9" />
+          <img src="/assets/img/food-category.svg" class="w-9 h-9" />
           <p>Food & Drinks</p>
         </div>
       </div>
@@ -33,7 +33,7 @@
         >
           <p>{{ currentYearDate }}</p>
 
-          <img src="/arrow-down.svg" alt="" />
+          <img src="/assets/img/arrow-down.svg" alt="" />
         </div>
 
         <div
@@ -49,7 +49,7 @@
             >
               <p>{{ year.text }}</p>
               <img
-                src="/check.svg"
+                src="/assets/img/check.svg"
                 class="self-center"
                 alt=""
                 v-if="year.checked"
@@ -65,9 +65,9 @@
     >
       <div class="flex justify-between mb-4">
         <div class="lato-semi-bold text-navyBlue-900 xl:text-2xl flex gap-6">
-          <NuxtImg src="/arrow-left.svg" class="w-6 h-6 self-center" />
+          <img src="/assets/img/arrow-left.svg" class="w-6 h-6 self-center" />
           <div class="flex gap-2.5">
-            <NuxtImg src="/food-category.svg" class="w-9 h-9" />
+            <img src="/assets/img/food-category.svg" class="w-9 h-9" />
             <p class="self-center text-2xl">Food & Drinks</p>
           </div>
         </div>
@@ -78,7 +78,7 @@
       >
         <p>{{ currentYearDate }}</p>
 
-        <img src="/arrow-down.svg" alt="" />
+        <img src="/assets/img/arrow-down.svg" alt="" />
       </div>
       <div class="">
         <AnalyticsTab :tabs="tabs" @update:selectedTab="updateSelectedTab">

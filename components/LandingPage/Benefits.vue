@@ -27,10 +27,14 @@
             <div class="mb-12 xl:flex 3xl:mb-5">
               <!-- image -->
               <div class="w-9 mb-4 xl:mr-4 shrink-0">
+                <<<<<<< HEAD
                 <img
                   src="~/assets/img/benefit-easy-to-use.svg"
                   class="w-full"
                 />
+                =======
+                <img src="/assets/img/benefit-easy-to-use.svg" class="w-full" />
+                >>>>>>> temp-branch
               </div>
               <!-- text -->
               <div>
@@ -53,7 +57,7 @@
               <!-- image -->
               <div class="w-9 mb-4 xl:mr-4 shrink-0">
                 <img
-                  src="~/assets/img/benefits-insightful-analytics.svg"
+                  src="/assets/img/benefits-insightful-analytics.svg"
                   class="w-full"
                 />
               </div>
@@ -76,10 +80,10 @@
             <div class="mb-7 xl:flex 3xl:mb-0">
               <!-- image -->
               <div class="w-9 mb-4 xl:mr-4 shrink-0">
-                <img
-                  src="~/assets/img/benefits-flexible-organisation.svg"
-                  class="w-full"
-                />
+                <img <<<<<<< HEAD
+                src="~/assets/img/benefits-flexible-organisation.svg" =======
+                src="/assets/img/benefits-flexible-organisation.svg" >>>>>>>
+                temp-branch class="w-full" />
               </div>
               <!-- text -->
               <div>

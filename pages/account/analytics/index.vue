@@ -17,7 +17,7 @@
         >
           <p>{{ currentYearDate }}</p>
 
-          <img src="/arrow-down.svg" alt="" />
+          <img src="/assets/img/arrow-down.svg" alt="" />
         </div>
 
         <div
@@ -33,7 +33,7 @@
             >
               <p>{{ year.text }}</p>
               <img
-                src="/check.svg"
+                src="/assets/img/check.svg"
                 class="self-center"
                 alt=""
                 v-if="year.checked"
@@ -57,7 +57,7 @@
         >
           <p>{{ currentYearDate }}</p>
 
-          <img src="/arrow-down.svg" alt="" />
+          <img src="/assets/img/arrow-down.svg" alt="" />
         </div>
       </div>
       <div class="">

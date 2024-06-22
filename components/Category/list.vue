@@ -23,15 +23,15 @@
         </div>
       </div>
       <div class="w-[16px] self-center">
-        <img src="~/assets/img/caret-right.svg" class="w-full" />
+        <img src="/assets/img/caret-right.svg" class="w-full" />
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import type { Category } from "@/types/category";
-const emit = defineEmits(["setSelectedCategory"]);
+import type { Category } from '@/types/category';
+const emit = defineEmits(['setSelectedCategory']);
 const props = defineProps<{
   setup: {
     categoryList: Category[];
@@ -39,7 +39,7 @@ const props = defineProps<{
 }>();
 
 const setCategory = (id: number) => {
-  emit("setSelectedCategory", id);
+  emit('setSelectedCategory', id);
 };
 </script>
 

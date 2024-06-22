@@ -19,7 +19,11 @@
       v-if="!recentTransactions.length"
     >
       <div class="w-[60px] m-auto mb-1">
+        <<<<<<< HEAD
         <img src="~/assets/img/recent-transaction.svg" class="w-full" />
+        =======
+        <img src="/assets/img/recent-transaction.svg" class="w-full" />
+        >>>>>>> temp-branch
       </div>
       <div
         class="text-center text-navyBlue-900 lato-medium text-sm mb-1"
@@ -94,9 +98,15 @@ const props = withDefaults(
         id: 1,
         subactegoryName: "Cooking gas",
         category: {
+<<<<<<< HEAD
           name: "Housing",
           color: "#f79009",
           icon: "/house-category-icon.svg",
+=======
+          name: 'Housing',
+          color: '#f79009',
+          icon: '/assets/img/house-category-icon.svg',
+>>>>>>> temp-branch
         },
         expenseCurrency: "₦",
         expenseAmount: "36,000",
@@ -106,9 +116,9 @@ const props = withDefaults(
         id: 2,
         subactegoryName: "A/C Repair",
         category: {
-          name: "Car",
-          color: "#12B76A",
-          icon: "/car-category.svg",
+          name: 'Car',
+          color: '#12B76A',
+          icon: '/assets/img/car-category.svg',
         },
         expenseCurrency: "₦",
         expenseAmount: "12,000,000",
@@ -118,9 +128,15 @@ const props = withDefaults(
         id: 3,
         subactegoryName: "Bolu Upkeep",
         category: {
+<<<<<<< HEAD
           name: "Family",
           color: "#004EC1",
           icon: "/family-category.svg",
+=======
+          name: 'Family',
+          color: '#004EC1',
+          icon: '/assets/img/family-category.svg',
+>>>>>>> temp-branch
         },
         expenseCurrency: "₦",
         expenseAmount: "10,000",

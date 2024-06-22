@@ -6,7 +6,7 @@
         class="rounded-lg border border-grey-300 bg-white p-2 font-medium text-gray-700 hover:bg-gray-50"
         @click="newPage(pages.prev)"
       >
-        <img src="/page-arrow-left.svg" alt="" />
+        <img src="/assets/img/page-arrow-left.svg" alt="" />
       </a>
 
       <p class="text-[#344054] self-center">
@@ -17,7 +17,7 @@
         class="rounded-lg border border-grey-300 bg-white p-2 font-medium text-gray-700 hover:bg-gray-50"
         @click="newPage(pages.next)"
       >
-        <img src="/page-arrow-right.svg" alt="" />
+        <img src="/assets/img/page-arrow-right.svg" alt="" />
       </a>
     </div>
     <div
@@ -39,7 +39,7 @@
           @click="newPage(pages.prev)"
         >
           <div class="flex gap-2">
-            <img src="/page-arrow-left.svg" alt="" />
+            <img src="/assets/img/page-arrow-left.svg" alt="" />
             <p class="lato-medium text-sm text-[#344054] font-medium">
               Previous
             </p>
@@ -65,7 +65,7 @@
           @click="newPage(pages.next)"
           ><div class="flex gap-2">
             <p class="lato-medium text-sm text-[#344054] font-medium">Next</p>
-            <img src="/page-arrow-right.svg" alt="" />
+            <img src="/assets/img/page-arrow-right.svg" alt="" />
           </div>
         </a>
       </nav>

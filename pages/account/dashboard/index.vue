@@ -28,7 +28,7 @@
           >
             <div class="w-[36px] mb-2">
               <img
-                src="~/assets/img/add-expense-quick-link.svg"
+                src="/assets/img/add-expense-quick-link.svg"
                 class="w-full"
               />
             </div>
@@ -41,7 +41,7 @@
           >
             <div class="w-[36px] mb-2">
               <img
-                src="~/assets/img/create-category-quick-link.svg"
+                src="/assets/img/create-category-quick-link.svg"
                 class="w-full"
               />
             </div>
@@ -68,7 +68,7 @@
 
 <script lang="ts" setup>
 definePageMeta({
-  layout: "account",
+  layout: 'account',
 });
 
 const openCategorySuggestionModal = ref(false);

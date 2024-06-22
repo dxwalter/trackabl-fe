@@ -19,7 +19,11 @@
             <div class="flex justify-center">
               <div class="w-[16px] self-center mr-1">
                 <img
-                  :src="slide.trendStatus ? '/trend-up.svg' : '/trend-down.svg'"
+                  :src="
+                    slide.trendStatus
+                      ? '/assets/img/trend-up.svg'
+                      : '/assets/img/trend-down.svg'
+                  "
                   class="w-full"
                 />
               </div>

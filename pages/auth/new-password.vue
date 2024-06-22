@@ -6,7 +6,7 @@
       <div class="flex justify-between mb-6 2xl:mb-14">
         <div class="w-[20px] self-center">
           <NuxtLink to="/auth">
-            <img src="~/assets/img/arrow-left.svg" class="w-full" />
+            <img src="/assets/img/arrow-left.svg" class="w-full" />
           </NuxtLink>
         </div>
 
@@ -63,7 +63,7 @@
             >
               <div class="button-text">Continue</div>
               <div class="w-6 button-spinner">
-                <img src="~/assets/img/button-loader.svg" class="w-full" />
+                <img src="/assets/img/button-loader.svg" class="w-full" />
               </div>
             </button>
           </div>
@@ -80,12 +80,12 @@
 </template>
 <script lang="ts" setup>
 definePageMeta({
-  layout: "auth-page-layout",
+  layout: 'auth-page-layout',
 });
 
-import PasswordRecoverySuccessModal from "@/components/Modals/PasswordRecoverySuccess.vue";
+import PasswordRecoverySuccessModal from '@/components/Modals/PasswordRecoverySuccess.vue';
 
-import { useFormInputManipulator } from "@/composables/FormInputManipulator";
+import { useFormInputManipulator } from '@/composables/FormInputManipulator';
 const { HidePassword, ShowPassword } = useFormInputManipulator();
 
 const isPasswordVisible = ref(false);

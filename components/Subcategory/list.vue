@@ -5,10 +5,10 @@
       @click="changeCategory"
     >
       <div
-        class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg self-center"
+        class="w-[36px] h-[36px] bg-grey-200 rounded-full flex justify-center items-center self-center mr-4 lato-bold text-lg"
       >
         <div class="w-[24px]">
-          <img src="~/assets/img/arrow-left.svg" class="w-full" />
+          <img src="/assets/img/arrow-left.svg" class="w-full" />
         </div>
       </div>
       <div class="lato-medium text-navyBlue-900 self-center">
@@ -39,15 +39,15 @@
         </div>
       </div>
       <div class="w-[16px] self-center">
-        <img src="~/assets/img/caret-right.svg" class="w-full" />
+        <img src="/assets/img/caret-right.svg" class="w-full" />
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import type { Subcategory } from "@/types/category";
-const emit = defineEmits(["setSelectedSubCategory", "changeCategory"]);
+import type { Subcategory } from '@/types/category';
+const emit = defineEmits(['setSelectedSubCategory', 'changeCategory']);
 const props = defineProps<{
   setup: {
     categoryId: number;
@@ -71,14 +71,14 @@ const subcategoryList = computed(() => {
   return subcategories;
 });
 
-import { useCategoryStore } from "@/stores/category";
+import { useCategoryStore } from '@/stores/category';
 const { list } = useCategoryStore();
 
 const setSubcategory = (id: number) => {
-  emit("setSelectedSubCategory", id);
+  emit('setSelectedSubCategory', id);
 };
 const changeCategory = () => {
-  emit("changeCategory");
+  emit('changeCategory');
 };
 </script>
 
