@@ -51,7 +51,7 @@
             @click="showSuggestionPopover"
           >
             <div class="w-[16px]">
-              <div><NuxtImg src="/plus-grey.svg" class="w-full" /></div>
+              <div><img src="/assets/img/plus-grey.svg" class="w-full" /></div>
             </div>
           </button>
         </div>

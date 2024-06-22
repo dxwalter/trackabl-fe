@@ -23,7 +23,7 @@
               class="bg-[#ECFDF3] rounded-[16px] inline-flex gap-1 text-[#027A48] py-[2px] px-2"
               v-if="item.status === 'Paid'"
             >
-              <img src="/status-check.svg" alt="" />
+              <img src="/assets/img/status-check.svg" alt="" />
               {{ item.status }}
             </div>
 
@@ -31,7 +31,7 @@
               class="bg-[#FEF3F2] rounded-[16px] inline-flex gap-1 text-[#B42318] py-[2px] px-2"
               v-if="item.status === 'Failed'"
             >
-              <img src="/failed.svg" alt="" />
+              <img src="/assets/img/failed.svg" alt="" />
               {{ item.status }}
             </div>
 
@@ -39,7 +39,7 @@
               class="bg-[#0439A3] rounded-[16px] inline-flex gap-1 text-[#fff] py-[2px] px-2"
               v-if="item.status === 'Refunded'"
             >
-              <img src="/corner-up-left.svg" alt="" />
+              <img src="/assets/img/corner-up-left.svg" alt="" />
               {{ item.status }}
             </div>
           </td>

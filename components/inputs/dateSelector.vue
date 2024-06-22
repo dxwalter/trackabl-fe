@@ -23,7 +23,7 @@
 
         <template #input-icon>
           <div class="w-[20px] self-center">
-            <NuxtImg src="/calendar.svg" class="w-full" />
+            <img src="/assets/img/calendar.svg" class="w-full" />
           </div>
         </template>
       </VueDatePicker>
@@ -32,9 +32,9 @@
 </template>
 
 <script lang="ts" setup>
-import VueDatePicker from "@vuepic/vue-datepicker";
-import "@vuepic/vue-datepicker/dist/main.css";
-const date = ref("");
+import VueDatePicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css';
+const date = ref('');
 </script>
 
 <style scoped lang="css">
@@ -47,7 +47,7 @@ const date = ref("");
   /* display: none !important; */
   color: #101828;
   font-size: 16px;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   border: 1px solid #d0d5dd;
   border-radius: 12px;
   padding: 12px 14px;
@@ -59,7 +59,7 @@ const date = ref("");
 
 .date-modifier :deep(.dp__main .dp__input_wrap input::placeholder) {
   color: #667085;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -79,7 +79,7 @@ const date = ref("");
   :deep(
     .dp__main .dp__outer_menu_wrap .dp--header-wrap .dp__month_year_wrap button
   ) {
-  font-family: "LatoMedium", sans-serif;
+  font-family: 'LatoMedium', sans-serif;
   color: #344054;
   font-weight: bold !important;
   font-size: 16px;
@@ -90,7 +90,7 @@ const date = ref("");
   border-radius: 12px;
 }
 .date-modifier :deep(.dp__main .dp__outer_menu_wrap .dp__calendar) {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -105,7 +105,7 @@ const date = ref("");
   ) {
   font-size: 14px;
   color: #344054;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-style: normal;
 }
 </style>

@@ -19,7 +19,7 @@
             }"
           >
             <div class="w-[20px]">
-              <NuxtImg :src="categoryDetails[0].icon" class="w-full" />
+              <img :src="categoryDetails[0].icon" class="w-full" />
             </div>
           </div>
 

@@ -29,10 +29,7 @@
                   Try for free
                 </div>
                 <div class="w-[18px] self-center">
-                  <NuxtImg
-                    src="/arrow-right-black.svg"
-                    class="w-full"
-                  ></NuxtImg>
+                  <img src="/assets/img/arrow-right-black.svg" class="w-full" />
                 </div>
               </NuxtLink>
             </div>
@@ -40,14 +37,14 @@
           <div
             class="flex justify-center md:w-60 m-auto lg:w-[300px] 2xl:w-6/12 3xl:w-5/12"
           >
-            <NuxtImg
-              src="/iPhone-12-Pro-mockup.png"
+            <img
+              src="/assets/img/iPhone-12-Pro-mockup.png"
               class="w-full 2xl:hidden"
-            ></NuxtImg>
-            <NuxtImg
-              src="/iPhone-12-Pro-mockup-desktop.png"
+            />
+            <img
+              src="/assets/img/iPhone-12-Pro-mockup-desktop.png"
               class="w-full hidden 2xl:block"
-            ></NuxtImg>
+            />
           </div>
         </div>
         <div></div>

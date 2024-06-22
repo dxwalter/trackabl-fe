@@ -5,7 +5,7 @@
       class="flex justify-center py-6 px-4 xl:py-9 xl:px-[112px] xl:justify-start mb-6"
     >
       <div class="w-[115px] xl:w-[140px]">
-        <NuxtImg src="/blue-logo.svg" class="w-full" />
+        <img src="/assets/img/blue-logo.svg" class="w-full" />
       </div>
     </div>
     <!-- content -->
@@ -24,18 +24,19 @@
               to="https://www.facebook.com/61559650231999"
               target="_blank"
             >
-              <NuxtImg src="/facebook-grey.svg" class="w-full"></NuxtImg>
+              <img src="/assets/img/facebook-grey.svg" class="w-full" />
             </NuxtLink>
           </div>
           <div class="w-[18px] self-center mx-4">
             <NuxtLink to="https://twitter.com/officialtrackbl" target="_blank">
-              <NuxtImg src="/x-grey.svg" class="w-full"></NuxtImg
-            ></NuxtLink>
+              <img src="/assets/img/x-grey.svg" class="w-full"/ ></NuxtLink
+            >
           </div>
           <div class="w-[24px] self-center">
             <NuxtLink to="https://www.instagram.com/trackabl/" target="_blank"
-              ><NuxtImg src="/instagram-grey.svg" class="w-full"></NuxtImg
-            ></NuxtLink>
+              ><img src="/assets/img/instagram-grey.svg" class="w-full"/
+              ></NuxtLink
+            >
           </div>
         </div>
       </div>

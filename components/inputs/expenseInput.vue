@@ -7,7 +7,7 @@
       <div class="flex">
         <div class="flex self-center cursor-pointer" @click="openCurrencyModal">
           <div class="w-[18px] mr-1 self-center">
-            <NuxtImg src="/caret-down.svg" class="w-full" />
+            <img src="/assets/img/caret-down.svg" class="w-full" />
           </div>
           <div class="text-white text-2xl lato-semi-bold self-center">₦</div>
         </div>
@@ -31,7 +31,7 @@
 </template>
 
 <script lang="ts" setup>
-const amount = ref("");
+const amount = ref('');
 
 const isCurrencyModalOpen = ref(false);
 const openCurrencyModal = () => {
@@ -39,17 +39,17 @@ const openCurrencyModal = () => {
   isCurrencyModalOpen.value = !isCurrencyModalOpen.value;
 };
 
-const emit = defineEmits(["expenseAmount"]);
+const emit = defineEmits(['expenseAmount']);
 
 const validateInput = () => {
-  const rawAmount = amount.value.replaceAll(",", "");
+  const rawAmount = amount.value.replaceAll(',', '');
   const newNumber = Number(rawAmount);
 
   if (isNaN(Number(newNumber))) {
     amount.value = rawAmount.substring(0, rawAmount.length - 1);
   } else {
     if (amount.value.length === 0) {
-      amount.value = "";
+      amount.value = '';
       return;
     }
 
@@ -60,7 +60,7 @@ const validateInput = () => {
     }
 
     amount.value = newNumber.toLocaleString();
-    emit("expenseAmount", Number(amount.value.replaceAll(",", "")));
+    emit('expenseAmount', Number(amount.value.replaceAll(',', '')));
   }
 };
 

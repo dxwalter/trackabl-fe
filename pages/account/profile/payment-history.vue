@@ -3,7 +3,7 @@
     <div class="mb-6 px-[18px] xl:px-9 flex gap-6">
       <div class="self-center">
         <img
-          src="/arrow-left.svg"
+          src="assets/img/arrow-left.svg"
           alt=""
           class="cursor-pointer"
           @click="$router.back()"
@@ -51,9 +51,7 @@
           class="hidden xl:block"
           :payments="payments"
         />
-        <AccountTablesPaymentHistoryCard
-          :payments="payments"
-        />
+        <AccountTablesPaymentHistoryCard :payments="payments" />
         <pagination
           class="border-grey-300 border-t"
           :current-page="1"

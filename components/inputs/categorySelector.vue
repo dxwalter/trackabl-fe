@@ -12,7 +12,7 @@
             :style="{ backgroundColor: selectedCategory[0].color }"
           >
             <div class="w-[16px]">
-              <NuxtImg :src="selectedCategory[0].icon" class="w-full" />
+              <img :src="selectedCategory[0].icon" class="w-full" />
             </div>
           </div>
           <div class="flex justify-between w-full self-center">
@@ -28,7 +28,7 @@
         </div>
 
         <div class="w-[20px] self-center">
-          <NuxtImg src="/caret-thin-down.svg" class="w-full" />
+          <img src="/assets/img/caret-thin-down.svg" class="w-full" />
         </div>
       </div>
     </div>
@@ -44,13 +44,13 @@
 </template>
 
 <script lang="ts" setup>
-const emit = defineEmits(["setSelectedIds", "openSuggestion"]);
+const emit = defineEmits(['setSelectedIds', 'openSuggestion']);
 
 const selectedCategoryId = ref<number | null>(null);
 const selectedSubcategoryId = ref<number | null>(null);
 
-import { useCategoryStore } from "@/stores/category";
-import type { Subcategory } from "@/types/category";
+import { useCategoryStore } from '@/stores/category';
+import type { Subcategory } from '@/types/category';
 const { list } = useCategoryStore();
 
 const selectedCategory = computed(() => {
@@ -88,14 +88,14 @@ const manageCategoryModal = (data: {
     return;
   }
 
-  console.log("Here");
-  emit("setSelectedIds", data);
+  console.log('Here');
+  emit('setSelectedIds', data);
 
   closeCategoryModal();
 };
 
 const onOpenSuggestion = (data: { type: string; categoryId?: number }) => {
-  emit("openSuggestion", data);
+  emit('openSuggestion', data);
   closeCategoryModal();
 };
 

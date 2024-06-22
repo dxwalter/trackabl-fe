@@ -3,7 +3,7 @@
     <div class="mb-6 px-[18px] xl:px-9 flex gap-6">
       <div class="self-center">
         <img
-          src="/arrow-left.svg"
+          src="/assets/img/arrow-left.svg"
           alt=""
           class="cursor-pointer"
           @click="$router.back()"
@@ -46,7 +46,7 @@
           </div>
 
           <div class="flex gap-1 mt-2">
-            <img src="/calendar.svg" alt="" />
+            <img src="/assets/img/calendar.svg" alt="" />
             <p class="text-grey-500">Renews 26 May</p>
           </div>
         </div>
@@ -56,7 +56,7 @@
             class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between"
           >
             <p class="text-grey-500">View payment history</p>
-            <img src="/caret-right.svg" alt="" />
+            <img src="/assets/img/caret-right.svg" alt="" />
           </nuxt-link>
 
           <nuxt-link
@@ -64,7 +64,7 @@
             class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between mt-4"
           >
             <p class="text-grey-500">Change plan</p>
-            <img src="/caret-right.svg" alt="" />
+            <img src="/assets/img/caret-right.svg" alt="" />
           </nuxt-link>
         </div>
       </div>

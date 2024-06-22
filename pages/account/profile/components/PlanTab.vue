@@ -46,15 +46,15 @@
           </p>
           <ul class="mt-6 flex flex-col gap-4">
             <li class="flex gap-3">
-              <img src="/check-icon.svg" alt="" />
+              <img src="/assets/img/check-icon.svg" alt="" />
               <p class="text-grey-500">Unlock all features</p>
             </li>
             <li class="flex gap-3">
-              <img src="/check-icon.svg" alt="" />
+              <img src="/assets/img/check-icon.svg" alt="" />
               <p class="text-grey-500">Basic reporting + analytics</p>
             </li>
             <li class="flex gap-3">
-              <img src="/check-icon.svg" alt="" />
+              <img src="/assets/img/check-icon.svg" alt="" />
               <p class="text-grey-500">Up to 10 individual users</p>
             </li>
           </ul>
@@ -92,15 +92,15 @@
           </p>
           <ul class="mt-6 flex flex-col gap-4">
             <li class="flex gap-3">
-              <img src="/check-icon.svg" alt="" />
+              <img src="/assets/img/check-icon.svg" alt="" />
               <p class="text-grey-500">Unlock all features</p>
             </li>
             <li class="flex gap-3">
-              <img src="/check-icon.svg" alt="" />
+              <img src="/assets/img/check-icon.svg" alt="" />
               <p class="text-grey-500">Basic reporting + analytics</p>
             </li>
             <li class="flex gap-3">
-              <img src="/check-icon.svg" alt="" />
+              <img src="/assets/img/check-icon.svg" alt="" />
               <p class="text-grey-500">Up to 10 individual users</p>
             </li>
           </ul>
@@ -136,15 +136,15 @@
           </p>
           <ul class="mt-6 flex flex-col gap-4">
             <li class="flex gap-3">
-              <img src="/check-icon.svg" alt="" />
+              <img src="/assets/img/check-icon.svg" alt="" />
               <p class="text-grey-500">Unlock all features</p>
             </li>
             <li class="flex gap-3">
-              <img src="/check-icon.svg" alt="" />
+              <img src="/assets/img/check-icon.svg" alt="" />
               <p class="text-grey-500">Basic reporting + analytics</p>
             </li>
             <li class="flex gap-3">
-              <img src="/check-icon.svg" alt="" />
+              <img src="/assets/img/check-icon.svg" alt="" />
               <p class="text-grey-500">Up to 10 individual users</p>
             </li>
           </ul>
@@ -182,15 +182,15 @@
           </p>
           <ul class="mt-6 flex flex-col gap-4">
             <li class="flex gap-3">
-              <img src="/check-icon.svg" alt="" />
+              <img src="/assets/img/check-icon.svg" alt="" />
               <p class="text-grey-500">Unlock all features</p>
             </li>
             <li class="flex gap-3">
-              <img src="/check-icon.svg" alt="" />
+              <img src="/assets/img/check-icon.svg" alt="" />
               <p class="text-grey-500">Basic reporting + analytics</p>
             </li>
             <li class="flex gap-3">
-              <img src="/check-icon.svg" alt="" />
+              <img src="/assets/img/check-icon.svg" alt="" />
               <p class="text-grey-500">Up to 10 individual users</p>
             </li>
           </ul>

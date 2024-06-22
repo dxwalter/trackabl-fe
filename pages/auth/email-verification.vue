@@ -46,7 +46,7 @@
         >
           <div class="button-text">Tap to Confirm</div>
           <div class="w-6 button-spinner">
-            <NuxtImg src="/button-loader.svg" class="w-full" />
+            <img src="/assets/img/button-loader.svg" class="w-full" />
           </div>
         </button>
       </div>
@@ -61,7 +61,7 @@
 
 <script lang="ts" setup>
 definePageMeta({
-  layout: "pricing-page-layout",
+  layout: 'pricing-page-layout',
 });
 
 const time = ref(10);

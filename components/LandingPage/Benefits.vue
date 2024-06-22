@@ -27,10 +27,7 @@
             <div class="mb-12 xl:flex 3xl:mb-5">
               <!-- image -->
               <div class="w-9 mb-4 xl:mr-4 shrink-0">
-                <NuxtImg
-                  src="/benefit-easy-to-use.svg"
-                  class="w-full"
-                ></NuxtImg>
+                <img src="/assets/img/benefit-easy-to-use.svg" class="w-full" />
               </div>
               <!-- text -->
               <div>
@@ -52,10 +49,10 @@
             <div class="mb-12 xl:flex 3xl:mb-5">
               <!-- image -->
               <div class="w-9 mb-4 xl:mr-4 shrink-0">
-                <NuxtImg
-                  src="/benefits-insightful-analytics.svg"
+                <img
+                  src="/assets/img/benefits-insightful-analytics.svg"
                   class="w-full"
-                ></NuxtImg>
+                />
               </div>
               <!-- text -->
               <div>
@@ -76,10 +73,10 @@
             <div class="mb-7 xl:flex 3xl:mb-0">
               <!-- image -->
               <div class="w-9 mb-4 xl:mr-4 shrink-0">
-                <NuxtImg
-                  src="/benefits-flexible-organisation.svg"
+                <img
+                  src="/assets/img/benefits-flexible-organisation.svg"
                   class="w-full"
-                ></NuxtImg>
+                />
               </div>
               <!-- text -->
               <div>

@@ -3,7 +3,7 @@
     <div class="mb-6 px-[18px] xl:px-9 flex justify-between">
       <div class="w-[62px]">
         <img
-          src="/arrow-left.svg"
+          src="/assets/img/arrow-left.svg"
           alt=""
           class="self-center cursor-pointer"
           @click="$router.back()"
@@ -32,9 +32,9 @@
 
       <div class="xl:mt-8 flex flex-col justify-center">
         <div class="relative w-[96px] h-[96px] mx-auto rounded-[50%]">
-          <img src="/profile-icon.svg" class="w-full" alt="" />
+          <img src="/assets/img/profile-icon.svg" class="w-full" alt="" />
           <img
-            src="/edit.svg"
+            src="/assets/img/edit.svg"
             alt=""
             class="absolute bottom-0 right-0 xl:hidden"
           />
@@ -51,7 +51,7 @@
           class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between"
         >
           <p class="text-[#101828]">Edit Profile</p>
-          <img src="/caret-right.svg" alt="" />
+          <img src="/assets/img/caret-right.svg" alt="" />
         </nuxt-link>
 
         <nuxt-link
@@ -59,14 +59,14 @@
           class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between mt-4"
         >
           <p class="text-[#101828]">Manage Subscription</p>
-          <img src="/caret-right.svg" alt="" />
+          <img src="/assets/img/caret-right.svg" alt="" />
         </nuxt-link>
 
         <div
           class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between mt-4"
         >
           <p class="text-[#101828]">Change Password</p>
-          <img src="/public/caret-right.svg" alt="" />
+          <img src="/assets/img/caret-right.svg" alt="" />
         </div>
 
         <div

@@ -27,7 +27,10 @@
             class="py-3 px-4 border border-grey-200 rounded-xl w-[186px] xl:w-[250px] 2xl:w-[418px] 3xl:w-full mr-2 xl:mr-0 block shrink-0 xl:mb-2"
           >
             <div class="w-[36px] mb-2">
-              <NuxtImg src="/add-expense-quick-link.svg" class="w-full" />
+              <img
+                src="/assets/img/add-expense-quick-link.svg"
+                class="w-full"
+              />
             </div>
             <div class="lato-medium text-blue-500">Add Expense</div>
           </NuxtLink>
@@ -37,7 +40,10 @@
             @click="latchCategoryPopover"
           >
             <div class="w-[36px] mb-2">
-              <NuxtImg src="/create-category-quick-link.svg" class="w-full" />
+              <img
+                src="/assets/img/create-category-quick-link.svg"
+                class="w-full"
+              />
             </div>
             <div class="lato-medium text-blue-500 text-left">
               Create a Category
@@ -62,7 +68,7 @@
 
 <script lang="ts" setup>
 definePageMeta({
-  layout: "account",
+  layout: 'account',
 });
 
 const openCategorySuggestionModal = ref(false);

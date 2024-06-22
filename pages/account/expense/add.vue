@@ -8,7 +8,7 @@
       <div class="flex justify-between mb-6 2xl:mb-14 w-full xl:hidden">
         <div class="w-[20px] self-center">
           <NuxtLink to="/auth">
-            <NuxtImg src="/arrow-left.svg" class="w-full" />
+            <img src="/assets/img/arrow-left.svg" class="w-full" />
           </NuxtLink>
         </div>
 
@@ -76,7 +76,7 @@
 
 <script lang="ts" setup>
 definePageMeta({
-  layout: "add-expense",
+  layout: 'add-expense',
 });
 
 const openCategorySuggestionModal = ref(false);
@@ -90,7 +90,7 @@ const latchSubCategoryPopover = () => {
   openSubcategorySuggestionModal.value = !openSubcategorySuggestionModal.value;
 };
 const openSuggestion = (data: { type: string; categoryId?: number }) => {
-  if (data.type === "category") {
+  if (data.type === 'category') {
     latchCategoryPopover();
   } else {
     categoryIdForSuggestion.value = data.categoryId ? data.categoryId : null;

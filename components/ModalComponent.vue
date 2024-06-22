@@ -13,10 +13,10 @@
             <div class="flex justify-end w-full">
               <div class="mb-6">
                 <button
-                  class="border-0 rounded-full close-modal-btn w-[24px] h-[24px] flex justify-center item-ends border-0 cursor-pointer"
+                  class="border-0 rounded-full close-modal-btn w-[24px] h-[24px] flex justify-center item-ends cursor-pointer"
                   @click="closeModal"
                 >
-                  <NuxtImg src="/close-modal.svg" class="w-full" />
+                  <img src="/assets/img/close-modal.svg" class="w-full" />
                 </button>
               </div>
             </div>
@@ -33,7 +33,7 @@
 </template>
 
 <script lang="ts" setup>
-const emit = defineEmits(["closeModal"]);
+const emit = defineEmits(['closeModal']);
 
 const props = defineProps<{
   setup: {
@@ -42,16 +42,16 @@ const props = defineProps<{
 }>();
 
 const closeModal = () => {
-  emit("closeModal");
+  emit('closeModal');
 };
 
 const HideOverflowInBodyTag = () => {
-  const bodyElement = document.getElementsByTagName("body")[0];
-  bodyElement.classList.add("overflow-hidden");
+  const bodyElement = document.getElementsByTagName('body')[0];
+  bodyElement.classList.add('overflow-hidden');
 };
 const ShowOverflowInBodyTag = () => {
-  const bodyElement = document.getElementsByTagName("body")[0];
-  bodyElement.classList.remove("overflow-hidden");
+  const bodyElement = document.getElementsByTagName('body')[0];
+  bodyElement.classList.remove('overflow-hidden');
 };
 
 watch(

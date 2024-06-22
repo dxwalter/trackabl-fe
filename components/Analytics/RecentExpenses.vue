@@ -19,7 +19,7 @@
       v-if="!recentTransactions.length"
     >
       <div class="w-[60px] m-auto mb-1">
-        <NuxtImg src="/recent-transaction.svg" class="w-full" />
+        <img src="/assets/img/recent-transaction.svg" class="w-full" />
       </div>
       <div
         class="text-center text-navyBlue-900 lato-medium text-sm mb-1"
@@ -44,7 +44,7 @@
             class="w-[36px] h-[36px] rounded-full flex justify-center items-center p-2 self-center mr-3"
             :style="{ backgroundColor: expense.category.color }"
           >
-            <NuxtImg :src="expense.category.icon" class="w-full" />
+            <img :src="expense.category.icon" class="w-full" />
           </div>
           <div class="self-center flex flex-col">
             <div class="lato-medium text-base text-navyBlue-900 mb-1">
@@ -96,7 +96,7 @@ const props = withDefaults(
         category: {
           name: 'Housing',
           color: '#f79009',
-          icon: '/house-category-icon.svg',
+          icon: '/assets/img/house-category-icon.svg',
         },
         expenseCurrency: '₦',
         expenseAmount: '36,000',
@@ -108,7 +108,7 @@ const props = withDefaults(
         category: {
           name: 'Car',
           color: '#12B76A',
-          icon: '/car-category.svg',
+          icon: '/assets/img/car-category.svg',
         },
         expenseCurrency: '₦',
         expenseAmount: '12,000,000',
@@ -120,7 +120,7 @@ const props = withDefaults(
         category: {
           name: 'Family',
           color: '#004EC1',
-          icon: '/family-category.svg',
+          icon: '/assets/img/family-category.svg',
         },
         expenseCurrency: '₦',
         expenseAmount: '10,000',

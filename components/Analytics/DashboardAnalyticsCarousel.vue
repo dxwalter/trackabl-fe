@@ -18,8 +18,12 @@
             </div>
             <div class="flex justify-center">
               <div class="w-[16px] self-center mr-1">
-                <NuxtImg
-                  :src="slide.trendStatus ? '/trend-up.svg' : '/trend-down.svg'"
+                <img
+                  :src="
+                    slide.trendStatus
+                      ? '/assets/img/trend-up.svg'
+                      : '/assets/img/trend-down.svg'
+                  "
                   class="w-full"
                 />
               </div>

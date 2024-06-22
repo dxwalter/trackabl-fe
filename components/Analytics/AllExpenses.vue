@@ -15,7 +15,7 @@
                 class="flex gap-[2px] px-2 py-1 border-b-2 border-blue-500 cursor-pointer"
                 @click="latchCategoryPopover"
               >
-                <NuxtImg src="/add.svg" class="w-4 h-4 self-center" />
+                <img src="/assets/img/add.svg" class="w-4 h-4 self-center" />
                 <p class="text-sm text-blue-500 font-medium leading-[20px]">
                   Add
                 </p>
@@ -66,7 +66,7 @@
           v-else
         >
           <div class="w-[60px] m-auto mb-1">
-            <NuxtImg src="/recent-transaction.svg" class="w-full" />
+            <img src="/assets/img/recent-transaction.svg" class="w-full" />
           </div>
           <div
             class="text-center text-navyBlue-900 lato-medium text-sm mb-1"
