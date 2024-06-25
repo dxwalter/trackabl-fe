@@ -63,7 +63,8 @@
         </nuxt-link>
 
         <div
-          class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between mt-4"
+          class="rounded-[8px] border rounded-bl-none py-3 px-4 border-grey-200 flex justify-between mt-4 cursor-pointer"
+          @click="showChangePasswordModal = true"
         >
           <p class="text-[#101828]">Change Password</p>
           <img src="/assets/img/caret-right.svg" alt="" />
@@ -79,6 +80,7 @@
         <div class="mt-[56px]">
           <button
             class="w-full text-white bg-red-500 py-3 px-4 rounded-xl border-blue-400 hover:bg-red-700"
+            @click="showDeleteModal = true"
           >
             Delete Account
           </button>
@@ -86,6 +88,20 @@
       </div>
     </div>
   </div>
+
+  <AccountPopoversChangePassword
+    :setup="{
+      open: showChangePasswordModal,
+    }"
+    @close-modal="showChangePasswordModal = false"
+  />
+
+  <AccountPopoversDeleteAccount
+    :setup="{
+      open: showDeleteModal,
+    }"
+    @close-modal="showDeleteModal = false"
+  />
 </template>
 <script lang="ts" setup>
 import Toggle from '@/components/Toggle.vue';
@@ -96,4 +112,7 @@ defineComponent({
 definePageMeta({
   layout: 'account',
 });
+
+const showChangePasswordModal = ref(false);
+const showDeleteModal = ref(false);
 </script>

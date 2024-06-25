@@ -121,7 +121,7 @@ const props = withDefaults(
         category: {
           name: 'Family',
           color: '#004EC1',
-          icon: '/assets/img/family-category.svg',
+          icon: '~/assets/img/family-category.svg',
         },
         expenseCurrency: '₦',
         expenseAmount: '10,000',
