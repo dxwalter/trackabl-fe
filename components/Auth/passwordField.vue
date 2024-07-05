@@ -61,6 +61,7 @@
         :id="props.setup.id"
         :placeholder="props.setup.placeholder"
         v-model="userPassword"
+        @input="updatePasswordValue"
       />
       <div
         class="self-center h-full px-[14px] text-blue-700 text-sm underline cursor-pointer"
@@ -113,7 +114,7 @@
 </template>
 
 <script lang="ts" setup>
-const emit = defineEmits(['newPasswordState']);
+const emit = defineEmits(['newPasswordState', 'passwordValue']);
 const props = defineProps<{
   setup: {
     label: string;
@@ -199,6 +200,10 @@ const validatePassword = (password: string) => {
     status: passwordScore.value === 3 ? true : false,
     data: password,
   });
+};
+
+const updatePasswordValue = (e) => {
+  emit('passwordValue', e);
 };
 
 watch(

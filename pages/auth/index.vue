@@ -57,6 +57,7 @@
               type="email"
               class="w-full px-[14px] py-3 text-navyBlue-900 rounded-xl border border-grey-300 blue-active-form-field"
               placeholder="Enter your email address"
+              v-model="form.email"
             />
           </div>
           <div class="full mb-6">
@@ -70,13 +71,14 @@
                 class="w-full px-[14px] rounded-xl py-3 text-navyBlue-900 self-center password-field"
                 id="SignInPassword"
                 placeholder="Enter your password"
+                v-model="form.password"
               />
               <div
                 class="self-center h-full px-[14px] text-blue-700 text-sm underline cursor-pointer"
                 style="text-underline-offset: 4px"
                 @click="mangePasswordVisibility"
               >
-                {{ isPasswordVisible ? "Hide" : "Show" }}
+                {{ isPasswordVisible ? 'Hide' : 'Show' }}
               </div>
             </div>
           </div>
@@ -96,8 +98,8 @@
               }"
               type="submit"
             >
-              <div class="button-text">Continue</div>
-              <div class="w-6 button-spinner">
+              <div class="button-text" v-if="!isPending">Continue</div>
+              <div class="w-6" v-else>
                 <img src="/assets/img/button-loader.svg" class="w-full" />
               </div>
             </button>
@@ -108,31 +110,76 @@
   </div>
 </template>
 <script lang="ts" setup>
+// import { AuthService } from '@/services/index.js';
 definePageMeta({
-  layout: "auth-page-layout",
+  layout: 'auth-page-layout',
 });
 
-import { useFormInputManipulator } from "@/composables/FormInputManipulator";
-import { ref } from "vue";
+import { useFormInputManipulator } from '@/composables/FormInputManipulator';
+import { ref } from 'vue';
+import { useRuntimeConfig } from '#imports';
+import { useRouter } from 'vue-router';
+import { useMyFetch } from '@/composables/useMyFetch.ts';
+
+const config = useRuntimeConfig();
+const apiBaseUrl = config.public.API_BASE_URL;
 
 const { HidePassword, ShowPassword } = useFormInputManipulator();
 
 const isPasswordVisible = ref(false);
 const isFormSubmitted = ref(false);
+const isPending = ref(false);
+const router = useRouter();
+
+const form = ref({
+  email: '',
+  password: '',
+  trial_count: 0,
+});
 
 const mangePasswordVisibility = () => {
   if (isPasswordVisible.value) {
-    HidePassword("SignInPassword");
+    HidePassword('SignInPassword');
   } else {
-    ShowPassword("SignInPassword");
+    ShowPassword('SignInPassword');
   }
 
   isPasswordVisible.value = !isPasswordVisible.value;
 };
 
-const logUserIn = () => {
-  useNuxtApp().$toast.success(
-    `<div class="toastHeader lato-semi-bold text-base mb-2">Uh-uh! This email is not valid</div><div class="toastBody text-sm lato-regular">It looks like there is already an account with this email address. Try to login or use a different email address</div>`
-  );
+const logUserIn = async () => {
+  if (isPending.value) return; //
+  isPending.value = true;
+  // const data = await AuthService.login();
+
+  const { data, error } = await useMyFetch('/auth/login', {
+    method: 'POST',
+    body: form.value,
+  });
+  console.log(data.value);
+  // console.log(error.value.message, error.value.name);
+  // console.log(error);
+  if (data.value) {
+    useNuxtApp().$toast.success(
+      `<div class="toastHeader lato-semi-bold text-base mb-2"></div><div class="toastBody text-sm lato-regular">${data.value.message}</div>`
+    );
+
+    if (data.value.data.isEmailVerified === false) {
+      router.push('/auth/email-verification');
+      localStorage.setItem('email', form.value.email);
+      localStorage.setItem('user', JSON.stringify(data.value.data));
+    } else {
+      router.push('/account/dashboard');
+    }
+
+    isPending.value = false;
+    form.value.trial_count += 1;
+  } else {
+    useNuxtApp().$toast.error(
+      `<div class="toastHeader lato-semi-bold text-base mb-2">${error.value.data.error}</div><div class="toastBody text-sm lato-regular">${error.value.data.message}</div>`
+    );
+    isPending.value = false;
+    form.value.trial_count += 1;
+  }
 };
 </script>

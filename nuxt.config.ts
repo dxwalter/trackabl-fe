@@ -3,12 +3,20 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
-    "~/assets/css/main.css",
-    "~/assets/css/supporting-style.css",
-    "animate.css/animate.min.css",
+    '~/assets/css/main.css',
+    '~/assets/css/supporting-style.css',
+    'animate.css/animate.min.css',
   ],
+  runtimeConfig: {
+    // Make environment variables accessible here
+    public: {
+      API_BASE_URL: process.env.VITE_APP_API_URL,
+      // Add more environment variables as needed
+    },
+  },
+
   image: {
-    dir: "assets/img",
+    dir: 'assets/img',
   },
   postcss: {
     plugins: {
@@ -20,30 +28,30 @@ export default defineNuxtConfig({
     // Options
     preconnect: true,
     prefetch: true,
-    display: "swap",
-    Lato: "400-900",
+    display: 'swap',
+    Lato: '400-900',
   },
   build: {
-    transpile: ["@vuepic/vue-datepicker"],
+    transpile: ['@vuepic/vue-datepicker'],
   },
   modules: [
-    "@nuxtjs/tailwindcss",
+    '@nuxtjs/tailwindcss',
     // "@nuxt/image",
-    "@nuxtjs/google-fonts",
-    "vue3-carousel-nuxt",
-    "@pinia/nuxt",
-    "@nuxt/test-utils/module",
+    '@nuxtjs/google-fonts',
+    'vue3-carousel-nuxt',
+    '@pinia/nuxt',
+    '@nuxt/test-utils/module',
     [
-      "@nuxt/image",
+      '@nuxt/image',
       {
-        dir: "assets/img",
+        dir: 'assets/img',
       },
     ],
   ],
   carousel: {
-    prefix: "MyPrefix",
+    prefix: 'MyPrefix',
   },
   pinia: {
-    storesDirs: ["./stores/**"],
+    storesDirs: ['./stores/**'],
   },
 });

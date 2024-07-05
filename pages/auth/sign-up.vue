@@ -47,7 +47,7 @@
             <div class="w-5/12 border self-center text-grey-150"></div>
           </div>
         </div>
-        <form @submit.prevent="logUserIn">
+        <form @submit.prevent="SignUserUp">
           <div class="full mb-5">
             <div class="text-navyBlue-900 text-sm mb-1.5 lato-medium">
               Full Name
@@ -57,6 +57,7 @@
               type="text"
               class="w-full px-[14px] py-3 text-navyBlue-900 rounded-xl border border-grey-300 blue-active-form-field"
               placeholder="Tell us your full name"
+              v-model="form.fullname"
             />
           </div>
           <div class="full mb-5">
@@ -68,6 +69,7 @@
               type="email"
               class="w-full px-[14px] py-3 text-navyBlue-900 rounded-xl border border-grey-300 blue-active-form-field"
               placeholder="Enter your email address"
+              v-model="form.email"
             />
           </div>
           <div class="full mb-8">
@@ -81,6 +83,7 @@
                 showGuideLinesOnActive: true,
               }"
               @new-password-state=""
+              @password-value="setPassword"
             />
           </div>
 
@@ -105,8 +108,8 @@
               }"
               type="submit"
             >
-              <div class="button-text">Continue</div>
-              <div class="w-6 button-spinner">
+              <div class="" v-if="!isPending">Continue</div>
+              <div class="w-6" v-else>
                 <img src="/assets/img/button-loader.svg" class="w-full" />
               </div>
             </button>
@@ -122,11 +125,23 @@ definePageMeta({
 });
 
 import { useFormInputManipulator } from '@/composables/FormInputManipulator';
+import { useRuntimeConfig } from '#imports';
+import { useRouter } from 'vue-router';
+import { ref } from 'vue';
+
+const config = useRuntimeConfig();
+const apiBaseUrl = config.public.API_BASE_URL;
+const router = useRouter();
 
 const { HidePassword, ShowPassword } = useFormInputManipulator();
 
 const isPasswordVisible = ref(false);
 const isFormSubmitted = ref(false);
+const isPending = ref(false);
+
+const setPassword = (e) => {
+  form.value.password = e.target.value;
+};
 
 const mangePasswordVisibility = () => {
   if (isPasswordVisible.value) {
@@ -138,9 +153,34 @@ const mangePasswordVisibility = () => {
   isPasswordVisible.value = !isPasswordVisible.value;
 };
 
-const logUserIn = () => {
-  useNuxtApp().$toast.success(
-    `<div class="toastHeader lato-semi-bold text-base mb-2">Uh-uh! This email is not valid</div><div class="toastBody text-sm lato-regular">It looks like there is already an account with this email address. Try to login or use a different email address</div>`
-  );
+const form = ref({
+  fullname: '',
+  email: '',
+  trial_count: 0,
+  password: '',
+});
+
+const SignUserUp = async () => {
+  isPending.value = true;
+  const { data, error } = await useFetch(`${apiBaseUrl}/auth/create`, {
+    method: 'POST',
+    body: form.value,
+  });
+
+  if (data.value) {
+    form.value.trial_count += 1;
+    useNuxtApp().$toast.success(
+      `<div class="toastHeader lato-semi-bold text-base mb-2">Success</div><div class="toastBody text-sm lato-regular">${data.value.message}</div>`
+    );
+    isPending.value = false;
+    localStorage.setItem('email', form.value.email);
+    router.push('/auth/email-verification');
+  } else {
+    useNuxtApp().$toast.error(
+      `<div class="toastHeader lato-semi-bold text-base mb-2">${error.value.data.error}</div><div class="toastBody text-sm lato-regular">${error.value.data.message}</div>`
+    );
+    form.value.trial_count += 1;
+    isPending.value = false;
+  }
 };
 </script>
