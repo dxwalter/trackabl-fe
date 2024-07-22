@@ -40,6 +40,7 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     'vue3-carousel-nuxt',
     '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
     '@nuxt/test-utils/module',
     [
       '@nuxt/image',

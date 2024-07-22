@@ -71,6 +71,9 @@
 
 <script lang="ts" setup>
 import { withDefaults, defineProps } from 'vue';
+import { useMyFetch } from '@/composables/useMyFetch.ts';
+
+const router = useRouter();
 
 interface Expense {
   id: number;
@@ -130,6 +133,45 @@ const props = withDefaults(
     ],
   }
 );
+
+const fetchExpenses = async () => {
+  const { data, error } = await useMyFetch('/expense', {
+    method: 'GET',
+  });
+
+  console.log(data);
+};
+
+fetchExpenses();
+console.log('keke');
+
+// console.log(data.value);
+// console.log(error);
+// if (data.value) {
+//   useNuxtApp().$toast.success(
+//     `<div class="toastHeader lato-semi-bold text-base mb-2"></div><div class="toastBody text-sm lato-regular">${data.value.message}</div>`
+//   );
+
+// if (data.value.data.isEmailVerified === false) {
+//   router.push('/auth/email-verification');
+//   localStorage.setItem('email', form.value.email);
+//   localStorage.setItem('user', JSON.stringify(data.value.data));
+// } else {
+//   // userStore.SET_USER(data.value.data);
+
+//   router.push('/account/dashboard');
+// }
+
+// isPending.value = false;
+// form.value.trial_count += 1;
+// } else {
+//   useNuxtApp().$toast.error(
+//     `<div class="toastHeader lato-semi-bold text-base mb-2">${error.value.data.error}</div><div class="toastBody text-sm lato-regular">${error.value.data.message}</div>`
+//   );
+//   isPending.value = false;
+//   form.value.trial_count += 1;
+// }
+// };
 </script>
 
 <style></style>

@@ -120,9 +120,11 @@ import { ref } from 'vue';
 import { useRuntimeConfig } from '#imports';
 import { useRouter } from 'vue-router';
 import { useMyFetch } from '@/composables/useMyFetch.ts';
+import { useUserStore } from '@/stores/userStore.ts';
 
 const config = useRuntimeConfig();
 const apiBaseUrl = config.public.API_BASE_URL;
+const userStore = useUserStore();
 
 const { HidePassword, ShowPassword } = useFormInputManipulator();
 
@@ -157,8 +159,7 @@ const logUserIn = async () => {
     body: form.value,
   });
   console.log(data.value);
-  // console.log(error.value.message, error.value.name);
-  // console.log(error);
+  console.log(error);
   if (data.value) {
     useNuxtApp().$toast.success(
       `<div class="toastHeader lato-semi-bold text-base mb-2"></div><div class="toastBody text-sm lato-regular">${data.value.message}</div>`
@@ -169,6 +170,9 @@ const logUserIn = async () => {
       localStorage.setItem('email', form.value.email);
       localStorage.setItem('user', JSON.stringify(data.value.data));
     } else {
+      userStore.SET_USER(data.value.data);
+      localStorage.setItem('token', data.value.data.token);
+
       router.push('/account/dashboard');
     }
 

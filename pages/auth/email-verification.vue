@@ -62,7 +62,9 @@
 <script lang="ts" setup>
 import { useRuntimeConfig } from '#imports';
 import { useRouter } from 'vue-router';
-import { ref } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { useMyFetch } from '@/composables/useMyFetch';
+import { useMyFetchNoToken } from '@/composables/useMyFetchNoToken';
 
 const config = useRuntimeConfig();
 const apiBaseUrl = config.public.API_BASE_URL;
@@ -73,7 +75,7 @@ definePageMeta({
 
 const time = ref(10);
 const requestingOtp = ref(false);
-const intervalId = ref(<null | ReturnType<typeof setTimeout>>null);
+const intervalId = ref<null | ReturnType<typeof setInterval>>(null);
 const isFormSubmitted = ref(false);
 const email = ref<string | null>(null);
 const otpValue = ref('');
@@ -81,19 +83,18 @@ const isPending = ref(false);
 
 const getOptValue = (data: string) => {
   otpValue.value = data;
-
   console.log(otpValue.value);
 };
 
 const resendVerificationCode = async () => {
   const payload = ref({
-    email: localStorage.getItem('email'),
+    email: email.value,
     trial_count: 0,
   });
 
   isPending.value = true;
-  const { data, error } = await useFetch(
-    `${apiBaseUrl}/auth/generate-verifcation-token`,
+  const { data, error } = await useMyFetchNoToken(
+    `/auth/generate-verifcation-token`,
     {
       method: 'PATCH',
       body: payload.value,
@@ -108,13 +109,11 @@ const resendVerificationCode = async () => {
     isPending.value = false;
   } else {
     useNuxtApp().$toast.error(
-      `<div class="toastHeader lato-semi-bold text-base mb-2">Error</div><div class="toastBody text-sm lato-regular">${error.value.data.message}</div>`
+      `<div class="toastHeader lato-semi-bold text-base mb-2">Error</div><div class="toastBody text-sm lato-regular">${error.value.message}</div>`
     );
     payload.value.trial_count += 1;
     isPending.value = false;
   }
-
-  // console.log(data.value);
 
   requestingOtp.value = true;
 
@@ -134,12 +133,11 @@ const startCountDown = () => {
   }
 };
 
-onBeforeMount(() => {
+onBeforeUnmount(() => {
   clearInterval(intervalId.value as any);
 });
 
 onMounted(() => {
-  startCountDown();
   if (process.client) {
     email.value = localStorage.getItem('email');
     startCountDown();
@@ -147,13 +145,19 @@ onMounted(() => {
 });
 
 const verifyEmail = async () => {
+  if (isFormSubmitted.value || isPending.value) {
+    return;
+  }
+
+  isFormSubmitted.value = true;
+  isPending.value = true;
+
   const payload = ref({
     trial_count: 0,
   });
-  isPending.value = true;
-  isFormSubmitted.value = !isFormSubmitted;
-  const { data, error } = await useFetch(
-    `${apiBaseUrl}/auth/verify-email/${otpValue.value}`,
+
+  const { data, error } = await useMyFetch(
+    `/auth/verify-email/${otpValue.value}`,
     {
       method: 'PATCH',
       body: payload.value,
@@ -165,15 +169,16 @@ const verifyEmail = async () => {
     useNuxtApp().$toast.success(
       `<div class="toastHeader lato-semi-bold text-base mb-2">Success</div><div class="toastBody text-sm lato-regular">${data.value.message}</div>`
     );
-    isPending.value = false;
+    router.push('/account/dashboard');
   } else {
     useNuxtApp().$toast.error(
-      `<div class="toastHeader lato-semi-bold text-base mb-2">Error</div><div class="toastBody text-sm lato-regular">${error.value.data.message}</div>`
+      `<div class="toastHeader lato-semi-bold text-base mb-2">Error</div><div class="toastBody text-sm lato-regular">${error.value}</div>`
     );
     payload.value.trial_count += 1;
-    isPending.value = false;
   }
-  // /auth/verify-email/4939
+
+  isPending.value = false;
+  isFormSubmitted.value = false;
 };
 </script>
 

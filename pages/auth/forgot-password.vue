@@ -34,6 +34,7 @@
               type="email"
               class="w-full px-[14px] py-3 text-navyBlue-900 rounded-xl border border-grey-300 blue-active-form-field"
               placeholder="Enter your email address"
+              v-model="email"
             />
           </div>
           <div>
@@ -62,11 +63,16 @@ definePageMeta({
 });
 
 import { useFormInputManipulator } from '@/composables/FormInputManipulator';
+import { useMyFetch } from '@/composables/useMyFetch';
+import { useRouter } from 'vue-router';
 
 const { HidePassword, ShowPassword } = useFormInputManipulator();
 
 const isPasswordVisible = ref(false);
 const isFormSubmitted = ref(false);
+const email = ref('');
+const isPending = ref(false);
+const router = useRouter();
 
 const mangePasswordVisibility = () => {
   if (isPasswordVisible.value) {
@@ -78,9 +84,36 @@ const mangePasswordVisibility = () => {
   isPasswordVisible.value = !isPasswordVisible.value;
 };
 
-const logUserIn = () => {
-  useNuxtApp().$toast.success(
-    `<div class="toastHeader lato-semi-bold text-base mb-2">Uh-uh! This email is not valid</div><div class="toastBody text-sm lato-regular">It looks like there is already an account with this email address. Try to login or use a different email address</div>`
-  );
+const logUserIn = async () => {
+  let payload = {
+    email: email.value,
+    trial_count: 0,
+    redirect_url: 'http://localhost:3000/auth/new-password',
+  };
+
+  const { data, error } = await useMyFetchNoToken(`/auth/recover-password`, {
+    method: 'PATCH',
+    body: payload,
+  });
+
+  if (data.value) {
+    payload.trial_count += 1;
+    useNuxtApp().$toast.success(
+      `<div class="toastHeader lato-semi-bold text-base mb-2">Success</div><div class="toastBody text-sm lato-regular">${data.value.message}</div>`
+    );
+    isPending.value = false;
+    router.push('/auth/new-password');
+  } else {
+    useNuxtApp().$toast.error(
+      `<div class="toastHeader lato-semi-bold text-base mb-2">Error</div><div class="toastBody text-sm lato-regular">${error.value.message}</div>`
+    );
+    payload.trial_count += 1;
+    isPending.value = false;
+  }
+
+  console.log(payload);
+  // useNuxtApp().$toast.success(
+  //   `<div class="toastHeader lato-semi-bold text-base mb-2">Uh-uh! This email is not valid</div><div class="toastBody text-sm lato-regular">It looks like there is already an account with this email address. Try to login or use a different email address</div>`
+  // );
 };
 </script>

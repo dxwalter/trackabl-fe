@@ -30,6 +30,7 @@
     "npm": "^10.8.1",
     "nuxt": "^3.11.2",
     "pinia": "^2.1.7",
+    "pinia-plugin-persistedstate": "^3.2.1",
     "v-calendar": "^3.1.2",
     "vue": "^3.4.27",
     "vue-chartjs": "^5.3.1",
@@ -40,6 +41,7 @@
   "devDependencies": {
     "@nuxt/test-utils": "^3.13.1",
     "@nuxtjs/google-fonts": "^3.0.0-1",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
     "@vue/test-utils": "^2.4.6",
     "autoprefixer": "^10.4.19",
     "happy-dom": "^14.12.0",

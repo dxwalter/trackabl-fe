@@ -34,6 +34,7 @@
                 showGuideLinesOnActive: true,
               }"
               @new-password-state="getNewPassword"
+              @password-value="setPassword"
             />
           </div>
           <div class="full mb-14">
@@ -48,7 +49,10 @@
               }"
               @new-password-state="getConfirmedPassword"
             />
-            <div class="text-red-600 lato-medium text-xs">
+            <div
+              class="text-red-600 lato-medium text-xs"
+              v-if="confirmPassword !== newPassword"
+            >
               Oops! The password doesn’t match. Try again
             </div>
           </div>
@@ -86,21 +90,63 @@ definePageMeta({
 import PasswordRecoverySuccessModal from '@/components/Modals/PasswordRecoverySuccess.vue';
 
 import { useFormInputManipulator } from '@/composables/FormInputManipulator';
+import { useRoute, useRouter } from 'vue-router';
+
 const { HidePassword, ShowPassword } = useFormInputManipulator();
 
 const isPasswordVisible = ref(false);
 const isFormSubmitted = ref(false);
+const confirmPassword = ref('');
+const newPassword = ref('');
 
 const getConfirmedPassword = (data: { status: boolean; data: string }) => {
-  // console.log(data);
+  confirmPassword.value = data.data;
 };
 const getNewPassword = (data: { status: boolean; data: string }) => {
-  // console.log(data);
+  newPassword.value = data.data;
 };
 
-const logUserIn = () => {
-  useNuxtApp().$toast.success(
-    `<div class="toastHeader lato-semi-bold text-base mb-2">Uh-uh! This email is not valid</div><div class="toastBody text-sm lato-regular">It looks like there is already an account with this email address. Try to login or use a different email address</div>`
-  );
+const setPassword = (e) => {
+  form.value.password = e.target.value;
+};
+
+const isPending = ref(false);
+const route = useRoute();
+const router = useRouter();
+console.log(route.query);
+const form = ref({
+  email: route.query.email,
+  trial_count: 0,
+  token: route.query.token,
+  password: '',
+});
+
+const logUserIn = async () => {
+  if (isPending.value) return; //
+  isPending.value = true;
+  console.log(form);
+  // const data = await AuthService.login();
+
+  const { data, error } = await useMyFetch('/auth/update-password', {
+    method: 'PATCH',
+    body: form.value,
+  });
+  console.log(data.value);
+  console.log(error);
+  if (data.value) {
+    useNuxtApp().$toast.success(
+      `<div class="toastHeader lato-semi-bold text-base mb-2"></div><div class="toastBody text-sm lato-regular">${data.value.message}</div>`
+    );
+
+    isPending.value = false;
+    form.value.trial_count += 1;
+    router.push('/auth');
+  } else {
+    useNuxtApp().$toast.error(
+      `<div class="toastHeader lato-semi-bold text-base mb-2">${error.value.data.error}</div><div class="toastBody text-sm lato-regular">${error.value.data.message}</div>`
+    );
+    isPending.value = false;
+    form.value.trial_count += 1;
+  }
 };
 </script>

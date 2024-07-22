@@ -5,10 +5,11 @@
         <span class="text-sm lato-medium text-grey-500 mr-1 xl:text-base"
           >Good Morning!</span
         >
-        <span>☀️</span>
+        <!-- <span>☀️</span> -->
       </div>
       <div class="lato-semi-bold text-navyBlue-900 xl:text-2xl">
-        Adeola Adeyoyin
+        {{ userStore.user?.firstName }}
+        {{ userStore.user?.lastName }}
       </div>
     </div>
     <!-- Dashboard carousel-analytics -->
@@ -67,9 +68,13 @@
 </template>
 
 <script lang="ts" setup>
+import { useUserStore } from '@/stores/userStore.ts';
 definePageMeta({
   layout: 'account',
 });
+
+const userStore = useUserStore();
+console.log(userStore);
 
 const openCategorySuggestionModal = ref(false);
 const latchCategoryPopover = () => {
