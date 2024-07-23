@@ -1,7 +1,7 @@
-import { defineStore } from "pinia";
-import { categories } from "./test-data/category.data";
+import { defineStore } from 'pinia';
+import { categories } from './test-data/category.data';
 export const useCategoryStore = defineStore({
-  id: "CategoryStore",
+  id: 'CategoryStore',
   state: () => ({
     categoryList: categories,
     isReady: categories.length > 0 ? true : false,
@@ -9,5 +9,9 @@ export const useCategoryStore = defineStore({
   getters: {
     list: (state) => state.categoryList,
   },
-  actions: {},
+  actions: {
+    SET_LIST(list) {
+      this.categoryList = list;
+    },
+  },
 });

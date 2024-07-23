@@ -3,6 +3,19 @@ import { useRuntimeConfig } from '#imports';
 import { ref } from 'vue';
 import { LOGIN } from '~/services/endpoints';
 
+const serializeParams = (params) => {
+  return Object.keys(params)
+    .map((key) => {
+      // Handle specific decoding here if needed
+      if (key === 'endDate') {
+        return `${encodeURIComponent(key)}=${params[key]}`; // No encoding for the value
+      } else {
+        return `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`;
+      }
+    })
+    .join('&');
+};
+
 export const useMyFetch = async (url: string, options: any = {}) => {
   const data = ref();
   const error = ref();
@@ -22,15 +35,24 @@ export const useMyFetch = async (url: string, options: any = {}) => {
     // console.log(`$apiBaseUrl}`);
   }
 
+  // Serialize params if available
+  if (options.params) {
+    const serializedParams = serializeParams(options.params);
+    url += `?${serializedParams}`;
+  }
+
   try {
     const response: any = await $fetch(`${apiBaseUrl}${url}`, {
       ...options,
+      params: undefined, // Remove params from options to prevent double appending
     });
 
     data.value = response;
   } catch (e) {
     error.value = e;
   }
+
+  return { data, error };
 
   // console.log(error);
 

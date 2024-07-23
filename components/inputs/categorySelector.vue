@@ -17,8 +17,8 @@
           </div>
           <div class="flex justify-between w-full self-center">
             <div class="text-navyBlue-900 lato-medium">
-              {{ selectedCategory[0].name }} &
-              {{ selectedCategory[0].subcategories[0].name }}
+              {{ selectedCategory[0]?.name }} &
+              {{ selectedCategory[0]?.subcategories[0]?.name }}
             </div>
           </div>
         </div>

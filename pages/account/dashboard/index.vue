@@ -54,7 +54,7 @@
       </div>
       <!-- Recent -->
       <div class="xl:w-8/12 2xl:w-7/12 3xl:w-7/12">
-        <AnalyticsRecentExpenses />
+        <AnalyticsRecentExpenses :recentTransactions="expenses" />
       </div>
     </div>
   </div>
@@ -69,15 +69,35 @@
 
 <script lang="ts" setup>
 import { useUserStore } from '@/stores/userStore.ts';
+import { useMyFetch } from '@/composables/useMyFetch.ts';
 definePageMeta({
   layout: 'account',
 });
 
 const userStore = useUserStore();
-console.log(userStore);
+const expenses = ref([]);
+// console.log(userStore);
 
 const openCategorySuggestionModal = ref(false);
 const latchCategoryPopover = () => {
   openCategorySuggestionModal.value = !openCategorySuggestionModal.value;
 };
+
+const fetchExpenses = async () => {
+  const { data, error } = await useMyFetch('/expense', {
+    method: 'GET',
+    params: {
+      endDate: '07/11/2024',
+      pageNumber: 1,
+      aggregate: 'category',
+      categoryId: 1,
+    },
+  });
+
+  expenses.value = data.value.data.expense;
+
+  console.log(data.value.data.expense);
+};
+
+fetchExpenses();
 </script>

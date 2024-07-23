@@ -16,11 +16,10 @@
     <!-- no recent expense -->
     <div
       class="py-3 xl:pt-12 flex flex-col justify-center"
-      v-if="!recentTransactions.length"
+      v-if="recentTransactions.length === 0"
     >
       <div class="w-[60px] m-auto mb-1">
         <img src="/assets/img/recent-transaction.svg" class="w-full" />
-        temp-branch
       </div>
       <div
         class="text-center text-navyBlue-900 lato-medium text-sm mb-1"
@@ -33,7 +32,7 @@
       </div>
     </div>
     <!-- 00 -->
-    <div class="py-5" v-if="recentTransactions?.length">
+    <div class="py-5" v-else>
       <NuxtLink
         :to="`/account/expense/${expense.id}`"
         class="flex justify-between mb-6"
@@ -88,62 +87,13 @@ interface Expense {
   expenseDate: string;
 }
 
-const props = withDefaults(
-  defineProps<{
-    recentTransactions: Expense[];
-  }>(),
-  {
-    recentTransactions: () => [
-      {
-        id: 1,
-        subactegoryName: 'Cooking gas',
-        category: {
-          name: 'Housing',
-          color: '#f79009',
-          icon: '/assets/img/house-category-icon.svg',
-        },
-        expenseCurrency: '₦',
-        expenseAmount: '36,000',
-        expenseDate: 'Sun, 16 Jan',
-      },
-      {
-        id: 2,
-        subactegoryName: 'A/C Repair',
-        category: {
-          name: 'Car',
-          color: '#12B76A',
-          icon: '/assets/img/car-category.svg',
-        },
-        expenseCurrency: '₦',
-        expenseAmount: '12,000,000',
-        expenseDate: 'Sun, 16 Jan',
-      },
-      {
-        id: 3,
-        subactegoryName: 'Bolu Upkeep',
-        category: {
-          name: 'Family',
-          color: '#004EC1',
-          icon: '~/assets/img/family-category.svg',
-        },
-        expenseCurrency: '₦',
-        expenseAmount: '10,000',
-        expenseDate: 'Sun, 16 Jan',
-      },
-    ],
-  }
-);
+const transactions = ref();
 
-const fetchExpenses = async () => {
-  const { data, error } = await useMyFetch('/expense', {
-    method: 'GET',
-  });
+const props = defineProps<{
+  recentTransactions: Expense[];
+}>();
 
-  console.log(data);
-};
-
-fetchExpenses();
-console.log('keke');
+console.log(props);
 
 // console.log(data.value);
 // console.log(error);

@@ -65,6 +65,8 @@ const emit = defineEmits(['setSelectedIds', 'openSuggestion']);
 
 import { useCategoryStore } from '@/stores/category';
 const { list } = useCategoryStore();
+const categoryStore = useCategoryStore();
+// const list = ref([]);
 
 // animation trigger
 const animateCategory = ref(false);
@@ -73,8 +75,8 @@ const animateSubCategory = ref(false);
 const categorySearchKeyword = ref('');
 const categoryList = computed(() => {
   return categorySearchKeyword.value.trim().length === 0
-    ? list
-    : list.filter((category) =>
+    ? categoryStore.categoryList
+    : categoryStore.categoryList.filter((category) =>
         category.name
           .toLowerCase()
           .includes(categorySearchKeyword.value.toLowerCase())
@@ -84,7 +86,7 @@ const categoryList = computed(() => {
 const modalTitle = computed(() => {
   return !openSubcategoryList.value
     ? 'Select a Category'
-    : 'Select a Subategory';
+    : 'Select a Subcategory';
 });
 
 const CloseModal = () => {
@@ -133,8 +135,22 @@ const showSuggestionPopover = () => {
   }
 };
 
+const fetchCategoryList = async () => {
+  const { data, error } = await useMyFetch('/category', {
+    method: 'GET',
+  });
+
+  // list.value = data.value.data;
+  categoryStore.SET_LIST(data.value.data);
+
+  categoryStore.categoryList;
+
+  // console.log(data.value.data.expense);
+};
+
 onMounted(() => {
   resetModalData();
+  fetchCategoryList();
 });
 </script>
 
