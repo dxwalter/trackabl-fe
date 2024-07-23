@@ -60,17 +60,17 @@
 </template>
 
 <script lang="ts" setup>
-import { useRuntimeConfig } from '#imports';
-import { useRouter } from 'vue-router';
-import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { useMyFetch } from '@/composables/useMyFetch';
-import { useMyFetchNoToken } from '@/composables/useMyFetchNoToken';
+import { useRuntimeConfig } from "#imports";
+import { useRouter } from "vue-router";
+import { ref, onMounted, onBeforeUnmount } from "vue";
+import { useMyFetch } from "@/composables/useMyFetch";
+import { useMyFetchNoToken } from "@/composables/useMyFetchNoToken";
 
 const config = useRuntimeConfig();
 const apiBaseUrl = config.public.API_BASE_URL;
 const router = useRouter();
 definePageMeta({
-  layout: 'pricing-page-layout',
+  layout: "pricing-page-layout",
 });
 
 const time = ref(10);
@@ -78,7 +78,7 @@ const requestingOtp = ref(false);
 const intervalId = ref<null | ReturnType<typeof setInterval>>(null);
 const isFormSubmitted = ref(false);
 const email = ref<string | null>(null);
-const otpValue = ref('');
+const otpValue = ref("");
 const isPending = ref(false);
 
 const getOptValue = (data: string) => {
@@ -96,7 +96,7 @@ const resendVerificationCode = async () => {
   const { data, error } = await useMyFetchNoToken(
     `/auth/generate-verifcation-token`,
     {
-      method: 'PATCH',
+      method: "PATCH",
       body: payload.value,
     }
   );
@@ -139,7 +139,7 @@ onBeforeUnmount(() => {
 
 onMounted(() => {
   if (process.client) {
-    email.value = localStorage.getItem('email');
+    email.value = localStorage.getItem("email");
     startCountDown();
   }
 });
@@ -159,7 +159,7 @@ const verifyEmail = async () => {
   const { data, error } = await useMyFetch(
     `/auth/verify-email/${otpValue.value}`,
     {
-      method: 'PATCH',
+      method: "PATCH",
       body: payload.value,
     }
   );
@@ -169,10 +169,10 @@ const verifyEmail = async () => {
     useNuxtApp().$toast.success(
       `<div class="toastHeader lato-semi-bold text-base mb-2">Success</div><div class="toastBody text-sm lato-regular">${data.value.message}</div>`
     );
-    router.push('/account/dashboard');
+    router.push("/account/dashboard");
   } else {
     useNuxtApp().$toast.error(
-      `<div class="toastHeader lato-semi-bold text-base mb-2">Error</div><div class="toastBody text-sm lato-regular">${error.value}</div>`
+      `<div class="toastHeader lato-semi-bold text-base mb-2">Error</div><div class="toastBody text-sm lato-regular">An error occurred validating your email address</div>`
     );
     payload.value.trial_count += 1;
   }
