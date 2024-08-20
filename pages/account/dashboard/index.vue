@@ -88,9 +88,9 @@ const fetchExpenses = async () => {
     method: 'GET',
     params: {
       endDate: '07/11/2024',
-      pageNumber: 1,
-      aggregate: 'category',
-      categoryId: 1,
+      startDate: '01/01/2024',
+      // pageNumber: 1,
+      // categoryId: 2,
     },
   });
 

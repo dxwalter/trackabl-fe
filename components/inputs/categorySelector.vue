@@ -51,11 +51,12 @@ const selectedSubcategoryId = ref<number | null>(null);
 
 import { useCategoryStore } from '@/stores/category';
 import type { Subcategory } from '@/types/category';
-const { list } = useCategoryStore();
+// const { list } = useCategoryStore();
+const categoryStore = useCategoryStore();
 
 const selectedCategory = computed(() => {
   if (!selectedCategoryId.value || !selectedSubcategoryId.value) return [];
-  const category = list.filter(
+  const category = categoryStore.categoryList.filter(
     (category) => category.id === selectedCategoryId.value
   );
 
@@ -88,7 +89,6 @@ const manageCategoryModal = (data: {
     return;
   }
 
-  console.log('Here');
   emit('setSelectedIds', data);
 
   closeCategoryModal();

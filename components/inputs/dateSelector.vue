@@ -7,6 +7,7 @@
         :enable-time-picker="false"
         auto-apply
         placeholder="DD/MM/YYYY"
+        @update:model-value="getDate"
       >
         <!-- <div
           class="flex justify-start w-full py-[10px] px-[14px] border rounded-xl border-grey-300"
@@ -34,7 +35,17 @@
 <script lang="ts" setup>
 import VueDatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css';
+import { watch } from 'vue';
 const date = ref('');
+const emit = defineEmits(['getFormattedDate']);
+
+const getDate = (e) => {
+  date.value = new Date(
+    'Wed Jul 24 2024 23:51:00 GMT+0100 (West Africa Standard Time)'
+  ).toLocaleDateString('en-US');
+
+  emit('getFormattedDate', date.value);
+};
 </script>
 
 <style scoped lang="css">

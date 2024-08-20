@@ -9,7 +9,9 @@
           <div class="w-[18px] mr-1 self-center">
             <img src="/assets/img/caret-down.svg" class="w-full" />
           </div>
-          <div class="text-white text-2xl lato-semi-bold self-center">₦</div>
+          <div class="text-white text-2xl lato-semi-bold self-center">
+            {{ currency?.symbol || '₦' }}
+          </div>
         </div>
         <div class="w-full self-center relative">
           <input
@@ -25,7 +27,8 @@
       :setup="{
         openModal: isCurrencyModalOpen,
       }"
-      @close-currency-modal="openCurrencyModal"
+      @close-currency-modal="isCurrencyModalOpen = false"
+      @changeCurrency="updateCurrency"
     />
   </ClientOnly>
 </template>
@@ -39,7 +42,23 @@ const openCurrencyModal = () => {
   isCurrencyModalOpen.value = !isCurrencyModalOpen.value;
 };
 
-const emit = defineEmits(['expenseAmount']);
+const emit = defineEmits(['expenseAmount', 'currencySelected']);
+const currency = ref({
+  createdAt: null,
+  currencyCode: 'NGN',
+  currencyName: 'Naira',
+  deletedAt: null,
+  id: 95,
+  name: 'Nigerian Naira',
+  symbol: '₦',
+  updatedAt: null,
+});
+
+const updateCurrency = (data) => {
+  currency.value = data;
+  console.log(currency.value);
+  emit('currencySelected', currency.value);
+};
 
 const validateInput = () => {
   const rawAmount = amount.value.replaceAll(',', '');
@@ -80,6 +99,10 @@ watch(
     immediate: true,
   }
 );
+
+onMounted(() => {
+  emit('currencySelected', currency.value);
+});
 </script>
 
 <style scoped lang="css">

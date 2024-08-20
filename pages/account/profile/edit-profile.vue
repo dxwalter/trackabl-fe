@@ -38,8 +38,8 @@
           />
         </div>
         <div class="text-center mt-2">
-          <p class="text-grey-900 text-[18px]">Adeola Adedoyin</p>
-          <p class="text-grey-500 mt-2">adeola4real@gmail.com</p>
+          <p class="text-grey-900 text-[18px]">{{ form.full_name }}</p>
+          <p class="text-grey-500 mt-2">{{ form.email }}</p>
         </div>
       </div>
 
@@ -55,7 +55,7 @@
             type="text"
             class="w-full px-[14px] py-3 text-navyBlue-900 rounded-xl border border-grey-300 blue-active-form-field"
             placeholder="Enter short name"
-            v-model="full_name"
+            v-model="form.full_name"
           />
         </div>
 
@@ -70,15 +70,19 @@
             type="email"
             class="w-full px-[14px] py-3 text-navyBlue-900 rounded-xl border border-grey-300 blue-active-form-field"
             placeholder="Enter short name"
-            v-model="email"
+            v-model="form.email"
           />
         </div>
 
         <div class="mt-[56px]">
           <button
-            class="w-full text-white bg-blue-500 py-3 px-4 rounded-xl border-blue-400 hover:bg-red-700"
+            class="w-full text-white bg-blue-500 py-3 px-4 rounded-xl border-blue-400 hover:bg-red-700 flex justify-center"
+            @click="updateProfile"
           >
-            Update
+            <div class="button-text" v-if="!isPending">Update</div>
+            <div class="w-6" v-else>
+              <img src="/assets/img/button-loader.svg" class="w-full" />
+            </div>
           </button>
           <p class="text-sm text-grey-500 mt-2 text-center">
             You can make update to your profile details once every 30 days.
@@ -99,6 +103,7 @@
 </template>
 <script lang="ts" setup>
 import Toggle from '@/components/Toggle.vue';
+import { useMyFetch } from '@/composables/useMyFetch.ts';
 import { ref } from 'vue';
 
 defineComponent({
@@ -116,6 +121,12 @@ const editActions = ref([
   { text: 'Upload Photo', checked: false },
   { text: 'View Photo', checked: false },
 ]);
+const isPending = ref(false);
+const form = ref({
+  full_name: '',
+  email: '',
+  trial_count: 0,
+});
 
 const latchEditProfilePopover = () => {
   console.log('kdkfd');
@@ -126,4 +137,48 @@ const handleActionClick = () => {
   console.log('action click');
   openEditProfileModal.value = false;
 };
+
+const updateProfile = async () => {
+  isPending.value = true;
+  const { data, error } = await useMyFetch(`/user/update-profile`, {
+    method: 'PATCH',
+    body: form.value,
+  });
+
+  if (data.value) {
+    form.value.trial_count += 1;
+    useNuxtApp().$toast.success(
+      `<div class="toastHeader lato-semi-bold text-base mb-2">Success</div><div class="toastBody text-sm lato-regular">${data.value.message}</div>`
+    );
+    isPending.value = false;
+  } else {
+    useNuxtApp().$toast.error(
+      `<div class="toastHeader lato-semi-bold text-base mb-2">${error.value.data.error}</div><div class="toastBody text-sm lato-regular">${error.value.data.message}</div>`
+    );
+    form.value.trial_count += 1;
+    isPending.value = false;
+  }
+};
+
+const fetchProfile = async () => {
+  const { data, error } = await useMyFetch('/user', {
+    method: 'GET',
+  });
+  console.log(data.value.data);
+  form.value.full_name = `${data.value.data.firstName} ${data.value.data.lastName}`;
+  form.value.email = `${data.value.data.email}`;
+
+  await fetchProfile();
+
+  if (data.value) {
+  } else {
+    useNuxtApp().$toast.error(
+      `<div class="toastHeader lato-semi-bold text-base mb-2">${error.value.data.error}</div><div class="toastBody text-sm lato-regular">${error.value.data.message}</div>`
+    );
+  }
+};
+
+onMounted(() => {
+  fetchProfile();
+});
 </script>

@@ -22,7 +22,10 @@
           Add Expense
         </div>
         <div class="mb-6">
-          <InputsExpenseInput @expense-amount="getExpenseAmount" />
+          <InputsExpenseInput
+            @expense-amount="getExpenseAmount"
+            @currencySelected="updateCurrency"
+          />
         </div>
         <div class="mb-4">
           <InputsCategorySelector
@@ -31,16 +34,17 @@
           />
         </div>
         <div class="mb-4">
-          <InputsDateSelector />
+          <InputsDateSelector @getFormattedDate="getFormattedDate" />
         </div>
         <div class="mb-4">
-          <InputsFileSelector />
+          <InputsFileSelector @getFile="getFile" />
         </div>
         <div class="mb-14">
           <div class="text-navyBlue-900 text-sm mb-1.5 lato-medium">Note</div>
           <textarea
             placeholder="Give a description"
             class="border rounded-xl border-grey-300 w-full px-[14px] py-[10px] text-grey-500 h-[86px] blue-active-form-field"
+            v-model="payload.note"
           ></textarea>
         </div>
         <div class="flex gap-4">
@@ -51,8 +55,12 @@
           </button>
           <button
             class="w-full text-white bg-blue-500 py-3 px-4 rounded-xl border-blue-400 hover:bg-blue-700"
+            @click.prevent="createExpense"
           >
-            Continue
+            <div class="button-text" v-if="!isPending">Continue</div>
+            <div class="w-6" v-else>
+              <img src="/assets/img/button-loader.svg" class="w-full" />
+            </div>
           </button>
         </div>
       </div>
@@ -79,6 +87,17 @@ definePageMeta({
   layout: 'add-expense',
 });
 
+const payload = ref({
+  categoryId: '',
+  subcategoryId: '',
+  expenseDate: '',
+  currencyId: '',
+  note: '',
+  receipt: '',
+  trial_count: 0,
+  amount: '',
+});
+
 const openCategorySuggestionModal = ref(false);
 const latchCategoryPopover = () => {
   openCategorySuggestionModal.value = !openCategorySuggestionModal.value;
@@ -98,14 +117,73 @@ const openSuggestion = (data: { type: string; categoryId?: number }) => {
   }
 };
 
+const isPending = ref(false);
+
 const getExpenseAmount = (data: number) => {
-  // console.log(data);
+  console.log(data);
+  payload.value.amount = data;
 };
 
-const getCategoryIds = (data: {
-  categoryId: number;
-  subcategoryId: number;
-}) => {};
+const updateCurrency = (data) => {
+  console.log(data);
+  payload.value.currencyId = data.id;
+};
+
+const getCategoryIds = (data: { cateoryId: number; subcategoryId: number }) => {
+  console.log(data);
+  payload.value.categoryId = data?.cateoryId;
+  payload.value.subcategoryId = data.subcategoryId;
+};
+
+const getFormattedDate = (data) => {
+  payload.value.expenseDate = data;
+};
+
+const getFile = (data) => {
+  payload.value.receipt = data;
+  console.log(data);
+};
+
+const createExpense = async () => {
+  console.log(payload.value);
+  const formData = new FormData();
+  formData.append('categoryId', +payload.value.categoryId);
+  formData.append('subcategoryId', +payload.value.subcategoryId);
+  formData.append('expenseDate', payload.value.expenseDate);
+  formData.append('currencyId', +payload.value.currencyId);
+  formData.append('note', payload.value.note);
+  formData.append('receipt', payload.value.receipt[0]);
+  formData.append('trial_count', +payload.value.trial_count);
+  formData.append('amount', +payload.value.trial_count);
+
+  const { data, error } = await useMyFetch('/expense', {
+    method: 'POST',
+    body: formData,
+  });
+  console.log(data.value);
+  console.log(error);
+  if (data.value) {
+    useNuxtApp().$toast.success(
+      `<div class="toastHeader lato-semi-bold text-base mb-2"></div><div class="toastBody text-sm lato-regular">${data.value.message}</div>`
+    );
+
+    payload.value = {
+      categoryId: '',
+      subcategoryId: '',
+      expenseDate: '',
+      currencyId: '',
+      note: '',
+      receipt: '',
+      trial_count: 0,
+      amount: '',
+    };
+  } else {
+    useNuxtApp().$toast.error(
+      `<div class="toastHeader lato-semi-bold text-base mb-2">${error.value.data.error}</div><div class="toastBody text-sm lato-regular">${error.value.data.message}</div>`
+    );
+    isPending.value = false;
+  }
+};
 </script>
 
 <style></style>

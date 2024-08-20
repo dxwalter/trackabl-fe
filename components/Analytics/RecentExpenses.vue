@@ -16,7 +16,7 @@
     <!-- no recent expense -->
     <div
       class="py-3 xl:pt-12 flex flex-col justify-center"
-      v-if="recentTransactions.length === 0"
+      v-if="recentTransactions?.length === 0"
     >
       <div class="w-[60px] m-auto mb-1">
         <img src="/assets/img/recent-transaction.svg" class="w-full" />

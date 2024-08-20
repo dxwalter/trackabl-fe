@@ -9,19 +9,40 @@
       <div class="w-[40px] mr-3 self-center">
         <img src="/assets/img/file-upload-icon.svg" class="w-full" />
       </div>
-      <div class="text-xs text-grey-500 self-center">
+      <div class="text-xs text-grey-500 self-center" v-if="!file">
         <div class="mb-1">
           <span class="text-blue-500">Click to upload </span>
           <span>or drag and drop</span>
         </div>
         <div>JPEG, JPG, PNG, or PDF</div>
       </div>
-      <input type="file" class="file-style cursor-pointer" />
+      <div class="text-xs text-grey-500 self-center" v-else>
+        <div class="mb-1">
+          <div>{{ file?.name }}</div>
+        </div>
+      </div>
+      <input
+        type="file"
+        class="file-style cursor-pointer"
+        @change="exportFiles"
+      />
     </div>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const emit = defineEmits(['getFile']);
+const file = ref(null);
+
+const exportFiles = (event) => {
+  const target = event.target as HTMLInputElement;
+  const files = target.files;
+  file.value = target.files[0];
+
+  if (!files || files.length === 0) return;
+  emit('getFile', files);
+};
+</script>
 
 <style lang="css" scoped>
 .file-style {

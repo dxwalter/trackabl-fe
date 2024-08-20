@@ -40,8 +40,10 @@
           />
         </div>
         <div class="text-center mt-2">
-          <p class="text-grey-900 text-[18px]">Adeola Adedoyin</p>
-          <p class="text-grey-500 mt-2">adeola4real@gmail.com</p>
+          <p class="text-grey-900 text-[18px]">
+            {{ profileData?.firstName }} {{ profileData?.lastName }}
+          </p>
+          <p class="text-grey-500 mt-2">{{ profileData?.email }}</p>
         </div>
       </div>
 
@@ -105,6 +107,7 @@
 </template>
 <script lang="ts" setup>
 import Toggle from '@/components/Toggle.vue';
+import { onMounted } from 'vue';
 
 defineComponent({
   Toggle,
@@ -115,4 +118,27 @@ definePageMeta({
 
 const showChangePasswordModal = ref(false);
 const showDeleteModal = ref(false);
+const isPending = ref(false);
+const profileData = ref(null);
+
+const fetchProfile = async () => {
+  const { data, error } = await useMyFetch('/user', {
+    method: 'GET',
+  });
+  console.log(data.value.data);
+  profileData.value = data.value.data;
+  // console.log(error);
+  // currencies.value = data.value.data;
+  if (data.value) {
+    isPending.value = false;
+  } else {
+    useNuxtApp().$toast.error(
+      `<div class="toastHeader lato-semi-bold text-base mb-2">${error.value.data.error}</div><div class="toastBody text-sm lato-regular">${error.value.data.message}</div>`
+    );
+  }
+};
+
+// onMounted(() => {
+fetchProfile();
+// });
 </script>
